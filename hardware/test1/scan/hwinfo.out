@@ -7,7 +7,7 @@ kernel version is 4.4
 ----- /proc/cmdline end -----
 debug = 0xff7ffff7
 probe = 0x15938fcdaa17fcf9fffe (+memory +pci +isapnp +net +floppy +misc +misc.serial +misc.par +misc.floppy +serial +cpu +bios +monitor +mouse +scsi +usb -usb.mods +modem +modem.usb +parallel +parallel.lp +parallel.zip -isa -isa.isdn +isdn +kbd +prom +sbus +int +braille +braille.alva +braille.fhp +braille.ht -ignx11 +sys -bios.vbe -isapnp.old -isapnp.new -isapnp.mod +braille.baum -manual +fb +pppoe -scan +pcmcia +fork -parallel.imm +s390 +cpuemu -sysfs -s390disks +udev +block +block.cdrom +block.part +edd +edd.mod -bios.ddc -bios.fb -bios.mode +input +block.mods +bios.vesa -cpuemu.debug -scsi.noserial +wlan -bios.crc -hal +bios.vram +bios.acpi -bios.ddc.ports=0 +modules.pata -net.eeprom +x86emu=dump -max -lxrc)
-shm: attached segment 1343498 at 0x7f329c809000
+shm: attached segment 1507338 at 0x7fe24daa5000
 >> hal.1: read hal data
 >> floppy.1: get nvram
 >> floppy.2: klog info
@@ -130,16 +130,16 @@ x86emu: could not init vm
 ----- /proc/ioports end -----
 ----- /proc/interrupts -----
      0:         20          0          0          0   IO-APIC    2-edge      timer
-     1:         10       3973          0       8857   IO-APIC    1-edge      i8042
+     1:         10       3973          0       8918   IO-APIC    1-edge      i8042
      8:          1          0          0          0   IO-APIC    8-edge      rtc0
      9:          0          0          0          0   IO-APIC    9-fasteoi   acpi
-    12:         16          0          0      31271   IO-APIC   12-edge      i8042
+    12:         16          0          0      32960   IO-APIC   12-edge      i8042
     14:          0          0          0          0   IO-APIC   14-edge      ata_piix
     15:          0          0          0          0   IO-APIC   15-edge      ata_piix
     16:          6          0          0        817   IO-APIC   16-fasteoi   vmwgfx, snd_ens1371
-    17:       4816      25376          0          0   IO-APIC   17-fasteoi   ehci_hcd:usb1, ioc0
+    17:       4816      25581          0          0   IO-APIC   17-fasteoi   ehci_hcd:usb1, ioc0
     18:        187          0          0          2   IO-APIC   18-fasteoi   uhci_hcd:usb2
-    19:          3          0      34912          0   IO-APIC   19-fasteoi   ens33
+    19:          3          0      35128          0   IO-APIC   19-fasteoi   ens33
     24:          0          0          0          0   PCI-MSI 344064-edge      PCIe PME, pciehp
     25:          0          0          0          0   PCI-MSI 346112-edge      PCIe PME, pciehp
     26:          0          0          0          0   PCI-MSI 348160-edge      PCIe PME, pciehp
@@ -172,23 +172,23 @@ x86emu: could not init vm
     53:          0          0          0          0   PCI-MSI 403456-edge      PCIe PME, pciehp
     54:          0          0          0          0   PCI-MSI 405504-edge      PCIe PME, pciehp
     55:          0          0          0          0   PCI-MSI 407552-edge      PCIe PME, pciehp
-    56:         74        201        286       1622   PCI-MSI 1130496-edge      0000:02:05.0
-    57:          6        136          0         46   PCI-MSI 129024-edge      vmw_vmci
+    56:         74        201        286       1727   PCI-MSI 1130496-edge      0000:02:05.0
+    57:          6        136          0         84   PCI-MSI 129024-edge      vmw_vmci
     58:          0          0          0          0   PCI-MSI 129025-edge      vmw_vmci
    NMI:          0          0          0          0   Non-maskable interrupts
-   LOC:     225183     189081     205667     233933   Local timer interrupts
+   LOC:     231325     198974     213471     241874   Local timer interrupts
    SPU:          0          0          0          0   Spurious interrupts
    PMI:          0          0          0          0   Performance monitoring interrupts
    IWI:          0          0          1          0   IRQ work interrupts
    RTR:          0          0          0          0   APIC ICR read retries
-   RES:      53261      33310      41326      39777   Rescheduling interrupts
-   CAL:       9445       3122      10596       6845   Function call interrupts
-   TLB:        585        557        501        679   TLB shootdowns
+   RES:      54577      34693      42443      40846   Rescheduling interrupts
+   CAL:       9693       3155      10752       6983   Function call interrupts
+   TLB:        624        679        554        779   TLB shootdowns
    TRM:          0          0          0          0   Thermal event interrupts
    THR:          0          0          0          0   Threshold APIC interrupts
    DFR:          0          0          0          0   Deferred Error APIC interrupts
    MCE:          0          0          0          0   Machine check exceptions
-   MCP:         16         16         16         16   Machine check polls
+   MCP:         17         17         17         17   Machine check polls
    ERR:          0
    MIS:          0
    PIN:          0          0          0          0   Posted-interrupt notification event
@@ -1488,16 +1488,16 @@ i/o:0 0xd000 - 0xdfff (0x1000) "PCI Bus 0000:0d"
 i/o:0 0xe000 - 0xefff (0x1000) "PCI Bus 0000:15"
 i/o:0 0xfce0 - 0xfcff (0x20) "pnp 00:06"
 irq:0  0 (       20) "2-edge      timer"
-irq:0  1 (    12840) "1-edge      i8042"
+irq:0  1 (    12901) "1-edge      i8042"
 irq:0  8 (        1) "8-edge      rtc0"
 irq:0  9 (        0) "9-fasteoi   acpi"
-irq:0 12 (    31287) "12-edge      i8042"
+irq:0 12 (    32976) "12-edge      i8042"
 irq:0 14 (        0) "14-edge      ata_piix"
 irq:0 15 (        0) "15-edge      ata_piix"
 irq:0 16 (      823) "16-fasteoi   vmwgfx" "snd_ens1371"
-irq:0 17 (    30192) "17-fasteoi   ehci_hcd:usb1" "ioc0"
+irq:0 17 (    30397) "17-fasteoi   ehci_hcd:usb1" "ioc0"
 irq:0 18 (      189) "18-fasteoi   uhci_hcd:usb2"
-irq:0 19 (    34915) "19-fasteoi   ens33"
+irq:0 19 (    35131) "19-fasteoi   ens33"
 irq:0 24 (        0) "344064-edge      PCIe PME" "pciehp"
 irq:0 25 (        0) "346112-edge      PCIe PME" "pciehp"
 irq:0 26 (        0) "348160-edge      PCIe PME" "pciehp"
@@ -1530,8 +1530,8 @@ irq:0 52 (        0) "401408-edge      PCIe PME" "pciehp"
 irq:0 53 (        0) "403456-edge      PCIe PME" "pciehp"
 irq:0 54 (        0) "405504-edge      PCIe PME" "pciehp"
 irq:0 55 (        0) "407552-edge      PCIe PME" "pciehp"
-irq:0 56 (     2183) "1130496-edge      0000:02:05.0"
-irq:0 57 (      188) "129024-edge      vmw_vmci"
+irq:0 56 (     2288) "1130496-edge      0000:02:05.0"
+irq:0 57 (      226) "129024-edge      vmw_vmci"
 irq:0 58 (        0) "129025-edge      vmw_vmci"
 dma:1 4 "cascade"
 ----- misc resources end -----
@@ -1969,11 +1969,11 @@ sysfs: no such class: usb
 ----- return code: ? -----
 >> edd.2: edd info
 >> modem.1: serial
-******  started child process 4234 (15s/120s)  ******
-******  stopped child process 4234 (120s)  ******
+******  started child process 4593 (15s/120s)  ******
+******  stopped child process 4593 (120s)  ******
 >> mouse.2: serial
-******  started child process 4235 (20s/20s)  ******
-******  stopped child process 4235 (20s)  ******
+******  started child process 4594 (20s/20s)  ******
+******  stopped child process 4594 (20s)  ******
 >> input.1: joydev mod
 >> input.1.1: evdev mod
 ----- exec: "/sbin/modprobe evdev " -----
@@ -5074,7 +5074,7 @@ ens33: socket failed: Operation not permitted
   E: MINOR=0
   E: PRIMARY_DEVICE_FOR_DISPLAY=1
   E: SUBSYSTEM=drm
-  E: TAGS=:uaccess:seat:master-of-seat:
+  E: TAGS=:seat:master-of-seat:uaccess:
   E: USEC_INITIALIZED=11039000
   
   P: /devices/pci0000:00/0000:00:0f.0/drm/card0/card0-Virtual-1
@@ -5172,7 +5172,7 @@ ens33: socket failed: Operation not permitted
   E: MAJOR=226
   E: MINOR=128
   E: SUBSYSTEM=drm
-  E: TAGS=:uaccess:seat:
+  E: TAGS=:seat:uaccess:
   E: USEC_INITIALIZED=11039423
   
   P: /devices/pci0000:00/0000:00:0f.0/graphics/fb0
@@ -5259,7 +5259,7 @@ ens33: socket failed: Operation not permitted
   N: sda1
   S: disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part1
   S: disk/by-uuid/64ba3075-47aa-42b1-8414-ae0e17aa8562
-  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part1 /dev/disk/by-uuid/64ba3075-47aa-42b1-8414-ae0e17aa8562
+  E: DEVLINKS=/dev/disk/by-uuid/64ba3075-47aa-42b1-8414-ae0e17aa8562 /dev/disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part1
   E: DEVNAME=/dev/sda1
   E: DEVPATH=/devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda1
   E: DEVTYPE=partition
@@ -5331,7 +5331,7 @@ ens33: socket failed: Operation not permitted
   S: disk/by-label/\x2fdata\x2f
   S: disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part3
   S: disk/by-uuid/0981b104-2ed5-460e-9829-1921f4f437ee
-  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part3 /dev/disk/by-label/\x2fdata\x2f /dev/disk/by-uuid/0981b104-2ed5-460e-9829-1921f4f437ee
+  E: DEVLINKS=/dev/disk/by-uuid/0981b104-2ed5-460e-9829-1921f4f437ee /dev/disk/by-label/\x2fdata\x2f /dev/disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part3
   E: DEVNAME=/dev/sda3
   E: DEVPATH=/devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda3
   E: DEVTYPE=partition
@@ -5371,7 +5371,7 @@ ens33: socket failed: Operation not permitted
   N: sda5
   S: disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part5
   S: disk/by-uuid/d0fdc441-0ffa-42f5-acf8-ee08ea7d832f
-  E: DEVLINKS=/dev/disk/by-uuid/d0fdc441-0ffa-42f5-acf8-ee08ea7d832f /dev/disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part5
+  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part5 /dev/disk/by-uuid/d0fdc441-0ffa-42f5-acf8-ee08ea7d832f
   E: DEVNAME=/dev/sda5
   E: DEVPATH=/devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda5
   E: DEVTYPE=partition
@@ -5636,7 +5636,7 @@ ens33: socket failed: Operation not permitted
   N: input/mouse2
   S: input/by-id/usb-VMware_VMware_Virtual_USB_Mouse-mouse
   S: input/by-path/pci-0000:02:00.0-usb-0:1:1.0-mouse
-  E: DEVLINKS=/dev/input/by-id/usb-VMware_VMware_Virtual_USB_Mouse-mouse /dev/input/by-path/pci-0000:02:00.0-usb-0:1:1.0-mouse
+  E: DEVLINKS=/dev/input/by-path/pci-0000:02:00.0-usb-0:1:1.0-mouse /dev/input/by-id/usb-VMware_VMware_Virtual_USB_Mouse-mouse
   E: DEVNAME=/dev/input/mouse2
   E: DEVPATH=/devices/pci0000:00/0000:00:11.0/0000:02:00.0/usb2/2-1/2-1:1.0/0003:0E0F:0003.0001/input/input5/mouse2
   E: ID_BUS=usb
@@ -5722,7 +5722,7 @@ ens33: socket failed: Operation not permitted
   E: PRODUCT=58f/9540/120
   E: SUBSYSTEM=usb
   E: SYSTEMD_WANTS=smartcard.target
-  E: TAGS=:systemd:uaccess:seat:
+  E: TAGS=:systemd:seat:uaccess:
   E: TYPE=0/0/0
   E: USEC_INITIALIZED=2957458
   
@@ -5904,7 +5904,7 @@ ens33: socket failed: Operation not permitted
   E: SOUND_INITIALIZED=1
   E: SUBSYSTEM=sound
   E: SYSTEMD_WANTS=sound.target
-  E: TAGS=:systemd:seat:
+  E: TAGS=:seat:systemd:
   E: USEC_INITIALIZED=12646692
   
   P: /devices/pci0000:00/0000:00:11.0/0000:02:02.0/sound/card0/dmmidi
@@ -6602,7 +6602,7 @@ ens33: socket failed: Operation not permitted
   S: disk/by-id/ata-VMware_Virtual_SATA_CDRW_Drive_01000000000000000001
   S: disk/by-path/pci-0000:02:05.0-ata-2
   S: dvd
-  E: DEVLINKS=/dev/disk/by-id/ata-VMware_Virtual_SATA_CDRW_Drive_01000000000000000001 /dev/cdrom /dev/disk/by-path/pci-0000:02:05.0-ata-2 /dev/dvd
+  E: DEVLINKS=/dev/disk/by-id/ata-VMware_Virtual_SATA_CDRW_Drive_01000000000000000001 /dev/dvd /dev/disk/by-path/pci-0000:02:05.0-ata-2 /dev/cdrom
   E: DEVNAME=/dev/sr0
   E: DEVPATH=/devices/pci0000:00/0000:00:11.0/0000:02:05.0/ata4/host4/target4:0:0/4:0:0:0/block/sr0
   E: DEVTYPE=disk
@@ -6628,7 +6628,7 @@ ens33: socket failed: Operation not permitted
   E: MAJOR=11
   E: MINOR=0
   E: SUBSYSTEM=block
-  E: TAGS=:systemd:uaccess:seat:
+  E: TAGS=:systemd:seat:uaccess:
   E: USEC_INITIALIZED=2548064
   
   P: /devices/pci0000:00/0000:00:11.0/0000:02:05.0/ata4/host4/target4:0:0/4:0:0:0/bsg/4:0:0:0
@@ -6653,7 +6653,7 @@ ens33: socket failed: Operation not permitted
   E: MAJOR=21
   E: MINOR=1
   E: SUBSYSTEM=scsi_generic
-  E: TAGS=:uaccess:seat:
+  E: TAGS=:seat:uaccess:
   E: USEC_INITIALIZED=11068797
   
   P: /devices/pci0000:00/0000:00:11.0/0000:02:05.0/ata4/link4/ata_link/link4
@@ -9629,7 +9629,7 @@ ens33: socket failed: Operation not permitted
   E: MAJOR=10
   E: MINOR=232
   E: SUBSYSTEM=misc
-  E: TAGS=:uaccess:seat:
+  E: TAGS=:seat:uaccess:
   E: USEC_INITIALIZED=12334265
   
   P: /devices/virtual/misc/lightnvm
@@ -12473,9 +12473,6 @@ ens33: socket failed: Operation not permitted
   prop read: 2GFb.ndpeucax6V1 (failed)
   old prop read: 2GFb.ndpeucax6V1 (failed)
 ----- kernel log -----
-  <4>[ 4408.522249]  [<ffffffff81838add>] smp_apic_timer_interrupt+0x3d/0x50
-  <4>[ 4408.522252]  [<ffffffff81836da2>] apic_timer_interrupt+0x82/0x90
-  <4>[ 4408.522252]  <EOI>  [<ffffffffc024acd0>] ? vmballoon_work+0xb0/0x75b [vmw_balloon]
   <4>[ 4408.522257]  [<ffffffff8109a495>] process_one_work+0x165/0x480
   <4>[ 4408.522258]  [<ffffffff8109a7fb>] worker_thread+0x4b/0x4c0
   <4>[ 4408.522260]  [<ffffffff8109a7b0>] ? process_one_work+0x480/0x480
@@ -12588,6 +12585,10 @@ ens33: socket failed: Operation not permitted
   <4>[ 4408.522507]  [<ffffffff81103711>] ? SyS_futex+0x81/0x180
   <4>[ 4408.522510]  [<ffffffff8120e989>] ? SyS_read+0x79/0xc0
   <4>[ 4408.522512]  [<ffffffff81836032>] ? entry_SYSCALL_64_fastpath+0x16/0x71
+  <6>[ 4762.878822] e1000: ens33 NIC Link is Down
+  <6>[ 4779.150872] e1000: ens33 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+  <6>[ 4783.433017] e1000: ens33 NIC Link is Down
+  <6>[ 4791.453855] e1000: ens33 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
 ----- kernel log end -----
 ----- /proc/modules -----
   ipt_MASQUERADE 16384 1 - Live 0x0000000000000000
@@ -12890,7 +12891,7 @@ ens33: socket failed: Operation not permitted
   Memory Range: 0xfeba0000-0xfebbffff (rw,non-prefetchable)
   Memory Range: 0xfebc0000-0xfebdffff (rw,non-prefetchable)
   Memory Range: 0xc0008000-0xc000bfff (ro,non-prefetchable,disabled)
-  IRQ: 17 (30192 events)
+  IRQ: 17 (30397 events)
   Module Alias: "pci:v00001000d00000030sv000015ADsd00001976bc01sc00i00"
   Driver Info #0:
     Driver Status: mptspi is active
@@ -13621,7 +13622,7 @@ ens33: socket failed: Operation not permitted
   Memory Range: 0xfdff0000-0xfdffffff (rw,non-prefetchable)
   I/O Ports: 0x2000-0x3fff (rw)
   Memory Range: 0xfd500000-0xfd50ffff (ro,non-prefetchable,disabled)
-  IRQ: 19 (34915 events)
+  IRQ: 19 (35131 events)
   HW Address: 00:0c:29:70:76:ea
   Link detected: yes
   Module Alias: "pci:v00008086d0000100Fsv000015ADsd00000750bc02sc00i00"
@@ -13671,7 +13672,7 @@ ens33: socket failed: Operation not permitted
   SubDevice: pci 0x0770 
   Driver: "ehci-pci"
   Memory Range: 0xfd5ef000-0xfd5effff (rw,non-prefetchable)
-  IRQ: 17 (30192 events)
+  IRQ: 17 (30397 events)
   Module Alias: "pci:v000015ADd00000770sv000015ADsd00000770bc0Csc03i20"
   Driver Info #0:
     Driver Status: ehci-hcd is not active
@@ -13696,7 +13697,7 @@ ens33: socket failed: Operation not permitted
   Driver Modules: "ahci"
   Memory Range: 0xfd5ee000-0xfd5eefff (rw,non-prefetchable)
   Memory Range: 0xfd510000-0xfd51ffff (ro,non-prefetchable,disabled)
-  IRQ: 56 (2183 events)
+  IRQ: 56 (2288 events)
   Module Alias: "pci:v000015ADd000007E0sv000015ADsd000007E0bc01sc06i01"
   Driver Info #0:
     Driver Status: ahci is active
