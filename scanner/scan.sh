@@ -46,7 +46,7 @@ hwinfo > hwinfo.out
 
 echo "Beschreibe Besonderheiten"
 beschreibung=beschreibung.out
-echo "Besonderheiten von $id:" >> "$beschreibung"
+echo "Besonderheiten von $id:" > "$beschreibung"
 nano "$beschreibung"
 
 echo "Speichere Kopie"
@@ -57,7 +57,7 @@ cp *.out "$copy"
 echo "Speichere ins git."
 
 git pull
-git add .
+git add --all .
 git commit -m"$id inventarisiert."
 git push
 
