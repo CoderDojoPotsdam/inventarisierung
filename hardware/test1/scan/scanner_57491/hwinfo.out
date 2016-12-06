@@ -7,7 +7,7 @@ kernel version is 4.4
 ----- /proc/cmdline end -----
 debug = 0xff7ffff7
 probe = 0x15938fcdaa17fcf9fffe (+memory +pci +isapnp +net +floppy +misc +misc.serial +misc.par +misc.floppy +serial +cpu +bios +monitor +mouse +scsi +usb -usb.mods +modem +modem.usb +parallel +parallel.lp +parallel.zip -isa -isa.isdn +isdn +kbd +prom +sbus +int +braille +braille.alva +braille.fhp +braille.ht -ignx11 +sys -bios.vbe -isapnp.old -isapnp.new -isapnp.mod +braille.baum -manual +fb +pppoe -scan +pcmcia +fork -parallel.imm +s390 +cpuemu -sysfs -s390disks +udev +block +block.cdrom +block.part +edd +edd.mod -bios.ddc -bios.fb -bios.mode +input +block.mods +bios.vesa -cpuemu.debug -scsi.noserial +wlan -bios.crc -hal +bios.vram +bios.acpi -bios.ddc.ports=0 +modules.pata -net.eeprom +x86emu=dump -max -lxrc)
-shm: attached segment 1310730 at 0x7f0052383000
+shm: attached segment 1343498 at 0x7f329c809000
 >> hal.1: read hal data
 >> floppy.1: get nvram
 >> floppy.2: klog info
@@ -130,16 +130,16 @@ x86emu: could not init vm
 ----- /proc/ioports end -----
 ----- /proc/interrupts -----
      0:         20          0          0          0   IO-APIC    2-edge      timer
-     1:         10       3973          0       7964   IO-APIC    1-edge      i8042
+     1:         10       3973          0       8857   IO-APIC    1-edge      i8042
      8:          1          0          0          0   IO-APIC    8-edge      rtc0
      9:          0          0          0          0   IO-APIC    9-fasteoi   acpi
-    12:         16          0          0      29171   IO-APIC   12-edge      i8042
+    12:         16          0          0      31271   IO-APIC   12-edge      i8042
     14:          0          0          0          0   IO-APIC   14-edge      ata_piix
     15:          0          0          0          0   IO-APIC   15-edge      ata_piix
     16:          6          0          0        817   IO-APIC   16-fasteoi   vmwgfx, snd_ens1371
-    17:       4816      25207          0          0   IO-APIC   17-fasteoi   ehci_hcd:usb1, ioc0
+    17:       4816      25376          0          0   IO-APIC   17-fasteoi   ehci_hcd:usb1, ioc0
     18:        187          0          0          2   IO-APIC   18-fasteoi   uhci_hcd:usb2
-    19:          3          0      34654          0   IO-APIC   19-fasteoi   ens33
+    19:          3          0      34912          0   IO-APIC   19-fasteoi   ens33
     24:          0          0          0          0   PCI-MSI 344064-edge      PCIe PME, pciehp
     25:          0          0          0          0   PCI-MSI 346112-edge      PCIe PME, pciehp
     26:          0          0          0          0   PCI-MSI 348160-edge      PCIe PME, pciehp
@@ -172,23 +172,23 @@ x86emu: could not init vm
     53:          0          0          0          0   PCI-MSI 403456-edge      PCIe PME, pciehp
     54:          0          0          0          0   PCI-MSI 405504-edge      PCIe PME, pciehp
     55:          0          0          0          0   PCI-MSI 407552-edge      PCIe PME, pciehp
-    56:         74        201        286       1469   PCI-MSI 1130496-edge      0000:02:05.0
-    57:          6        136          0         45   PCI-MSI 129024-edge      vmw_vmci
+    56:         74        201        286       1622   PCI-MSI 1130496-edge      0000:02:05.0
+    57:          6        136          0         46   PCI-MSI 129024-edge      vmw_vmci
     58:          0          0          0          0   PCI-MSI 129025-edge      vmw_vmci
    NMI:          0          0          0          0   Non-maskable interrupts
-   LOC:     218327     178119     193750     217905   Local timer interrupts
+   LOC:     225183     189081     205667     233933   Local timer interrupts
    SPU:          0          0          0          0   Spurious interrupts
    PMI:          0          0          0          0   Performance monitoring interrupts
-   IWI:          0          0          0          0   IRQ work interrupts
+   IWI:          0          0          1          0   IRQ work interrupts
    RTR:          0          0          0          0   APIC ICR read retries
-   RES:      51471      31341      39723      38449   Rescheduling interrupts
-   CAL:       9387       3118      10560       6827   Function call interrupts
-   TLB:        578        519        484        651   TLB shootdowns
+   RES:      53261      33310      41326      39777   Rescheduling interrupts
+   CAL:       9445       3122      10596       6845   Function call interrupts
+   TLB:        585        557        501        679   TLB shootdowns
    TRM:          0          0          0          0   Thermal event interrupts
    THR:          0          0          0          0   Threshold APIC interrupts
    DFR:          0          0          0          0   Deferred Error APIC interrupts
    MCE:          0          0          0          0   Machine check exceptions
-   MCP:         15         15         15         15   Machine check polls
+   MCP:         16         16         16         16   Machine check polls
    ERR:          0
    MIS:          0
    PIN:          0          0          0          0   Posted-interrupt notification event
@@ -1488,16 +1488,16 @@ i/o:0 0xd000 - 0xdfff (0x1000) "PCI Bus 0000:0d"
 i/o:0 0xe000 - 0xefff (0x1000) "PCI Bus 0000:15"
 i/o:0 0xfce0 - 0xfcff (0x20) "pnp 00:06"
 irq:0  0 (       20) "2-edge      timer"
-irq:0  1 (    11947) "1-edge      i8042"
+irq:0  1 (    12840) "1-edge      i8042"
 irq:0  8 (        1) "8-edge      rtc0"
 irq:0  9 (        0) "9-fasteoi   acpi"
-irq:0 12 (    29187) "12-edge      i8042"
+irq:0 12 (    31287) "12-edge      i8042"
 irq:0 14 (        0) "14-edge      ata_piix"
 irq:0 15 (        0) "15-edge      ata_piix"
 irq:0 16 (      823) "16-fasteoi   vmwgfx" "snd_ens1371"
-irq:0 17 (    30023) "17-fasteoi   ehci_hcd:usb1" "ioc0"
+irq:0 17 (    30192) "17-fasteoi   ehci_hcd:usb1" "ioc0"
 irq:0 18 (      189) "18-fasteoi   uhci_hcd:usb2"
-irq:0 19 (    34657) "19-fasteoi   ens33"
+irq:0 19 (    34915) "19-fasteoi   ens33"
 irq:0 24 (        0) "344064-edge      PCIe PME" "pciehp"
 irq:0 25 (        0) "346112-edge      PCIe PME" "pciehp"
 irq:0 26 (        0) "348160-edge      PCIe PME" "pciehp"
@@ -1530,8 +1530,8 @@ irq:0 52 (        0) "401408-edge      PCIe PME" "pciehp"
 irq:0 53 (        0) "403456-edge      PCIe PME" "pciehp"
 irq:0 54 (        0) "405504-edge      PCIe PME" "pciehp"
 irq:0 55 (        0) "407552-edge      PCIe PME" "pciehp"
-irq:0 56 (     2030) "1130496-edge      0000:02:05.0"
-irq:0 57 (      187) "129024-edge      vmw_vmci"
+irq:0 56 (     2183) "1130496-edge      0000:02:05.0"
+irq:0 57 (      188) "129024-edge      vmw_vmci"
 irq:0 58 (        0) "129025-edge      vmw_vmci"
 dma:1 4 "cascade"
 ----- misc resources end -----
@@ -1969,11 +1969,11 @@ sysfs: no such class: usb
 ----- return code: ? -----
 >> edd.2: edd info
 >> modem.1: serial
-******  started child process 4096 (15s/120s)  ******
-******  stopped child process 4096 (120s)  ******
+******  started child process 4234 (15s/120s)  ******
+******  stopped child process 4234 (120s)  ******
 >> mouse.2: serial
-******  started child process 4097 (20s/20s)  ******
-******  stopped child process 4097 (20s)  ******
+******  started child process 4235 (20s/20s)  ******
+******  stopped child process 4235 (20s)  ******
 >> input.1: joydev mod
 >> input.1.1: evdev mod
 ----- exec: "/sbin/modprobe evdev " -----
@@ -5074,7 +5074,7 @@ ens33: socket failed: Operation not permitted
   E: MINOR=0
   E: PRIMARY_DEVICE_FOR_DISPLAY=1
   E: SUBSYSTEM=drm
-  E: TAGS=:seat:uaccess:master-of-seat:
+  E: TAGS=:uaccess:seat:master-of-seat:
   E: USEC_INITIALIZED=11039000
   
   P: /devices/pci0000:00/0000:00:0f.0/drm/card0/card0-Virtual-1
@@ -5259,7 +5259,7 @@ ens33: socket failed: Operation not permitted
   N: sda1
   S: disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part1
   S: disk/by-uuid/64ba3075-47aa-42b1-8414-ae0e17aa8562
-  E: DEVLINKS=/dev/disk/by-uuid/64ba3075-47aa-42b1-8414-ae0e17aa8562 /dev/disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part1
+  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part1 /dev/disk/by-uuid/64ba3075-47aa-42b1-8414-ae0e17aa8562
   E: DEVNAME=/dev/sda1
   E: DEVPATH=/devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda1
   E: DEVTYPE=partition
@@ -5331,7 +5331,7 @@ ens33: socket failed: Operation not permitted
   S: disk/by-label/\x2fdata\x2f
   S: disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part3
   S: disk/by-uuid/0981b104-2ed5-460e-9829-1921f4f437ee
-  E: DEVLINKS=/dev/disk/by-label/\x2fdata\x2f /dev/disk/by-uuid/0981b104-2ed5-460e-9829-1921f4f437ee /dev/disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part3
+  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part3 /dev/disk/by-label/\x2fdata\x2f /dev/disk/by-uuid/0981b104-2ed5-460e-9829-1921f4f437ee
   E: DEVNAME=/dev/sda3
   E: DEVPATH=/devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda3
   E: DEVTYPE=partition
@@ -5371,7 +5371,7 @@ ens33: socket failed: Operation not permitted
   N: sda5
   S: disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part5
   S: disk/by-uuid/d0fdc441-0ffa-42f5-acf8-ee08ea7d832f
-  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part5 /dev/disk/by-uuid/d0fdc441-0ffa-42f5-acf8-ee08ea7d832f
+  E: DEVLINKS=/dev/disk/by-uuid/d0fdc441-0ffa-42f5-acf8-ee08ea7d832f /dev/disk/by-path/pci-0000:00:10.0-scsi-0:0:0:0-part5
   E: DEVNAME=/dev/sda5
   E: DEVPATH=/devices/pci0000:00/0000:00:10.0/host2/target2:0:0/2:0:0:0/block/sda/sda5
   E: DEVTYPE=partition
@@ -5607,7 +5607,7 @@ ens33: socket failed: Operation not permitted
   N: input/event4
   S: input/by-id/usb-VMware_VMware_Virtual_USB_Mouse-event-mouse
   S: input/by-path/pci-0000:02:00.0-usb-0:1:1.0-event-mouse
-  E: DEVLINKS=/dev/input/by-id/usb-VMware_VMware_Virtual_USB_Mouse-event-mouse /dev/input/by-path/pci-0000:02:00.0-usb-0:1:1.0-event-mouse
+  E: DEVLINKS=/dev/input/by-path/pci-0000:02:00.0-usb-0:1:1.0-event-mouse /dev/input/by-id/usb-VMware_VMware_Virtual_USB_Mouse-event-mouse
   E: DEVNAME=/dev/input/event4
   E: DEVPATH=/devices/pci0000:00/0000:00:11.0/0000:02:00.0/usb2/2-1/2-1:1.0/0003:0E0F:0003.0001/input/input5/event4
   E: ID_BUS=usb
@@ -5636,7 +5636,7 @@ ens33: socket failed: Operation not permitted
   N: input/mouse2
   S: input/by-id/usb-VMware_VMware_Virtual_USB_Mouse-mouse
   S: input/by-path/pci-0000:02:00.0-usb-0:1:1.0-mouse
-  E: DEVLINKS=/dev/input/by-path/pci-0000:02:00.0-usb-0:1:1.0-mouse /dev/input/by-id/usb-VMware_VMware_Virtual_USB_Mouse-mouse
+  E: DEVLINKS=/dev/input/by-id/usb-VMware_VMware_Virtual_USB_Mouse-mouse /dev/input/by-path/pci-0000:02:00.0-usb-0:1:1.0-mouse
   E: DEVNAME=/dev/input/mouse2
   E: DEVPATH=/devices/pci0000:00/0000:00:11.0/0000:02:00.0/usb2/2-1/2-1:1.0/0003:0E0F:0003.0001/input/input5/mouse2
   E: ID_BUS=usb
@@ -6602,7 +6602,7 @@ ens33: socket failed: Operation not permitted
   S: disk/by-id/ata-VMware_Virtual_SATA_CDRW_Drive_01000000000000000001
   S: disk/by-path/pci-0000:02:05.0-ata-2
   S: dvd
-  E: DEVLINKS=/dev/cdrom /dev/dvd /dev/disk/by-id/ata-VMware_Virtual_SATA_CDRW_Drive_01000000000000000001 /dev/disk/by-path/pci-0000:02:05.0-ata-2
+  E: DEVLINKS=/dev/disk/by-id/ata-VMware_Virtual_SATA_CDRW_Drive_01000000000000000001 /dev/cdrom /dev/disk/by-path/pci-0000:02:05.0-ata-2 /dev/dvd
   E: DEVNAME=/dev/sr0
   E: DEVPATH=/devices/pci0000:00/0000:00:11.0/0000:02:05.0/ata4/host4/target4:0:0/4:0:0:0/block/sr0
   E: DEVTYPE=disk
@@ -12473,99 +12473,121 @@ ens33: socket failed: Operation not permitted
   prop read: 2GFb.ndpeucax6V1 (failed)
   old prop read: 2GFb.ndpeucax6V1 (failed)
 ----- kernel log -----
-  <4>[ 3109.434921] Workqueue: events_freezable_power_ disk_events_workfn
-  <4>[ 3109.434922] task: ffff88007432ee00 ti: ffff8800797d8000 task.ti: ffff8800797d8000
-  <4>[ 3109.434923] RIP: 0010:[<ffffffff81835a85>]  [<ffffffff81835a85>] _raw_spin_unlock_irqrestore+0x15/0x20
-  <4>[ 3109.434927] RSP: 0000:ffff8800797dba90  EFLAGS: 00000293
-  <4>[ 3109.434928] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000006
-  <4>[ 3109.434929] RDX: ffff880034b75e80 RSI: 0000000000000293 RDI: 0000000000000293
-  <4>[ 3109.434930] RBP: ffff8800797dba90 R08: 000000100000014a R09: 0000000800000010
-  <4>[ 3109.434931] R10: ffff880034b74708 R11: 0000000000000000 R12: ffff880034b74000
-  <4>[ 3109.434933] R13: 0000000000000293 R14: ffff8800348ac800 R15: ffff8800348ac800
-  <4>[ 3109.434934] FS:  0000000000000000(0000) GS:ffff88007b6c0000(0000) knlGS:0000000000000000
-  <4>[ 3109.434935] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
-  <4>[ 3109.434936] CR2: 00001ce3ab0ffff8 CR3: 0000000078d81000 CR4: 00000000001406e0
-  <4>[ 3109.434988] Stack:
-  <4>[ 3109.434990]  ffff8800797dbac0 ffffffff815e13d1 ffff880078aa4600 ffff88003489a420
-  <4>[ 3109.434992]  ffff880034b78800 ffff8800348ac850 ffff8800797dbaf0 ffffffff815bad81
-  <4>[ 3109.434994]  ffff88003489a420 ffff880034b78800 ffff88003489a420 ffff880078aa4600
-  <4>[ 3109.434996] Call Trace:
-  <4>[ 3109.435000]  [<ffffffff815e13d1>] ata_scsi_queuecmd+0xb1/0x250
-  <4>[ 3109.435003]  [<ffffffff815bad81>] scsi_dispatch_cmd+0xe1/0x240
-  <4>[ 3109.435005]  [<ffffffff815bdba2>] scsi_request_fn+0x472/0x610
-  <4>[ 3109.435009]  [<ffffffff813c21a9>] ? alloc_request_struct+0x19/0x20
-  <4>[ 3109.435011]  [<ffffffff813c1de3>] __blk_run_queue+0x33/0x40
-  <4>[ 3109.435013]  [<ffffffff813cc381>] blk_execute_rq_nowait+0xb1/0x160
-  <4>[ 3109.435015]  [<ffffffff813cc4bb>] blk_execute_rq+0x8b/0x140
-  <4>[ 3109.435018]  [<ffffffff813bcd89>] ? bio_phys_segments+0x19/0x20
-  <4>[ 3109.435020]  [<ffffffff813c7eb3>] ? blk_rq_bio_prep+0x63/0x80
-  <4>[ 3109.435022]  [<ffffffff813cc246>] ? blk_rq_map_kern+0xe6/0x140
-  <4>[ 3109.435023]  [<ffffffff815ba307>] scsi_execute+0x137/0x1d0
-  <4>[ 3109.435025]  [<ffffffff815bc3be>] scsi_execute_req_flags+0x8e/0xf0
-  <4>[ 3109.435028]  [<ffffffff815cd907>] sr_check_events+0xb7/0x2d0
-  <4>[ 3109.435061]  [<ffffffff8160ad98>] cdrom_check_events+0x18/0x30
-  <4>[ 3109.435064]  [<ffffffff815cdd3a>] sr_block_check_events+0x2a/0x30
-  <4>[ 3109.435066]  [<ffffffff813d78f0>] disk_check_events+0x60/0x150
-  <4>[ 3109.435067]  [<ffffffff813d79f6>] disk_events_workfn+0x16/0x20
-  <4>[ 3109.435071]  [<ffffffff8109a495>] process_one_work+0x165/0x480
-  <4>[ 3109.435073]  [<ffffffff8109a7fb>] worker_thread+0x4b/0x4c0
-  <4>[ 3109.435075]  [<ffffffff8109a7b0>] ? process_one_work+0x480/0x480
-  <4>[ 3109.435077]  [<ffffffff810a09d8>] kthread+0xd8/0xf0
-  <4>[ 3109.435079]  [<ffffffff810a0900>] ? kthread_create_on_node+0x1e0/0x1e0
-  <4>[ 3109.435081]  [<ffffffff818363cf>] ret_from_fork+0x3f/0x70
-  <4>[ 3109.435083]  [<ffffffff810a0900>] ? kthread_create_on_node+0x1e0/0x1e0
-  <4>[ 3109.435084] Code: 1f 44 00 00 eb c6 31 c0 eb ca e8 27 b6 84 ff 90 90 90 90 90 90 90 0f 1f 44 00 00 55 48 89 e5 c6 07 00 0f 1f 40 00 48 89 f7 57 9d <0f> 1f 44 00 00 5d c3 0f 1f 40 00 0f 1f 44 00 00 55 48 89 e5 c6 
-  <6>[ 3146.264451] mptscsih: ioc0: attempting task abort! (sc=ffff880078aa6a00)
-  <6>[ 3146.264479] sd 2:0:0:0: [sda] tag#1 CDB: Write(10) 2a 00 00 5d d0 60 00 00 08 00
-  <6>[ 3146.264494] mptscsih: ioc0: task abort: SUCCESS (rv=2002) (sc=ffff880078aa6a00)
-  <6>[ 3146.264502] mptscsih: ioc0: attempting task abort! (sc=ffff880075dbf300)
-  <6>[ 3146.264504] sd 2:0:0:0: [sda] tag#0 CDB: Read(10) 28 00 00 05 c8 00 00 00 20 00
-  <6>[ 3146.264505] mptscsih: ioc0: task abort: SUCCESS (rv=2002) (sc=ffff880075dbf300)
-  <6>[ 3148.268359] e1000: ens33 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
-  <6>[ 3718.995445] e1000: ens33 NIC Link is Down
-  <6>[ 3725.008272] e1000: ens33 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
-  <6>[ 3728.109636] e1000: ens33 NIC Link is Down
-  <6>[ 3736.484855] e1000: ens33 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
-  <0>[ 4192.057330] NMI watchdog: BUG: soft lockup - CPU#2 stuck for 23s! [thermald:1081]
-  <4>[ 4192.057334] Modules linked in: ipt_MASQUERADE nf_nat_masquerade_ipv4 xfrm_user xfrm_algo iptable_nat nf_conntrack_ipv4 nf_defrag_ipv4 nf_nat_ipv4 xt_addrtype iptable_filter ip_tables rfcomm xt_conntrack x_tables nf_nat nf_conntrack br_netfilter bridge stp llc aufs vmw_vsock_vmci_transport vsock pci_stub vboxpci(OE) vboxnetadp(OE) vboxnetflt(OE) vboxdrv(OE) bnep btusb btrtl btbcm btintel bluetooth coretemp kvm_intel kvm irqbypass crct10dif_pclmul crc32_pclmul ghash_clmulni_intel snd_ens1371 snd_ac97_codec aesni_intel gameport ac97_bus aes_x86_64 snd_pcm input_leds snd_seq_midi snd_seq_midi_event snd_rawmidi lrw snd_seq gf128mul snd_seq_device snd_timer glue_helper ablk_helper snd cryptd vmw_balloon joydev soundcore serio_raw nfit 8250_fintek i2c_piix4 shpchp vmw_vmci mac_hid parport_pc ppdev lp parport autofs4 hid_generic usbhid hid vmwgfx ttm drm_kms_helper syscopyarea sysfillrect ahci libahci psmouse e1000 sysimgblt mptspi fb_sys_fops mptscsih drm mptbase scsi_transport_spi pata_acpi fjes
-  <4>[ 4209.109738] CPU: 2 PID: 1081 Comm: thermald Tainted: G           OEL  4.4.0-51-generic #72-Ubuntu
-  <4>[ 4209.109741] Hardware name: VMware, Inc. VMware Virtual Platform/440BX Desktop Reference Platform, BIOS 6.00 07/02/2015
-  <4>[ 4209.109743] task: ffff8800357e0dc0 ti: ffff880077b8c000 task.ti: ffff880077b8c000
-  <4>[ 4209.109744] RIP: 0010:[<ffffffff811040a8>]  [<ffffffff811040a8>] smp_call_function_single+0xd8/0x130
-  <4>[ 4209.109752] RSP: 0018:ffff880077b8fce8  EFLAGS: 00000202
-  <4>[ 4209.109753] RAX: 0000000000000000 RBX: 0000000000000000 RCX: 0000000000000000
-  <4>[ 4209.109754] RDX: 0000000000000001 RSI: 0000000000000100 RDI: 0000000000000296
-  <4>[ 4209.109755] RBP: ffff880077b8fd30 R08: 0000000000000000 R09: 0000000000000001
-  <4>[ 4209.109756] R10: ffff8800797b8000 R11: ffff88003500bc80 R12: ffffffff814280d0
-  <4>[ 4209.109757] R13: ffff8800797b8000 R14: ffff88007424f080 R15: 0000000000000001
-  <4>[ 4209.109758] FS:  00007fcc97136700(0000) GS:ffff88007b680000(0000) knlGS:0000000000000000
-  <4>[ 4209.109760] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
-  <4>[ 4209.109760] CR2: 00001ce3aa01c008 CR3: 000000007686d000 CR4: 00000000001406e0
-  <4>[ 4209.109811] Stack:
-  <4>[ 4209.109812]  ffff880077b8fdd0 ffff880026d6e900 0000000000000000 ffffffff814280d0
-  <4>[ 4209.109814]  ffff880077b8fd40 0000000000000003 00000000db848817 ffff880077b8fd8c
-  <4>[ 4209.109815]  ffff880077b8fd88 ffff880077b8fd78 ffffffff8142826d 00000000000001b1
-  <4>[ 4209.109817] Call Trace:
-  <4>[ 4209.109840]  [<ffffffff814280d0>] ? __extract_hwseed+0x2d/0x2d
-  <4>[ 4209.109843]  [<ffffffff8142826d>] rdmsr_on_cpu+0x5d/0x90
-  <4>[ 4209.109847]  [<ffffffffc03052d7>] show_temp+0xa7/0xe0 [coretemp]
-  <4>[ 4209.109865]  [<ffffffff815544c0>] dev_attr_show+0x20/0x50
-  <4>[ 4209.109870]  [<ffffffff81833eb2>] ? mutex_lock+0x12/0x30
-  <4>[ 4209.109887]  [<ffffffff8128df5c>] sysfs_kf_seq_show+0xbc/0x130
-  <4>[ 4209.109890]  [<ffffffff8128c783>] kernfs_seq_show+0x23/0x30
-  <4>[ 4209.109893]  [<ffffffff8123210c>] seq_read+0xec/0x390
-  <4>[ 4209.109895]  [<ffffffff8128d07a>] kernfs_fop_read+0x10a/0x160
-  <4>[ 4209.109898]  [<ffffffff81345490>] ? security_file_permission+0xa0/0xc0
-  <4>[ 4209.109901]  [<ffffffff8120d648>] __vfs_read+0x18/0x40
-  <4>[ 4209.109903]  [<ffffffff8120dc16>] vfs_read+0x86/0x130
-  <4>[ 4209.109905]  [<ffffffff8120e965>] SyS_read+0x55/0xc0
-  <4>[ 4209.109907]  [<ffffffff81836032>] entry_SYSCALL_64_fastpath+0x16/0x71
-  <4>[ 4209.109908] Code: 25 28 00 00 00 75 70 48 83 c4 38 5b 41 5c 5d c3 48 8d 75 c8 48 89 d1 89 df 4c 89 e2 e8 12 fe ff ff 8b 55 e0 83 e2 01 74 cf f3 90 <8b> 55 e0 83 e2 01 75 f6 eb c3 8b 05 80 24 00 01 85 c0 75 85 80 
-  <6>[ 4209.141072] mptscsih: ioc0: attempting task abort! (sc=ffff880077c3c300)
-  <6>[ 4209.141083] sd 2:0:0:0: [sda] tag#0 CDB: Write(10) 2a 00 01 05 93 a8 00 00 10 00
-  <6>[ 4209.141087] mptscsih: ioc0: task abort: SUCCESS (rv=2002) (sc=ffff880077c3c300)
-  <6>[ 4219.129899] e1000: ens33 NIC Link is Down
-  <6>[ 4228.501938] e1000: ens33 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: None
+  <4>[ 4408.522249]  [<ffffffff81838add>] smp_apic_timer_interrupt+0x3d/0x50
+  <4>[ 4408.522252]  [<ffffffff81836da2>] apic_timer_interrupt+0x82/0x90
+  <4>[ 4408.522252]  <EOI>  [<ffffffffc024acd0>] ? vmballoon_work+0xb0/0x75b [vmw_balloon]
+  <4>[ 4408.522257]  [<ffffffff8109a495>] process_one_work+0x165/0x480
+  <4>[ 4408.522258]  [<ffffffff8109a7fb>] worker_thread+0x4b/0x4c0
+  <4>[ 4408.522260]  [<ffffffff8109a7b0>] ? process_one_work+0x480/0x480
+  <4>[ 4408.522261]  [<ffffffff8109a7b0>] ? process_one_work+0x480/0x480
+  <4>[ 4408.522263]  [<ffffffff810a09d8>] kthread+0xd8/0xf0
+  <4>[ 4408.522264]  [<ffffffff810a0900>] ? kthread_create_on_node+0x1e0/0x1e0
+  <4>[ 4408.522265]  [<ffffffff818363cf>] ret_from_fork+0x3f/0x70
+  <4>[ 4408.522266]  [<ffffffff810a0900>] ? kthread_create_on_node+0x1e0/0x1e0
+  <3>[ 4408.522298] 	0-...: (3 GPs behind) idle=c5c/0/0 softirq=41488/41504 fqs=0 
+  <3>[ 4408.522301] 	2-...: (3 GPs behind) idle=197/1/0 softirq=29853/29855 fqs=0 
+  <3>[ 4408.522303] 	3-...: (1 GPs behind) idle=a95/140000000000001/0 softirq=31677/31677 fqs=0 
+  <3>[ 4408.522304] 	(detected by 1, t=19948 jiffies, g=19617, c=19616, q=63)
+  <6>[ 4408.522313] Task dump for CPU 0:
+  <6>[ 4408.522314] swapper/0       R  running task        0     0      0 0x00000000
+  <4>[ 4408.522316]  ffffffff810b1900 ffffffff81e03ec8 ffffffff810fed9e 0000000081e11500
+  <4>[ 4408.522317]  ffff88007b60d640 ffffffff81f36a00 ffffffff81e03eb8 ffffffff81038d7e
+  <4>[ 4408.522319]  ffffffff81f36a00 ffffffff81e04000 ffffffff81e03ec8 ffffffff8103958f
+  <4>[ 4408.522320] Call Trace:
+  <4>[ 4408.522323]  [<ffffffff810b1900>] ? sched_clock_idle_sleep_event+0x10/0x20
+  <4>[ 4408.522325]  [<ffffffff810fed9e>] ? __tick_nohz_idle_enter+0xee/0x3e0
+  <4>[ 4408.522327]  [<ffffffff81038d7e>] ? default_idle+0x1e/0xe0
+  <4>[ 4408.522328]  [<ffffffff8103958f>] ? arch_cpu_idle+0xf/0x20
+  <4>[ 4408.522330]  [<ffffffff810c41ba>] ? default_idle_call+0x2a/0x40
+  <4>[ 4408.522332]  [<ffffffff810c4521>] ? cpu_startup_entry+0x2f1/0x350
+  <4>[ 4408.522334]  [<ffffffff818299ec>] ? rest_init+0x7c/0x80
+  <4>[ 4408.522336]  [<ffffffff81f5c011>] ? start_kernel+0x481/0x4a2
+  <4>[ 4408.522338]  [<ffffffff81f5b120>] ? early_idt_handler_array+0x120/0x120
+  <4>[ 4408.522340]  [<ffffffff81f5b339>] ? x86_64_start_reservations+0x2a/0x2c
+  <4>[ 4408.522341]  [<ffffffff81f5b485>] ? x86_64_start_kernel+0x14a/0x16d
+  <6>[ 4408.522342] Task dump for CPU 2:
+  <6>[ 4408.522343] swapper/2       R  running task        0     0      1 0x00000008
+  <4>[ 4408.522344]  ffffffffffffff10 ffffffff810645d6 0000000000000010 0000000000000246
+  <4>[ 4408.522345]  ffff88007af77e90 0000000000000018 ffff88007af77eb0 ffffffff81038d7e
+  <4>[ 4408.522346]  ffffffff81f36a00 ffff88007af78000 ffff88007af77ec0 ffffffff8103958f
+  <4>[ 4408.522347] Call Trace:
+  <4>[ 4408.522349]  [<ffffffff810645d6>] ? native_safe_halt+0x6/0x10
+  <4>[ 4408.522350]  [<ffffffff81038d7e>] ? default_idle+0x1e/0xe0
+  <4>[ 4408.522351]  [<ffffffff8103958f>] ? arch_cpu_idle+0xf/0x20
+  <4>[ 4408.522352]  [<ffffffff810c41ba>] ? default_idle_call+0x2a/0x40
+  <4>[ 4408.522354]  [<ffffffff810c4521>] ? cpu_startup_entry+0x2f1/0x350
+  <4>[ 4408.522355]  [<ffffffff81051714>] ? start_secondary+0x154/0x190
+  <6>[ 4408.522356] Task dump for CPU 3:
+  <6>[ 4408.522357] kworker/3:0     R  running task        0  3840      2 0x00000008
+  <6>[ 4408.522360] Workqueue: events_freezable vmballoon_work [vmw_balloon]
+  <4>[ 4408.522361]  ffff88007b6d6500 ffff88007b6db100 00000000000000c0 ffffffffc024d6c0
+  <4>[ 4408.522362]  ffff8800735ffe58 ffffffff8109a495 0000000000000000 ffff8800754404b0
+  <4>[ 4408.522363]  ffff88007b6d6500 0000000000000008 ffff88007b6d6518 ffff880075440480
+  <4>[ 4408.522364] Call Trace:
+  <4>[ 4408.522366]  [<ffffffff8109a495>] ? process_one_work+0x165/0x480
+  <4>[ 4408.522367]  [<ffffffff8109a7fb>] ? worker_thread+0x4b/0x4c0
+  <4>[ 4408.522368]  [<ffffffff8109a7b0>] ? process_one_work+0x480/0x480
+  <4>[ 4408.522370]  [<ffffffff8109a7b0>] ? process_one_work+0x480/0x480
+  <4>[ 4408.522371]  [<ffffffff810a09d8>] ? kthread+0xd8/0xf0
+  <4>[ 4408.522372]  [<ffffffff810a0900>] ? kthread_create_on_node+0x1e0/0x1e0
+  <4>[ 4408.522373]  [<ffffffff818363cf>] ? ret_from_fork+0x3f/0x70
+  <4>[ 4408.522374]  [<ffffffff810a0900>] ? kthread_create_on_node+0x1e0/0x1e0
+  <3>[ 4408.522376] rcu_sched kthread starved for 19948 jiffies! g19617 c19616 f0x0 s3 ->state=0x1
+  <6>[ 4408.522377] Task dump for CPU 0:
+  <6>[ 4408.522378] swapper/0       R  running task        0     0      0 0x00000000
+  <4>[ 4408.522381]  ffffffff810b1900 ffffffff81e03ec8 ffffffff810fed9e 0000000081e11500
+  <4>[ 4408.522382]  ffff88007b60d640 ffffffff81f36a00 ffffffff81e03eb8 ffffffff81038d7e
+  <4>[ 4408.522384]  ffffffff81f36a00 ffffffff81e04000 ffffffff81e03ec8 ffffffff8103958f
+  <4>[ 4408.522385] Call Trace:
+  <4>[ 4408.522396]  [<ffffffff810b1900>] ? sched_clock_idle_sleep_event+0x10/0x20
+  <4>[ 4408.522399]  [<ffffffff810fed9e>] ? __tick_nohz_idle_enter+0xee/0x3e0
+  <4>[ 4408.522400]  [<ffffffff81038d7e>] ? default_idle+0x1e/0xe0
+  <4>[ 4408.522402]  [<ffffffff8103958f>] ? arch_cpu_idle+0xf/0x20
+  <4>[ 4408.522403]  [<ffffffff810c41ba>] ? default_idle_call+0x2a/0x40
+  <4>[ 4408.522405]  [<ffffffff810c4521>] ? cpu_startup_entry+0x2f1/0x350
+  <4>[ 4408.522407]  [<ffffffff818299ec>] ? rest_init+0x7c/0x80
+  <4>[ 4408.522409]  [<ffffffff81f5c011>] ? start_kernel+0x481/0x4a2
+  <4>[ 4408.522411]  [<ffffffff81f5b120>] ? early_idt_handler_array+0x120/0x120
+  <4>[ 4408.522413]  [<ffffffff81f5b339>] ? x86_64_start_reservations+0x2a/0x2c
+  <4>[ 4408.522414]  [<ffffffff81f5b485>] ? x86_64_start_kernel+0x14a/0x16d
+  <6>[ 4408.522415] Task dump for CPU 2:
+  <6>[ 4408.522415] swapper/2       R  running task        0     0      1 0x00000008
+  <4>[ 4408.522417]  ffff88007af69b80 014a4d8083aee84e ffff88007b683da8 ffffffff810ae9c9
+  <4>[ 4408.522418]  0000000000000002 ffffffff81e527c0 ffff88007b683dc0 ffffffff810b11f7
+  <4>[ 4408.522461]  0000000000000003 ffff88007b683df0 ffffffff810e4b1e ffff88007b697a80
+  <4>[ 4408.522462] Call Trace:
+  <4>[ 4408.522462]  <IRQ>  [<ffffffff810ae9c9>] sched_show_task+0xa9/0x110
+  <4>[ 4408.522465]  [<ffffffff810b11f7>] dump_cpu_task+0x37/0x40
+  <4>[ 4408.522467]  [<ffffffff810e4b1e>] rcu_dump_cpu_stacks+0x8e/0xe0
+  <4>[ 4408.522469]  [<ffffffff810e88ba>] rcu_check_callbacks+0x4fa/0x7f0
+  <4>[ 4408.522470]  [<ffffffff810ab2c4>] ? check_preempt_curr+0x54/0x90
+  <4>[ 4408.522471]  [<ffffffff810ab319>] ? ttwu_do_wakeup+0x19/0xe0
+  <4>[ 4408.522473]  [<ffffffff810feb40>] ? tick_sched_handle.isra.14+0x60/0x60
+  <4>[ 4408.522474]  [<ffffffff810eee49>] update_process_times+0x39/0x60
+  <4>[ 4408.522475]  [<ffffffff810feb05>] tick_sched_handle.isra.14+0x25/0x60
+  <4>[ 4408.522476]  [<ffffffff810feb7d>] tick_sched_timer+0x3d/0x70
+  <4>[ 4408.522478]  [<ffffffff810ef782>] __hrtimer_run_queues+0x102/0x290
+  <4>[ 4408.522479]  [<ffffffff810eff48>] hrtimer_interrupt+0xa8/0x1a0
+  <4>[ 4408.522481]  [<ffffffff81052fa8>] local_apic_timer_interrupt+0x38/0x60
+  <4>[ 4408.522482]  [<ffffffff81838add>] smp_apic_timer_interrupt+0x3d/0x50
+  <4>[ 4408.522483]  [<ffffffff81836da2>] apic_timer_interrupt+0x82/0x90
+  <4>[ 4408.522484]  <EOI>  [<ffffffff810645d6>] ? native_safe_halt+0x6/0x10
+  <4>[ 4408.522487]  [<ffffffff81038d7e>] default_idle+0x1e/0xe0
+  <4>[ 4408.522488]  [<ffffffff8103958f>] arch_cpu_idle+0xf/0x20
+  <4>[ 4408.522490]  [<ffffffff810c41ba>] default_idle_call+0x2a/0x40
+  <4>[ 4408.522491]  [<ffffffff810c4521>] cpu_startup_entry+0x2f1/0x350
+  <4>[ 4408.522492]  [<ffffffff81051714>] start_secondary+0x154/0x190
+  <6>[ 4408.522493] Task dump for CPU 3:
+  <6>[ 4408.522494] in:imklog       R  running task        0  1019      1 0x00000000
+  <4>[ 4408.522495]  0000000000000000 ffffc9000079bf84 ffffc9000063da40 ffffc9000079bf80
+  <4>[ 4408.522496]  ffff8800797186b0 ffff8800797186b0 00000000007c6000 ffff8800357983c0
+  <4>[ 4408.522498]  0000000000000cdc 00000000007c6000 ffff8800357983c0 0000000000000cd8
+  <4>[ 4408.522499] Call Trace:
+  <4>[ 4408.522501]  [<ffffffff81103457>] ? do_futex+0x307/0x540
+  <4>[ 4408.522505]  [<ffffffff81289464>] ? kmsg_read+0x44/0x60
+  <4>[ 4408.522507]  [<ffffffff81103711>] ? SyS_futex+0x81/0x180
+  <4>[ 4408.522510]  [<ffffffff8120e989>] ? SyS_read+0x79/0xc0
+  <4>[ 4408.522512]  [<ffffffff81836032>] ? entry_SYSCALL_64_fastpath+0x16/0x71
 ----- kernel log end -----
 ----- /proc/modules -----
   ipt_MASQUERADE 16384 1 - Live 0x0000000000000000
@@ -12868,7 +12890,7 @@ ens33: socket failed: Operation not permitted
   Memory Range: 0xfeba0000-0xfebbffff (rw,non-prefetchable)
   Memory Range: 0xfebc0000-0xfebdffff (rw,non-prefetchable)
   Memory Range: 0xc0008000-0xc000bfff (ro,non-prefetchable,disabled)
-  IRQ: 17 (30023 events)
+  IRQ: 17 (30192 events)
   Module Alias: "pci:v00001000d00000030sv000015ADsd00001976bc01sc00i00"
   Driver Info #0:
     Driver Status: mptspi is active
@@ -13599,7 +13621,7 @@ ens33: socket failed: Operation not permitted
   Memory Range: 0xfdff0000-0xfdffffff (rw,non-prefetchable)
   I/O Ports: 0x2000-0x3fff (rw)
   Memory Range: 0xfd500000-0xfd50ffff (ro,non-prefetchable,disabled)
-  IRQ: 19 (34657 events)
+  IRQ: 19 (34915 events)
   HW Address: 00:0c:29:70:76:ea
   Link detected: yes
   Module Alias: "pci:v00008086d0000100Fsv000015ADsd00000750bc02sc00i00"
@@ -13649,7 +13671,7 @@ ens33: socket failed: Operation not permitted
   SubDevice: pci 0x0770 
   Driver: "ehci-pci"
   Memory Range: 0xfd5ef000-0xfd5effff (rw,non-prefetchable)
-  IRQ: 17 (30023 events)
+  IRQ: 17 (30192 events)
   Module Alias: "pci:v000015ADd00000770sv000015ADsd00000770bc0Csc03i20"
   Driver Info #0:
     Driver Status: ehci-hcd is not active
@@ -13674,7 +13696,7 @@ ens33: socket failed: Operation not permitted
   Driver Modules: "ahci"
   Memory Range: 0xfd5ee000-0xfd5eefff (rw,non-prefetchable)
   Memory Range: 0xfd510000-0xfd51ffff (ro,non-prefetchable,disabled)
-  IRQ: 56 (2030 events)
+  IRQ: 56 (2183 events)
   Module Alias: "pci:v000015ADd000007E0sv000015ADsd000007E0bc01sc06i01"
   Driver Info #0:
     Driver Status: ahci is active
