@@ -6,7 +6,7 @@ scanner_id_file="../scanner-id"
 
 if ! [ -f "$scanner_id_file" ]
 then
-  python -c"import random; print(random.randint(0, 1000000))" > "$scanner_id_file"
+  python3 -c"import random; print(random.randint(0, 1000000))" > "$scanner_id_file"
 fi
 scanner_id="`cat \"$scanner_id_file\"`"
 
@@ -24,7 +24,7 @@ sudo dmidecode -t memory > dmidecode-memory.out
 
 echo "Lese USB"
 
-lsusb > lsusb.out
+lsusb -vvv > lsusb_vvv.out
 
 echo "Lese Netzwerk"
 
@@ -32,6 +32,11 @@ ifconfig > ifconfig.out
 
 echo "Lese Festplatten"
 sudo fdisk -l > fdisk-l.out
+touch smartctl-a.out
+for i in /dev/sd*
+do
+  sudo smartctl -a "$i" >> smartctl-a.out
+done
 
 echo "Lese CPU"
 cat /proc/cpuinfo > proc_cpuinfo.out
@@ -43,6 +48,8 @@ lsb_release -a > lsb_release-a.out
 
 echo "Lese Hardwareinformationen"
 hwinfo > hwinfo.out
+lspci -vvv > lspci-vvv.out
+sudo dmidecode -t0 > dmidecode-t0.out
 
 echo "Beschreibe Besonderheiten"
 beschreibung=beschreibung.out
