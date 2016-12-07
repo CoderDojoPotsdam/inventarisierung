@@ -53,8 +53,15 @@ sudo dmidecode -t0 > dmidecode-t0.out
 
 echo "Beschreibe Besonderheiten"
 beschreibung=beschreibung.out
-echo "Besonderheiten von $id:" > "$beschreibung"
-nano "$beschreibung"
+(
+  echo "Typ: "
+  echo "Prozessor: "
+  echo
+) > "$beschreibung"
+if [ "$1" != "-n" ]
+then
+  nano "$beschreibung"
+fi
 
 echo "Speichere Kopie"
 copy="scanner_$scanner_id"
