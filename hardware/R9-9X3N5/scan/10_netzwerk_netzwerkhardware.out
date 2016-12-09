@@ -1,0 +1,8 @@
+00:19.0 Ethernet controller [0200]: Intel Corporation 82577LM Gigabit Network Connection [8086:10ea] (rev 06)
+	Subsystem: Lenovo 82577LM Gigabit Network Connection [17aa:2153]
+	Kernel driver in use: e1000e
+	Kernel modules: e1000e
+--
+03:00.0 Network controller [0280]: Intel Corporation Centrino Ultimate-N 6300 [8086:4238] (rev 35)
+	Subsystem: Intel Corporation Centrino Ultimate-N 6300 3x3 AGN [8086:1111]
+	Kernel driver in use: iwlwifi
