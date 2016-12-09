@@ -68,7 +68,7 @@
           <tr><td class="first">bus info: </td><td class="second"><div class="id">cpu@0</div></td></tr>
           <tr><td class="first">version: </td><td class="second">Intel(R) Core(TM)2 Duo CPU     L9300  @ 1.60GHz</td></tr>
           <tr><td class="first">slot: </td><td class="second">None</td></tr>
-          <tr><td class="first">size: </td><td class="second">1600MHz</td></tr>
+          <tr><td class="first">size: </td><td class="second">800MHz</td></tr>
           <tr><td class="first">capacity: </td><td class="second">1601MHz</td></tr>
           <tr><td class="first">width: </td><td class="second">64 bits</td></tr>
           <tr><td class="first">clock: </td><td class="second">266MHz</td></tr>
@@ -697,7 +697,7 @@
                             <tr><td class="first">size: </td><td class="second">6363MiB</td></tr>
                             <tr><td class="first">capacity: </td><td class="second">6363MiB</td></tr>
                             <tr><td class="first">capabilities: </td><td class="second"><dfn title="Primary partition">primary</dfn> <dfn title="Bootable partition (active)">bootable</dfn> <dfn title="">journaled</dfn> <dfn title="Extended Attributes">extended_attributes</dfn> <dfn title="4GB+ files">large_files</dfn> <dfn title="16TB+ files">huge_files</dfn> <dfn title="directories with 65000+ subdirs">dir_nlink</dfn> <dfn title="extent-based allocation">extents</dfn> <dfn title="">ext4</dfn> <dfn title="EXT2/EXT3">ext2</dfn> <dfn title="initialized volume">initialized</dfn> </td></tr>
-                            <tr><td class="first">configuration:</td><td class="second"><table summary="configuration of volume:0"><tr><td class="sub-first"> created</td><td>=</td><td>2016-12-09 08:40:01</td></tr><tr><td class="sub-first"> filesystem</td><td>=</td><td>ext4</td></tr><tr><td class="sub-first"> lastmountpoint</td><td>=</td><td>/</td></tr><tr><td class="sub-first"> modified</td><td>=</td><td>2016-12-09 16:45:50</td></tr><tr><td class="sub-first"> mount.fstype</td><td>=</td><td>ext4</td></tr><tr><td class="sub-first"> mount.options</td><td>=</td><td>rw,relatime,errors=remount-ro,data=ordered</td></tr><tr><td class="sub-first"> mounted</td><td>=</td><td>2016-12-09 16:08:59</td></tr><tr><td class="sub-first"> state</td><td>=</td><td>mounted</td></tr></table></td></tr>
+                            <tr><td class="first">configuration:</td><td class="second"><table summary="configuration of volume:0"><tr><td class="sub-first"> created</td><td>=</td><td>2016-12-09 08:40:01</td></tr><tr><td class="sub-first"> filesystem</td><td>=</td><td>ext4</td></tr><tr><td class="sub-first"> lastmountpoint</td><td>=</td><td>/</td></tr><tr><td class="sub-first"> modified</td><td>=</td><td>2016-12-09 16:50:25</td></tr><tr><td class="sub-first"> mount.fstype</td><td>=</td><td>ext4</td></tr><tr><td class="sub-first"> mount.options</td><td>=</td><td>rw,relatime,errors=remount-ro,data=ordered</td></tr><tr><td class="sub-first"> mounted</td><td>=</td><td>2016-12-09 16:45:53</td></tr><tr><td class="sub-first"> state</td><td>=</td><td>mounted</td></tr></table></td></tr>
  </tbody>                         </table></div>
                          </div>
 <div class="indented">
