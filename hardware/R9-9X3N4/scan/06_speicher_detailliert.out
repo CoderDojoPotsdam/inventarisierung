@@ -1,0 +1,52 @@
+  *-firmware
+       description: BIOS
+       vendor: LENOVO
+       physical id: 0
+       version: 6MET81WW (1.41 )
+       date: 10/26/2010
+       size: 128KiB
+       capacity: 8128KiB
+       capabilities: pci pcmcia pnp upgrade shadowing escd cdboot bootselect edd int13floppy720 int5printscreen int9keyboard int14serial int17printer int10video acpi usb biosbootspecification
+  *-cache:0
+       description: L1 cache
+       physical id: a
+       slot: Internal L1 Cache
+       size: 32KiB
+       capacity: 32KiB
+       capabilities: asynchronous internal write-through data
+       configuration: level=1
+  *-cache:1
+       description: L2 cache
+       physical id: b
+       slot: Internal L2 Cache
+       size: 256KiB
+       capacity: 256KiB
+       capabilities: burst internal write-through unified
+       configuration: level=2
+  *-cache:2
+       description: L3 cache
+       physical id: c
+       slot: Internal L3 Cache
+       size: 3MiB
+       capacity: 8MiB
+       capabilities: burst internal write-back
+       configuration: level=3
+  *-memory
+       description: System Memory
+       physical id: 2a
+       slot: System board or motherboard
+       size: 4GiB
+     *-bank:0
+          description: SODIMM DDR3 Synchronous 1334 MHz (0.7 ns)
+          product: HMT351S6BFR8C-H9
+          vendor: Hynix Semiconductor (Hyundai Electronics)
+          physical id: 0
+          serial: 2F69C3D9
+          slot: DIMM 1
+          size: 4GiB
+          width: 64 bits
+          clock: 1334MHz (0.7ns)
+     *-bank:1
+          description: SODIMM Synchronous [empty]
+          physical id: 1
+          slot: DIMM 2
