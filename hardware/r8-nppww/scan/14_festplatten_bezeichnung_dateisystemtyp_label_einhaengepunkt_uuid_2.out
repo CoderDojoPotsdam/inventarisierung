@@ -1,0 +1,6 @@
+NAME   UUID                                 FSTYPE  SIZE LABEL MOUNTPOINT
+sda                                                 7.5G       
+├─sda1 b9fc048b-f75f-462e-9b11-86669ba9f6e0 ext4    6.5G       /
+├─sda2                                                1K       
+└─sda5 247c12ce-659e-42d9-b9f0-709428332871 swap   1022M       [SWAP]
+sr0                                                1024M       
