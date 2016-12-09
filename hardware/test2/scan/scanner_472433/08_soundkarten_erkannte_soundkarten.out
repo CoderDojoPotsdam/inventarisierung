@@ -1,4 +1,0 @@
-00:1b.0 Audio device [0403]: Intel Corporation 5 Series/3400 Series Chipset High Definition Audio [8086:3b56] (rev 06)
-	Subsystem: Lenovo 5 Series/3400 Series Chipset High Definition Audio [17aa:215e]
-	Kernel driver in use: snd_hda_intel
-	Kernel modules: snd_hda_intel
