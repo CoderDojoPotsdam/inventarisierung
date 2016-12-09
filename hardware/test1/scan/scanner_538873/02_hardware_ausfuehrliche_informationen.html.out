@@ -68,7 +68,7 @@
           <tr><td class="first">bus info: </td><td class="second"><div class="id">cpu@0</div></td></tr>
           <tr><td class="first">version: </td><td class="second">Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz</td></tr>
           <tr><td class="first">slot: </td><td class="second">None</td></tr>
-          <tr><td class="first">size: </td><td class="second">2400MHz</td></tr>
+          <tr><td class="first">size: </td><td class="second">2133MHz</td></tr>
           <tr><td class="first">capacity: </td><td class="second">2400MHz</td></tr>
           <tr><td class="first">width: </td><td class="second">64 bits</td></tr>
           <tr><td class="first">clock: </td><td class="second">133MHz</td></tr>
@@ -527,9 +527,9 @@
                       <tr><td class="first">vendor: </td><td class="second">Verbatim</td></tr>
                       <tr><td class="first">physical id: </td><td class="second"><div class="id">1</div></td></tr>
                       <tr><td class="first">bus info: </td><td class="second"><div class="id">usb@2:1.1</div></td></tr>
-                      <tr><td class="first">logical name: </td><td class="second"><div class="id">scsi0</div></td></tr>
+                      <tr><td class="first">logical name: </td><td class="second"><div class="id">scsi6</div></td></tr>
                       <tr><td class="first">version: </td><td class="second">1.00</td></tr>
-                      <tr><td class="first">serial: </td><td class="second">90006666C820BD02</td></tr>
+                      <tr><td class="first">serial: </td><td class="second">90006661ED1C7467</td></tr>
                       <tr><td class="first">capabilities: </td><td class="second"><dfn title="USB 2.0">usb-2.00</dfn> <dfn title="SCSI">scsi</dfn> <dfn title="Emulated device">emulated</dfn> <dfn title="SCSI host adapter">scsi-host</dfn> </td></tr>
                       <tr><td class="first">configuration:</td><td class="second"><table summary="configuration of usb"><tr><td class="sub-first"> driver</td><td>=</td><td>usb-storage</td></tr><tr><td class="sub-first"> maxpower</td><td>=</td><td>200mA</td></tr><tr><td class="sub-first"> speed</td><td>=</td><td>480Mbit/s</td></tr></table></td></tr>
  </tbody>                   </table></div>
@@ -540,7 +540,7 @@
  <tbody>
                          <tr><td class="first">description: </td><td class="second">SCSI Disk</td></tr>
                          <tr><td class="first">physical id: </td><td class="second"><div class="id">0.0.0</div></td></tr>
-                         <tr><td class="first">bus info: </td><td class="second"><div class="id">scsi@0:0.0.0</div></td></tr>
+                         <tr><td class="first">bus info: </td><td class="second"><div class="id">scsi@6:0.0.0</div></td></tr>
                          <tr><td class="first">logical name: </td><td class="second"><div class="id">/dev/sda</div></td></tr>
                          <tr><td class="first">size: </td><td class="second">7388MiB (7746MB)</td></tr>
                          <tr><td class="first">capabilities: </td><td class="second"><dfn title="Partitioned disk">partitioned</dfn> <dfn title="MS-DOS partition table">partitioned:dos</dfn> </td></tr>
@@ -554,7 +554,7 @@
                             <tr><td class="first">description: </td><td class="second">EXT4 volume</td></tr>
                             <tr><td class="first">vendor: </td><td class="second">Linux</td></tr>
                             <tr><td class="first">physical id: </td><td class="second"><div class="id">1</div></td></tr>
-                            <tr><td class="first">bus info: </td><td class="second"><div class="id">scsi@0:0.0.0,1</div></td></tr>
+                            <tr><td class="first">bus info: </td><td class="second"><div class="id">scsi@6:0.0.0,1</div></td></tr>
                             <tr><td class="first">logical name: </td><td class="second"><div class="id">/dev/sda1</div></td></tr>
                             <tr><td class="first">logical name: </td><td class="second"><div class="id">/</div></td></tr>
                             <tr><td class="first">version: </td><td class="second">1.0</td></tr>
@@ -562,7 +562,7 @@
                             <tr><td class="first">size: </td><td class="second">6363MiB</td></tr>
                             <tr><td class="first">capacity: </td><td class="second">6363MiB</td></tr>
                             <tr><td class="first">capabilities: </td><td class="second"><dfn title="Primary partition">primary</dfn> <dfn title="Bootable partition (active)">bootable</dfn> <dfn title="">journaled</dfn> <dfn title="Extended Attributes">extended_attributes</dfn> <dfn title="4GB+ files">large_files</dfn> <dfn title="16TB+ files">huge_files</dfn> <dfn title="directories with 65000+ subdirs">dir_nlink</dfn> <dfn title="extent-based allocation">extents</dfn> <dfn title="">ext4</dfn> <dfn title="EXT2/EXT3">ext2</dfn> <dfn title="initialized volume">initialized</dfn> </td></tr>
-                            <tr><td class="first">configuration:</td><td class="second"><table summary="configuration of volume:0"><tr><td class="sub-first"> created</td><td>=</td><td>2016-12-09 08:40:01</td></tr><tr><td class="sub-first"> filesystem</td><td>=</td><td>ext4</td></tr><tr><td class="sub-first"> lastmountpoint</td><td>=</td><td>/media/coderdojo/c7aa6a46-9ecc-4aeb-9c6e-1554c62d8666</td></tr><tr><td class="sub-first"> modified</td><td>=</td><td>2016-12-09 10:25:44</td></tr><tr><td class="sub-first"> mount.fstype</td><td>=</td><td>ext4</td></tr><tr><td class="sub-first"> mount.options</td><td>=</td><td>rw,relatime,errors=remount-ro,data=ordered</td></tr><tr><td class="sub-first"> mounted</td><td>=</td><td>2016-12-09 10:19:03</td></tr><tr><td class="sub-first"> state</td><td>=</td><td>mounted</td></tr></table></td></tr>
+                            <tr><td class="first">configuration:</td><td class="second"><table summary="configuration of volume:0"><tr><td class="sub-first"> created</td><td>=</td><td>2016-12-09 08:40:01</td></tr><tr><td class="sub-first"> filesystem</td><td>=</td><td>ext4</td></tr><tr><td class="sub-first"> lastmountpoint</td><td>=</td><td>/tmp/root_reinst.GZjihL</td></tr><tr><td class="sub-first"> modified</td><td>=</td><td>2016-12-09 11:53:39</td></tr><tr><td class="sub-first"> mount.fstype</td><td>=</td><td>ext4</td></tr><tr><td class="sub-first"> mount.options</td><td>=</td><td>rw,relatime,errors=remount-ro,data=ordered</td></tr><tr><td class="sub-first"> mounted</td><td>=</td><td>2016-12-09 11:52:07</td></tr><tr><td class="sub-first"> state</td><td>=</td><td>mounted</td></tr></table></td></tr>
  </tbody>                         </table></div>
                          </div>
 <div class="indented">
@@ -572,7 +572,7 @@
  <tbody>
                             <tr><td class="first">description: </td><td class="second">Extended partition</td></tr>
                             <tr><td class="first">physical id: </td><td class="second"><div class="id">2</div></td></tr>
-                            <tr><td class="first">bus info: </td><td class="second"><div class="id">scsi@0:0.0.0,2</div></td></tr>
+                            <tr><td class="first">bus info: </td><td class="second"><div class="id">scsi@6:0.0.0,2</div></td></tr>
                             <tr><td class="first">logical name: </td><td class="second"><div class="id">/dev/sda2</div></td></tr>
                             <tr><td class="first">size: </td><td class="second">1022MiB</td></tr>
                             <tr><td class="first">capacity: </td><td class="second">1022MiB</td></tr>
@@ -781,7 +781,7 @@
  <thead><tr><td class="first">id:</td><td class="second"><div class="id">scsi</div></td></tr></thead>
  <tbody>
           <tr><td class="first">physical id: </td><td class="second"><div class="id">1</div></td></tr>
-          <tr><td class="first">logical name: </td><td class="second"><div class="id">scsi2</div></td></tr>
+          <tr><td class="first">logical name: </td><td class="second"><div class="id">scsi1</div></td></tr>
           <tr><td class="first">capabilities: </td><td class="second"><dfn title="Emulated device">emulated</dfn> </td></tr>
  </tbody>       </table></div>
 <div class="indented">
@@ -793,7 +793,7 @@
              <tr><td class="first">product: </td><td class="second">DVDRAM GT30N</td></tr>
              <tr><td class="first">vendor: </td><td class="second">HL-DT-ST</td></tr>
              <tr><td class="first">physical id: </td><td class="second"><div class="id">0.0.0</div></td></tr>
-             <tr><td class="first">bus info: </td><td class="second"><div class="id">scsi@2:0.0.0</div></td></tr>
+             <tr><td class="first">bus info: </td><td class="second"><div class="id">scsi@1:0.0.0</div></td></tr>
              <tr><td class="first">logical name: </td><td class="second"><div class="id">/dev/cdrom</div></td></tr>
              <tr><td class="first">logical name: </td><td class="second"><div class="id">/dev/cdrw</div></td></tr>
              <tr><td class="first">logical name: </td><td class="second"><div class="id">/dev/dvd</div></td></tr>
