@@ -1,0 +1,54 @@
+H/W path                     Device      Class          Description
+===================================================================
+                                         system         4384WSD
+/0                                       bus            4384WSD
+/0/0                                     memory         128KiB BIOS
+/0/6                                     processor      Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
+/0/6/a                                   memory         32KiB L1 cache
+/0/6/b                                   memory         256KiB L2 cache
+/0/6/c                                   memory         3MiB L3 cache
+/0/2a                                    memory         4GiB System Memory
+/0/2a/0                                  memory         4GiB SODIMM DDR3 Synchronous 1334 MHz (0.7 ns)
+/0/2a/1                                  memory         SODIMM Synchronous [empty]
+/0/100                                   bridge         Core Processor DRAM Controller
+/0/100/2                                 display        Core Processor Integrated Graphics Controller
+/0/100/16                                communication  5 Series/3400 Series Chipset HECI Controller
+/0/100/16.3                              communication  5 Series/3400 Series Chipset KT Controller
+/0/100/19                    enp0s25     network        82577LM Gigabit Network Connection
+/0/100/1a                                bus            5 Series/3400 Series Chipset USB2 Enhanced Host Controller
+/0/100/1a/1                  usb1        bus            EHCI Host Controller
+/0/100/1a/1/1                            bus            Integrated Rate Matching Hub
+/0/100/1a/1/1/6                          multimedia     Integrated Camera
+/0/100/1b                                multimedia     5 Series/3400 Series Chipset High Definition Audio
+/0/100/1c                                bridge         5 Series/3400 Series Chipset PCI Express Root Port 1
+/0/100/1c.1                              bridge         5 Series/3400 Series Chipset PCI Express Root Port 2
+/0/100/1c.1/0                wlp3s0      network        Centrino Ultimate-N 6300
+/0/100/1c.3                              bridge         5 Series/3400 Series Chipset PCI Express Root Port 4
+/0/100/1c.4                              bridge         5 Series/3400 Series Chipset PCI Express Root Port 5
+/0/100/1c.4/0                            generic        MMC/SD Host Controller
+/0/100/1c.4/0.1                          generic        R5U2xx (R5U230 / R5U231 / R5U241) [Memory Stick Host Controller]
+/0/100/1c.4/0.3                          bus            R5C832 PCIe IEEE 1394 Controller
+/0/100/1d                                bus            5 Series/3400 Series Chipset USB2 Enhanced Host Controller
+/0/100/1d/1                  usb2        bus            EHCI Host Controller
+/0/100/1d/1/1                            bus            Integrated Rate Matching Hub
+/0/100/1d/1/1/1              scsi0       storage        Cruzer Switch
+/0/100/1d/1/1/1/0.0.0        /dev/sda    disk           15GB Cruzer Switch
+/0/100/1d/1/1/1/0.0.0/0      /dev/sda    disk           15GB 
+/0/100/1d/1/1/1/0.0.0/0/1    /dev/sda1   volume         6363MiB EXT4 volume
+/0/100/1d/1/1/1/0.0.0/0/2    /dev/sda2   volume         1022MiB Extended partition
+/0/100/1d/1/1/1/0.0.0/0/2/5  /dev/sda5   volume         1022MiB W95 FAT32 partition
+/0/100/1d/1/1/4                          generic        Qualcomm Gobi 2000
+/0/100/1e                                bridge         82801 Mobile PCI Bridge
+/0/100/1f                                bridge         QM57 Chipset LPC Interface Controller
+/0/100/1f.2                              storage        5 Series/3400 Series Chipset 6 port SATA AHCI Controller
+/0/100/1f.3                              bus            5 Series/3400 Series Chipset SMBus Controller
+/0/100/1f.6                              generic        5 Series/3400 Series Chipset Thermal Subsystem
+/0/101                                   bridge         Core Processor QuickPath Architecture Generic Non-core Registers
+/0/102                                   bridge         Core Processor QuickPath Architecture System Address Decoder
+/0/103                                   bridge         Core Processor QPI Link 0
+/0/104                                   bridge         1st Generation Core i3/5/7 Processor QPI Physical 0
+/0/105                                   bridge         1st Generation Core i3/5/7 Processor Reserved
+/0/106                                   bridge         1st Generation Core i3/5/7 Processor Reserved
+/0/1                         scsi2       storage        
+/0/1/0.0.0                   /dev/cdrom  disk           DVDRAM GT30N
+/1                                       power          42T4799
