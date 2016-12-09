@@ -7,7 +7,7 @@ kernel version is 4.4
 ----- /proc/cmdline end -----
 debug = 0xff7ffff7
 probe = 0x15938fcdaa17fcf9fffe (+memory +pci +isapnp +net +floppy +misc +misc.serial +misc.par +misc.floppy +serial +cpu +bios +monitor +mouse +scsi +usb -usb.mods +modem +modem.usb +parallel +parallel.lp +parallel.zip -isa -isa.isdn +isdn +kbd +prom +sbus +int +braille +braille.alva +braille.fhp +braille.ht -ignx11 +sys -bios.vbe -isapnp.old -isapnp.new -isapnp.mod +braille.baum -manual +fb +pppoe -scan +pcmcia +fork -parallel.imm +s390 +cpuemu -sysfs -s390disks +udev +block +block.cdrom +block.part +edd +edd.mod -bios.ddc -bios.fb -bios.mode +input +block.mods +bios.vesa -cpuemu.debug -scsi.noserial +wlan -bios.crc -hal +bios.vram +bios.acpi -bios.ddc.ports=0 +modules.pata -net.eeprom +x86emu=dump -max -lxrc)
-shm: attached segment 98307 at 0x7fd045d03000
+shm: attached segment 131075 at 0x7fe9557ca000
 >> hal.1: read hal data
 >> floppy.1: get nvram
 ----- /proc/nvram -----
@@ -130,28 +130,28 @@ x86emu: could not init vm
 ----- /proc/ioports end -----
 ----- /proc/interrupts -----
     0:         46          0          0          0   IO-APIC   2-edge      timer
-    1:          4         55        151         69   IO-APIC   1-edge      i8042
+    1:          4         73        809        193   IO-APIC   1-edge      i8042
     8:          0          1          0          0   IO-APIC   8-edge      rtc0
-    9:        114        111        114        118   IO-APIC   9-fasteoi   acpi
+    9:        114        120        125        129   IO-APIC   9-fasteoi   acpi
    12:        481        508        463        496   IO-APIC  12-edge      i8042
    16:          0          0          0          0   IO-APIC  16-fasteoi   mmc0
    17:          0          1          1          2   IO-APIC  17-fasteoi   rtl_pci
-   19:       3184       5041       3963       3606   IO-APIC  19-fasteoi   ehci_hcd:usb2, ips, firewire_ohci
+   19:       3184       5041       7561       5867   IO-APIC  19-fasteoi   ehci_hcd:usb2, ips, firewire_ohci
    23:         55         47         47         54   IO-APIC  23-fasteoi   ehci_hcd:usb1
-   24:         26         32        266         29   PCI-MSI 512000-edge      0000:00:1f.2
-   25:          0      27583          1          3   PCI-MSI 409600-edge      enp0s25
-   26:         19         18         13         12   PCI-MSI 32768-edge      i915
+   24:         26         32        886         29   PCI-MSI 512000-edge      0000:00:1f.2
+   25:          0     153422          1          3   PCI-MSI 409600-edge      enp0s25
+   26:         19         18         13         15   PCI-MSI 32768-edge      i915
    27:          7          6          7          5   PCI-MSI 360448-edge      mei_me
    28:         82         86         85         86   PCI-MSI 442368-edge      snd_hda_intel
-  NMI:         12          7        106          9   Non-maskable interrupts
-  LOC:       6015       5529      22436       4371   Local timer interrupts
+  NMI:         14         18        109         14   Non-maskable interrupts
+  LOC:       8739       9161      25873       6620   Local timer interrupts
   SPU:          0          0          0          0   Spurious interrupts
-  PMI:         12          7        106          9   Performance monitoring interrupts
+  PMI:         14         18        109         14   Performance monitoring interrupts
   IWI:          0          0          1          0   IRQ work interrupts
   RTR:          2          0          0          0   APIC ICR read retries
-  RES:        868        700        979        577   Rescheduling interrupts
-  CAL:        929        902        988       1123   Function call interrupts
-  TLB:         95         73         51         38   TLB shootdowns
+  RES:       1299        811       1295        996   Rescheduling interrupts
+  CAL:        973        952       1041       1187   Function call interrupts
+  TLB:         95         77         53         42   TLB shootdowns
   TRM:          0          0          0          0   Thermal event interrupts
   THR:          0          0          0          0   Threshold APIC interrupts
   DFR:          0          0          0          0   Deferred Error APIC interrupts
@@ -179,7 +179,7 @@ x86emu: could not init vm
   model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
   stepping	: 2
   microcode	: 0xc
-  cpu MHz		: 1199.000
+  cpu MHz		: 1333.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -206,7 +206,7 @@ x86emu: could not init vm
   model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
   stepping	: 2
   microcode	: 0xc
-  cpu MHz		: 1199.000
+  cpu MHz		: 1866.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -233,7 +233,7 @@ x86emu: could not init vm
   model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
   stepping	: 2
   microcode	: 0xc
-  cpu MHz		: 1866.000
+  cpu MHz		: 1466.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -260,7 +260,7 @@ x86emu: could not init vm
   model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
   stepping	: 2
   microcode	: 0xc
-  cpu MHz		: 1733.000
+  cpu MHz		: 1599.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -1093,17 +1093,17 @@ i/o:0 0x2000 - 0x20ff (0x100) "0000:03:00.0"
 i/o:0 0x2000 - 0x20ff (0x100) "rtl_pci"
 i/o:0 0x3000 - 0x3fff (0x1000) "PCI Bus 0000:05"
 irq:0  0 (       46) "2-edge      timer"
-irq:0  1 (      279) "1-edge      i8042"
+irq:0  1 (     1079) "1-edge      i8042"
 irq:0  8 (        1) "8-edge      rtc0"
-irq:0  9 (      457) "9-fasteoi   acpi"
+irq:0  9 (      488) "9-fasteoi   acpi"
 irq:0 12 (     1948) "12-edge      i8042"
 irq:0 16 (        0) "16-fasteoi   mmc0"
 irq:0 17 (        4) "17-fasteoi   rtl_pci"
-irq:0 19 (    15794) "19-fasteoi   ehci_hcd:usb2" "ips" "firewire_ohci"
+irq:0 19 (    21653) "19-fasteoi   ehci_hcd:usb2" "ips" "firewire_ohci"
 irq:0 23 (      203) "23-fasteoi   ehci_hcd:usb1"
-irq:0 24 (      353) "512000-edge      0000:00:1f.2"
-irq:0 25 (    27587) "409600-edge      enp0s25"
-irq:0 26 (       62) "32768-edge      i915"
+irq:0 24 (      973) "512000-edge      0000:00:1f.2"
+irq:0 25 (   153426) "409600-edge      enp0s25"
+irq:0 26 (       65) "32768-edge      i915"
 irq:0 27 (       25) "360448-edge      mei_me"
 irq:0 28 (      339) "442368-edge      snd_hda_intel"
 dma:1 4 "cascade"
@@ -1676,11 +1676,11 @@ sysfs: no such class: usb
 ----- return code: ? -----
 >> edd.2: edd info
 >> modem.1: serial
-******  started child process 3100 (15s/120s)  ******
-******  stopped child process 3100 (120s)  ******
+******  started child process 3685 (15s/120s)  ******
+******  stopped child process 3685 (120s)  ******
 >> mouse.2: serial
-******  started child process 3101 (20s/20s)  ******
-******  stopped child process 3101 (20s)  ******
+******  started child process 3686 (20s/20s)  ******
+******  stopped child process 3686 (20s)  ******
 >> input.1: joydev mod
 >> input.1.1: evdev mod
 ----- exec: "/sbin/modprobe evdev " -----
@@ -1982,7 +1982,7 @@ bus = 3, name = Integrated Camera
   model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
   stepping	: 2
   microcode	: 0xc
-  cpu MHz		: 1333.000
+  cpu MHz		: 1733.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -2009,7 +2009,7 @@ bus = 3, name = Integrated Camera
   model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
   stepping	: 2
   microcode	: 0xc
-  cpu MHz		: 1199.000
+  cpu MHz		: 1333.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -2036,7 +2036,7 @@ bus = 3, name = Integrated Camera
   model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
   stepping	: 2
   microcode	: 0xc
-  cpu MHz		: 1733.000
+  cpu MHz		: 1599.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -2063,7 +2063,7 @@ bus = 3, name = Integrated Camera
   model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
   stepping	: 2
   microcode	: 0xc
-  cpu MHz		: 1733.000
+  cpu MHz		: 1599.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -2889,7 +2889,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=0
   E: PRIMARY_DEVICE_FOR_DISPLAY=1
   E: SUBSYSTEM=drm
-  E: TAGS=:seat:uaccess:master-of-seat:
+  E: TAGS=:master-of-seat:seat:uaccess:
   E: USEC_INITIALIZED=15780332
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-DP-1
@@ -2898,7 +2898,7 @@ enp0s25: socket failed: Operation not permitted
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: SUBSYSTEM=drm
-  E: TAGS=:seat:master-of-seat:
+  E: TAGS=:master-of-seat:seat:
   E: USEC_INITIALIZED=15861046
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-DP-2
@@ -2907,7 +2907,7 @@ enp0s25: socket failed: Operation not permitted
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: SUBSYSTEM=drm
-  E: TAGS=:seat:master-of-seat:
+  E: TAGS=:master-of-seat:seat:
   E: USEC_INITIALIZED=15861472
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-DP-3
@@ -2916,7 +2916,7 @@ enp0s25: socket failed: Operation not permitted
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: SUBSYSTEM=drm
-  E: TAGS=:seat:master-of-seat:
+  E: TAGS=:master-of-seat:seat:
   E: USEC_INITIALIZED=15862946
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-HDMI-A-1
@@ -2925,7 +2925,7 @@ enp0s25: socket failed: Operation not permitted
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: SUBSYSTEM=drm
-  E: TAGS=:seat:master-of-seat:
+  E: TAGS=:master-of-seat:seat:
   E: USEC_INITIALIZED=15859429
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-HDMI-A-2
@@ -2934,7 +2934,7 @@ enp0s25: socket failed: Operation not permitted
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: SUBSYSTEM=drm
-  E: TAGS=:seat:master-of-seat:
+  E: TAGS=:master-of-seat:seat:
   E: USEC_INITIALIZED=15873302
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-HDMI-A-3
@@ -2943,7 +2943,7 @@ enp0s25: socket failed: Operation not permitted
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: SUBSYSTEM=drm
-  E: TAGS=:seat:master-of-seat:
+  E: TAGS=:master-of-seat:seat:
   E: USEC_INITIALIZED=15866778
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-LVDS-1
@@ -2952,7 +2952,7 @@ enp0s25: socket failed: Operation not permitted
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: SUBSYSTEM=drm
-  E: TAGS=:seat:master-of-seat:
+  E: TAGS=:master-of-seat:seat:
   E: USEC_INITIALIZED=15870990
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-LVDS-1/intel_backlight
@@ -2970,7 +2970,7 @@ enp0s25: socket failed: Operation not permitted
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: SUBSYSTEM=drm
-  E: TAGS=:seat:master-of-seat:
+  E: TAGS=:master-of-seat:seat:
   E: USEC_INITIALIZED=15873162
   
   P: /devices/pci0000:00/0000:00:02.0/drm/controlD64
@@ -3009,7 +3009,7 @@ enp0s25: socket failed: Operation not permitted
   E: MAJOR=29
   E: MINOR=0
   E: SUBSYSTEM=graphics
-  E: TAGS=:seat:master-of-seat:
+  E: TAGS=:master-of-seat:seat:
   E: USEC_INITIALIZED=15777971
   
   P: /devices/pci0000:00/0000:00:02.0/i2c-0
@@ -3672,7 +3672,7 @@ enp0s25: socket failed: Operation not permitted
   N: video0
   S: v4l/by-id/usb-Chicony_Electronics_Co.__Ltd._Integrated_Camera-video-index0
   S: v4l/by-path/pci-0000:00:1a.0-usb-0:1.6:1.0-video-index0
-  E: DEVLINKS=/dev/v4l/by-id/usb-Chicony_Electronics_Co.__Ltd._Integrated_Camera-video-index0 /dev/v4l/by-path/pci-0000:00:1a.0-usb-0:1.6:1.0-video-index0
+  E: DEVLINKS=/dev/v4l/by-path/pci-0000:00:1a.0-usb-0:1.6:1.0-video-index0 /dev/v4l/by-id/usb-Chicony_Electronics_Co.__Ltd._Integrated_Camera-video-index0
   E: DEVNAME=/dev/video0
   E: DEVPATH=/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0/video4linux/video0
   E: ID_BUS=usb
@@ -4484,7 +4484,7 @@ enp0s25: socket failed: Operation not permitted
   N: sda2
   S: disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0-part2
   S: disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0-part2
-  E: DEVLINKS=/dev/disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0-part2 /dev/disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0-part2
+  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0-part2 /dev/disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0-part2
   E: DEVNAME=/dev/sda2
   E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/block/sda/sda2
   E: DEVTYPE=partition
@@ -4525,7 +4525,7 @@ enp0s25: socket failed: Operation not permitted
   S: disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0-part5
   S: disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0-part5
   S: disk/by-uuid/247c12ce-659e-42d9-b9f0-709428332871
-  E: DEVLINKS=/dev/disk/by-uuid/247c12ce-659e-42d9-b9f0-709428332871 /dev/disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0-part5 /dev/disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0-part5
+  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0-part5 /dev/disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0-part5 /dev/disk/by-uuid/247c12ce-659e-42d9-b9f0-709428332871
   E: DEVNAME=/dev/sda5
   E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/block/sda/sda5
   E: DEVTYPE=partition
@@ -4753,7 +4753,7 @@ enp0s25: socket failed: Operation not permitted
   S: disk/by-path/pci-0000:00:1f.2-ata-2
   S: dvd
   S: dvdrw
-  E: DEVLINKS=/dev/cdrw /dev/dvd /dev/dvdrw /dev/disk/by-id/ata-HL-DT-STDVDRAM_GT30N_M2EA5411839 /dev/cdrom /dev/disk/by-path/pci-0000:00:1f.2-ata-2
+  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:1f.2-ata-2 /dev/disk/by-id/ata-HL-DT-STDVDRAM_GT30N_M2EA5411839 /dev/cdrw /dev/dvd /dev/dvdrw /dev/cdrom
   E: DEVNAME=/dev/sr0
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sr0
   E: DEVTYPE=disk
@@ -8879,7 +8879,7 @@ enp0s25: socket failed: Operation not permitted
   Memory Range: 0xf2000000-0xf23fffff (rw,non-prefetchable)
   Memory Range: 0xd0000000-0xdfffffff (ro,non-prefetchable)
   I/O Ports: 0x1800-0x1807 (rw)
-  IRQ: 26 (62 events)
+  IRQ: 26 (65 events)
   I/O Ports: 0x3c0-0x3df (rw)
   Module Alias: "pci:v00008086d00000046sv000017AAsd0000215Abc03sc00i00"
   Driver Info #0:
@@ -8946,7 +8946,7 @@ enp0s25: socket failed: Operation not permitted
   Memory Range: 0xf2600000-0xf261ffff (rw,non-prefetchable)
   Memory Range: 0xf2625000-0xf2625fff (rw,non-prefetchable)
   I/O Ports: 0x1820-0x183f (rw)
-  IRQ: 25 (27587 events)
+  IRQ: 25 (153426 events)
   HW Address: 5c:ff:35:04:97:d0
   Link detected: yes
   Module Alias: "pci:v00008086d000010EAsv000017AAsd00002153bc02sc00i00"
@@ -9092,7 +9092,7 @@ enp0s25: socket failed: Operation not permitted
   Revision: 0x06
   Driver: "ehci-pci"
   Memory Range: 0xf2828400-0xf28287ff (rw,non-prefetchable)
-  IRQ: 19 (15794 events)
+  IRQ: 19 (21653 events)
   Module Alias: "pci:v00008086d00003B34sv000017AAsd00002163bc0Csc03i20"
   Driver Info #0:
     Driver Status: ehci-hcd is not active
@@ -9154,7 +9154,7 @@ enp0s25: socket failed: Operation not permitted
   I/O Ports: 0x1810-0x1813 (rw)
   I/O Ports: 0x1840-0x185f (rw)
   Memory Range: 0xf2827000-0xf28277ff (rw,non-prefetchable)
-  IRQ: 24 (353 events)
+  IRQ: 24 (973 events)
   Module Alias: "pci:v00008086d00003B2Fsv000017AAsd00002168bc01sc06i01"
   Driver Info #0:
     Driver Status: ahci is active
@@ -9197,7 +9197,7 @@ enp0s25: socket failed: Operation not permitted
   Driver: "intel ips"
   Driver Modules: "intel_ips"
   Memory Range: 0xf2626000-0xf2626fff (rw,non-prefetchable)
-  IRQ: 19 (15794 events)
+  IRQ: 19 (21653 events)
   Module Alias: "pci:v00008086d00003B32sv000017AAsd00002190bc11sc80i00"
   Driver Info #0:
     Driver Status: intel_ips is active
@@ -9365,7 +9365,7 @@ enp0s25: socket failed: Operation not permitted
   Driver: "firewire_ohci"
   Driver Modules: "firewire_ohci"
   Memory Range: 0xf2500800-0xf2500fff (rw,non-prefetchable)
-  IRQ: 19 (15794 events)
+  IRQ: 19 (21653 events)
   Module Alias: "pci:v00001180d0000E832sv000017AAsd00002136bc0Csc00i10"
   Driver Info #0:
     Driver Status: ohci1394 is not active
@@ -9852,7 +9852,7 @@ enp0s25: socket failed: Operation not permitted
   Vendor: "GenuineIntel"
   Model: 6.37.2 "Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz"
   Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,rdtscp,lm,constant_tsc,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,smx,est,tm2,ssse3,cx16,xtpr,pdcm,sse4_1,sse4_2,popcnt,aes,lahf_lm,tpr_shadow,vnmi,flexpriority,ept,vpid,dtherm,ida,arat
-  Clock: 1333 MHz
+  Clock: 1733 MHz
   BogoMips: 4788.04
   Cache: 3072 kb
   Units/Processor: 16
@@ -9866,7 +9866,7 @@ enp0s25: socket failed: Operation not permitted
   Vendor: "GenuineIntel"
   Model: 6.37.2 "Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz"
   Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,rdtscp,lm,constant_tsc,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,smx,est,tm2,ssse3,cx16,xtpr,pdcm,sse4_1,sse4_2,popcnt,aes,lahf_lm,tpr_shadow,vnmi,flexpriority,ept,vpid,dtherm,ida,arat
-  Clock: 1200 MHz
+  Clock: 1333 MHz
   BogoMips: 4788.04
   Cache: 3072 kb
   Units/Processor: 16
@@ -9880,7 +9880,7 @@ enp0s25: socket failed: Operation not permitted
   Vendor: "GenuineIntel"
   Model: 6.37.2 "Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz"
   Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,rdtscp,lm,constant_tsc,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,smx,est,tm2,ssse3,cx16,xtpr,pdcm,sse4_1,sse4_2,popcnt,aes,lahf_lm,tpr_shadow,vnmi,flexpriority,ept,vpid,dtherm,ida,arat
-  Clock: 1733 MHz
+  Clock: 1600 MHz
   BogoMips: 4788.04
   Cache: 3072 kb
   Units/Processor: 16
@@ -9894,7 +9894,7 @@ enp0s25: socket failed: Operation not permitted
   Vendor: "GenuineIntel"
   Model: 6.37.2 "Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz"
   Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,rdtscp,lm,constant_tsc,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,smx,est,tm2,ssse3,cx16,xtpr,pdcm,sse4_1,sse4_2,popcnt,aes,lahf_lm,tpr_shadow,vnmi,flexpriority,ept,vpid,dtherm,ida,arat
-  Clock: 1733 MHz
+  Clock: 1600 MHz
   BogoMips: 4788.04
   Cache: 3072 kb
   Units/Processor: 16
