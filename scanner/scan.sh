@@ -2,6 +2,13 @@
 
 cd "`dirname \"$0\"`"
 
+if [ "$1" == "-d" ]
+then
+  debug=true
+else
+  debug=false
+fi
+
 scanner_id_file="../scanner-id"
 
 if ! [ -f "$scanner_id_file" ]
@@ -139,7 +146,7 @@ beschreibung=beschreibung.out
   echo "Prozessor: "
   echo
 ) > "$beschreibung"
-if [ "$1" != "-n" ]
+if [ "debug" == "false" ]
 then
   nano "$beschreibung"
 fi
