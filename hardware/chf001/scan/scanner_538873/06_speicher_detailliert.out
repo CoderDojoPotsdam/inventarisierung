@@ -1,0 +1,46 @@
+  *-firmware
+       description: BIOS
+       vendor: Dell Inc.
+       physical id: 0
+       version: A06
+       date: 04/03/2008
+       size: 64KiB
+       capacity: 512KiB
+       capabilities: isa pci pcmcia pnp upgrade shadowing cdboot bootselect int13floppy720 int5printscreen int9keyboard int14serial int17printer int10video acpi usb agp smartbattery biosbootspecification netboot
+  *-cache:0
+       description: L1 cache
+       physical id: 700
+       size: 32KiB
+       capacity: 32KiB
+       capabilities: internal write-back data
+       configuration: level=1
+  *-cache:1
+       description: L2 cache
+       physical id: 701
+       size: 2MiB
+       capacity: 2MiB
+       clock: 66MHz (15.0ns)
+       capabilities: pipeline-burst internal varies unified
+       configuration: level=2
+  *-memory
+       description: System Memory
+       physical id: 1000
+       slot: System board or motherboard
+       size: 2GiB
+     *-bank:0
+          description: Chip DDR Synchronous 533 MHz (1.9 ns)
+          physical id: 0
+          slot: System Board Memory
+          size: 1GiB
+          width: 64 bits
+          clock: 533MHz (1.9ns)
+     *-bank:1
+          description: DIMM DDR Synchronous 667 MHz (1.5 ns)
+          product: HYMP512S64CP8-Y5
+          vendor: Hynix Semiconductor (Hyundai Electronics)
+          physical id: 1
+          serial: 00003167
+          slot: DIMM_B
+          size: 1GiB
+          width: 64 bits
+          clock: 667MHz (1.5ns)
