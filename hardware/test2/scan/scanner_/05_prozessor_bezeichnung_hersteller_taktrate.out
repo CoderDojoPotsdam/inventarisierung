@@ -6,7 +6,7 @@
        bus info: cpu@0
        version: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
        slot: None
-       size: 1466MHz
+       size: 1999MHz
        capacity: 2400MHz
        width: 64 bits
        clock: 133MHz
