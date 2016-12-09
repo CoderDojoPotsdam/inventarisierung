@@ -1,0 +1,179 @@
+smartctl 6.5 2016-01-24 r4214 [x86_64-linux-4.4.0-31-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Model Family:     Seagate Momentus 7200.4
+Device Model:     ST9160412AS
+Serial Number:    5VG0MT9V
+LU WWN Device Id: 5 000c50 01925d77d
+Firmware Version: 0003LVM1
+User Capacity:    160,041,885,696 bytes [160 GB]
+Sector Size:      512 bytes logical/physical
+Rotation Rate:    7200 rpm
+Device is:        In smartctl database [for details use: -P show]
+ATA Version is:   ATA8-ACS T13/1699-D revision 4
+SATA Version is:  SATA 2.6, 3.0 Gb/s (current: 3.0 Gb/s)
+Local Time is:    Fri Dec  9 16:12:33 2016 CET
+SMART support is: Available - device has SMART capability.
+SMART support is: Enabled
+
+=== START OF READ SMART DATA SECTION ===
+SMART overall-health self-assessment test result: PASSED
+
+General SMART Values:
+Offline data collection status:  (0x82)	Offline data collection activity
+					was completed without error.
+					Auto Offline Data Collection: Enabled.
+Self-test execution status:      (   0)	The previous self-test routine completed
+					without error or no self-test has ever 
+					been run.
+Total time to complete Offline 
+data collection: 		(    0) seconds.
+Offline data collection
+capabilities: 			 (0x7b) SMART execute Offline immediate.
+					Auto Offline data collection on/off support.
+					Suspend Offline collection upon new
+					command.
+					Offline surface scan supported.
+					Self-test supported.
+					Conveyance Self-test supported.
+					Selective Self-test supported.
+SMART capabilities:            (0x0003)	Saves SMART data before entering
+					power-saving mode.
+					Supports SMART auto save timer.
+Error logging capability:        (0x01)	Error logging supported.
+					General Purpose Logging supported.
+Short self-test routine 
+recommended polling time: 	 (   1) minutes.
+Extended self-test routine
+recommended polling time: 	 (  37) minutes.
+Conveyance self-test routine
+recommended polling time: 	 (   2) minutes.
+SCT capabilities: 	       (0x103b)	SCT Status supported.
+					SCT Error Recovery Control supported.
+					SCT Feature Control supported.
+					SCT Data Table supported.
+
+SMART Attributes Data Structure revision number: 10
+Vendor Specific SMART Attributes with Thresholds:
+ID# ATTRIBUTE_NAME          FLAG     VALUE WORST THRESH TYPE      UPDATED  WHEN_FAILED RAW_VALUE
+  1 Raw_Read_Error_Rate     0x000f   118   099   034    Pre-fail  Always       -       194691028
+  3 Spin_Up_Time            0x0003   100   099   000    Pre-fail  Always       -       0
+  4 Start_Stop_Count        0x0032   099   099   020    Old_age   Always       -       1646
+  5 Reallocated_Sector_Ct   0x0033   100   100   036    Pre-fail  Always       -       0
+  7 Seek_Error_Rate         0x000f   081   060   030    Pre-fail  Always       -       138828790
+  9 Power_On_Hours          0x0032   094   094   000    Old_age   Always       -       6024 (181 246 0)
+ 10 Spin_Retry_Count        0x0013   100   100   097    Pre-fail  Always       -       0
+ 12 Power_Cycle_Count       0x0032   099   099   020    Old_age   Always       -       1573
+184 End-to-End_Error        0x0032   100   100   099    Old_age   Always       -       0
+187 Reported_Uncorrect      0x0032   100   100   000    Old_age   Always       -       0
+188 Command_Timeout         0x0032   100   093   000    Old_age   Always       -       47245361163
+189 High_Fly_Writes         0x003a   100   100   000    Old_age   Always       -       0
+190 Airflow_Temperature_Cel 0x0022   076   056   045    Old_age   Always       -       24 (Min/Max 18/24)
+191 G-Sense_Error_Rate      0x0032   100   100   000    Old_age   Always       -       51
+192 Power-Off_Retract_Count 0x0032   100   100   000    Old_age   Always       -       50
+193 Load_Cycle_Count        0x0032   071   071   000    Old_age   Always       -       58093
+194 Temperature_Celsius     0x0022   024   044   000    Old_age   Always       -       24 (0 11 0 0 0)
+195 Hardware_ECC_Recovered  0x001a   052   048   000    Old_age   Always       -       194691028
+196 Reallocated_Event_Count 0x000f   094   094   030    Pre-fail  Always       -       5673 (17403 0)
+197 Current_Pending_Sector  0x0012   100   100   000    Old_age   Always       -       0
+198 Offline_Uncorrectable   0x0010   100   100   000    Old_age   Offline      -       0
+199 UDMA_CRC_Error_Count    0x003e   200   200   000    Old_age   Always       -       0
+254 Free_Fall_Sensor        0x0032   100   100   000    Old_age   Always       -       0
+
+SMART Error Log Version: 1
+No Errors Logged
+
+SMART Self-test log structure revision number 1
+Num  Test_Description    Status                  Remaining  LifeTime(hours)  LBA_of_first_error
+# 1  Vendor (0x50)       Completed without error       00%         3         -
+# 2  Vendor (0x50)       Completed without error       00%         1         -
+
+SMART Selective self-test log data structure revision number 1
+ SPAN  MIN_LBA  MAX_LBA  CURRENT_TEST_STATUS
+    1        0        0  Not_testing
+    2        0        0  Not_testing
+    3        0        0  Not_testing
+    4        0        0  Not_testing
+    5        0        0  Not_testing
+Selective self-test flags (0x0):
+  After scanning selected spans, do NOT read-scan remainder of disk.
+If Selective self-test is pending on power-up, resume after 0 minute delay.
+
+smartctl 6.5 2016-01-24 r4214 [x86_64-linux-4.4.0-31-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+/dev/sdb: Unknown USB bridge [0x0781:0x5572 (0x127)]
+Please specify device type with the -d option.
+
+Use smartctl -h to get a usage summary
+
+smartctl 6.5 2016-01-24 r4214 [x86_64-linux-4.4.0-31-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Vendor:               SanDisk
+Product:              Cruzer Switch
+Revision:             1.27
+Compliance:           SPC-4
+User Capacity:        15,744,892,928 bytes [15.7 GB]
+Logical block size:   512 bytes
+Serial number:        20044317331DC9E05F25
+Device type:          disk
+Local Time is:        Fri Dec  9 16:12:34 2016 CET
+SMART support is:     Available - device has SMART capability.
+SMART support is:     Enabled
+Temperature Warning:  Disabled or Not Supported
+
+=== START OF READ SMART DATA SECTION ===
+SMART Health Status: OK
+
+Error Counter logging not supported
+
+Device does not support Self Test logging
+smartctl 6.5 2016-01-24 r4214 [x86_64-linux-4.4.0-31-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Vendor:               SanDisk
+Product:              Cruzer Switch
+Revision:             1.27
+Compliance:           SPC-4
+User Capacity:        15,744,892,928 bytes [15.7 GB]
+Logical block size:   512 bytes
+Serial number:        20044317331DC9E05F25
+Device type:          disk
+Local Time is:        Fri Dec  9 16:12:34 2016 CET
+SMART support is:     Available - device has SMART capability.
+SMART support is:     Enabled
+Temperature Warning:  Disabled or Not Supported
+
+=== START OF READ SMART DATA SECTION ===
+SMART Health Status: OK
+
+Error Counter logging not supported
+
+Device does not support Self Test logging
+smartctl 6.5 2016-01-24 r4214 [x86_64-linux-4.4.0-31-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Vendor:               SanDisk
+Product:              Cruzer Switch
+Revision:             1.27
+Compliance:           SPC-4
+User Capacity:        15,744,892,928 bytes [15.7 GB]
+Logical block size:   512 bytes
+Serial number:        20044317331DC9E05F25
+Device type:          disk
+Local Time is:        Fri Dec  9 16:12:34 2016 CET
+SMART support is:     Available - device has SMART capability.
+SMART support is:     Enabled
+Temperature Warning:  Disabled or Not Supported
+
+=== START OF READ SMART DATA SECTION ===
+SMART Health Status: OK
+
+Error Counter logging not supported
+
+Device does not support Self Test logging

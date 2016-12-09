@@ -1,0 +1,35 @@
+# dmidecode 3.0
+Getting SMBIOS data from sysfs.
+SMBIOS 2.6 present.
+
+Handle 0x0000, DMI type 0, 24 bytes
+BIOS Information
+	Vendor: LENOVO
+	Version: 6MET57WW (1.20 )
+	Release Date: 05/19/2010
+	Address: 0xE0000
+	Runtime Size: 128 kB
+	ROM Size: 8192 kB
+	Characteristics:
+		PCI is supported
+		PC Card (PCMCIA) is supported
+		PNP is supported
+		BIOS is upgradeable
+		BIOS shadowing is allowed
+		ESCD support is available
+		Boot from CD is supported
+		Selectable boot is supported
+		EDD is supported
+		3.5"/720 kB floppy services are supported (int 13h)
+		Print screen service is supported (int 5h)
+		8042 keyboard services are supported (int 9h)
+		Serial services are supported (int 14h)
+		Printer services are supported (int 17h)
+		CGA/mono video services are supported (int 10h)
+		ACPI is supported
+		USB legacy is supported
+		BIOS boot specification is supported
+		Targeted content distribution is supported
+	BIOS Revision: 1.32
+	Firmware Revision: 1.18
+
