@@ -31,7 +31,7 @@ H/W path                   Device      Class          Description
 /0/100/1d                              bus            5 Series/3400 Series Chipset USB2 Enhanced Host Controller
 /0/100/1d/1                usb2        bus            EHCI Host Controller
 /0/100/1d/1/1                          bus            Integrated Rate Matching Hub
-/0/100/1d/1/1/1            scsi6       storage        Cruzer Fit
+/0/100/1d/1/1/1            scsi0       storage        Cruzer Fit
 /0/100/1d/1/1/1/0.0.0      /dev/sda    disk           8004MB Cruzer Fit
 /0/100/1d/1/1/1/0.0.0/1    /dev/sda1   volume         6609MiB EXT4 volume
 /0/100/1d/1/1/1/0.0.0/2    /dev/sda2   volume         1022MiB Extended partition
@@ -47,6 +47,6 @@ H/W path                   Device      Class          Description
 /0/104                                 bridge         1st Generation Core i3/5/7 Processor QPI Physical 0
 /0/105                                 bridge         1st Generation Core i3/5/7 Processor Reserved
 /0/106                                 bridge         1st Generation Core i3/5/7 Processor Reserved
-/0/1                       scsi1       storage        
+/0/1                       scsi2       storage        
 /0/1/0.0.0                 /dev/cdrom  disk           DVDRAM GT30N
 /1                                     power          42T4799

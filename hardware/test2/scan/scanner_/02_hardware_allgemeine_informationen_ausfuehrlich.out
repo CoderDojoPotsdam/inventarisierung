@@ -11,7 +11,7 @@
 	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
 	Status: Cap+ 66MHz- UDF- FastB2B+ ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
 	Latency: 0
-	Interrupt: pin A routed to IRQ 26
+	Interrupt: pin A routed to IRQ 25
 	Region 0: Memory at f2000000 (64-bit, non-prefetchable) [size=4M]
 	Region 2: Memory at d0000000 (64-bit, prefetchable) [size=256M]
 	Region 4: I/O ports at 1800 [size=8]
@@ -46,7 +46,7 @@
 	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR+ FastB2B- DisINTx+
 	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
 	Latency: 0
-	Interrupt: pin A routed to IRQ 25
+	Interrupt: pin A routed to IRQ 26
 	Region 0: Memory at f2600000 (32-bit, non-prefetchable) [size=128K]
 	Region 1: Memory at f2625000 (32-bit, non-prefetchable) [size=4K]
 	Region 2: I/O ports at 1820 [size=32]

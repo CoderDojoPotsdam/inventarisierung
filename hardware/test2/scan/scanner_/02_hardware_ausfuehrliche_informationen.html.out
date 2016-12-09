@@ -186,7 +186,7 @@
              <tr><td class="first">clock: </td><td class="second">33MHz</td></tr>
              <tr><td class="first">capabilities: </td><td class="second"><dfn title="Message Signalled Interrupts">msi</dfn> <dfn title="Power Management">pm</dfn> <dfn title="">vga_controller</dfn> <dfn title="bus mastering">bus_master</dfn> <dfn title="PCI capabilities listing">cap_list</dfn> <dfn title="extension ROM">rom</dfn> </td></tr>
              <tr><td class="first">configuration:</td><td class="second"><table summary="configuration of display"><tr><td class="sub-first"> driver</td><td>=</td><td>i915</td></tr><tr><td class="sub-first"> latency</td><td>=</td><td>0</td></tr></table></td></tr>
-             <tr><td class="first">resources:</td><td class="second"><table summary="resources of display"><tr><td class="sub-first"> irq</td><td>:</td><td>26</td></tr><tr><td class="sub-first"> memory</td><td>:</td><td>f2000000-f23fffff</td></tr><tr><td class="sub-first"> memory</td><td>:</td><td>d0000000-dfffffff</td></tr><tr><td class="sub-first"> ioport</td><td>:</td><td>1800(size=8)</td></tr></table></td></tr>
+             <tr><td class="first">resources:</td><td class="second"><table summary="resources of display"><tr><td class="sub-first"> irq</td><td>:</td><td>25</td></tr><tr><td class="sub-first"> memory</td><td>:</td><td>f2000000-f23fffff</td></tr><tr><td class="sub-first"> memory</td><td>:</td><td>d0000000-dfffffff</td></tr><tr><td class="sub-first"> ioport</td><td>:</td><td>1800(size=8)</td></tr></table></td></tr>
  </tbody>          </table></div>
           </div>
 <div class="indented">
@@ -244,7 +244,7 @@
              <tr><td class="first">clock: </td><td class="second">33MHz</td></tr>
              <tr><td class="first">capabilities: </td><td class="second"><dfn title="Power Management">pm</dfn> <dfn title="Message Signalled Interrupts">msi</dfn> <dfn title="bus mastering">bus_master</dfn> <dfn title="PCI capabilities listing">cap_list</dfn> <dfn title="">ethernet</dfn> <dfn title="Physical interface">physical</dfn> <dfn title="twisted pair">tp</dfn> <dfn title="10Mbit/s">10bt</dfn> <dfn title="10Mbit/s (full duplex)">10bt-fd</dfn> <dfn title="100Mbit/s">100bt</dfn> <dfn title="100Mbit/s (full duplex)">100bt-fd</dfn> <dfn title="1Gbit/s (full duplex)">1000bt-fd</dfn> <dfn title="Auto-negotiation">autonegotiation</dfn> </td></tr>
              <tr><td class="first">configuration:</td><td class="second"><table summary="configuration of network"><tr><td class="sub-first"> autonegotiation</td><td>=</td><td>on</td></tr><tr><td class="sub-first"> broadcast</td><td>=</td><td>yes</td></tr><tr><td class="sub-first"> driver</td><td>=</td><td>e1000e</td></tr><tr><td class="sub-first"> driverversion</td><td>=</td><td>3.2.6-k</td></tr><tr><td class="sub-first"> duplex</td><td>=</td><td>full</td></tr><tr><td class="sub-first"> firmware</td><td>=</td><td>0.12-1</td></tr><tr><td class="sub-first"> ip</td><td>=</td><td>10.22.73.145</td></tr><tr><td class="sub-first"> latency</td><td>=</td><td>0</td></tr><tr><td class="sub-first"> link</td><td>=</td><td>yes</td></tr><tr><td class="sub-first"> multicast</td><td>=</td><td>yes</td></tr><tr><td class="sub-first"> port</td><td>=</td><td>twisted pair</td></tr><tr><td class="sub-first"> speed</td><td>=</td><td>100Mbit/s</td></tr></table></td></tr>
-             <tr><td class="first">resources:</td><td class="second"><table summary="resources of network"><tr><td class="sub-first"> irq</td><td>:</td><td>25</td></tr><tr><td class="sub-first"> memory</td><td>:</td><td>f2600000-f261ffff</td></tr><tr><td class="sub-first"> memory</td><td>:</td><td>f2625000-f2625fff</td></tr><tr><td class="sub-first"> ioport</td><td>:</td><td>1820(size=32)</td></tr></table></td></tr>
+             <tr><td class="first">resources:</td><td class="second"><table summary="resources of network"><tr><td class="sub-first"> irq</td><td>:</td><td>26</td></tr><tr><td class="sub-first"> memory</td><td>:</td><td>f2600000-f261ffff</td></tr><tr><td class="sub-first"> memory</td><td>:</td><td>f2625000-f2625fff</td></tr><tr><td class="sub-first"> ioport</td><td>:</td><td>1820(size=32)</td></tr></table></td></tr>
  </tbody>          </table></div>
           </div>
 <div class="indented">
@@ -527,7 +527,7 @@
                       <tr><td class="first">vendor: </td><td class="second">SanDisk</td></tr>
                       <tr><td class="first">physical id: </td><td class="second"><div class="id">1</div></td></tr>
                       <tr><td class="first">bus info: </td><td class="second"><div class="id">usb@2:1.1</div></td></tr>
-                      <tr><td class="first">logical name: </td><td class="second"><div class="id">scsi6</div></td></tr>
+                      <tr><td class="first">logical name: </td><td class="second"><div class="id">scsi0</div></td></tr>
                       <tr><td class="first">version: </td><td class="second">1.27</td></tr>
                       <tr><td class="first">serial: </td><td class="second">4C530012621219123490</td></tr>
                       <tr><td class="first">capabilities: </td><td class="second"><dfn title="USB 2.0">usb-2.00</dfn> <dfn title="SCSI">scsi</dfn> <dfn title="Emulated device">emulated</dfn> <dfn title="SCSI host adapter">scsi-host</dfn> </td></tr>
@@ -542,7 +542,7 @@
                          <tr><td class="first">product: </td><td class="second">Cruzer Fit</td></tr>
                          <tr><td class="first">vendor: </td><td class="second">SanDisk</td></tr>
                          <tr><td class="first">physical id: </td><td class="second"><div class="id">0.0.0</div></td></tr>
-                         <tr><td class="first">bus info: </td><td class="second"><div class="id">scsi@6:0.0.0</div></td></tr>
+                         <tr><td class="first">bus info: </td><td class="second"><div class="id">scsi@0:0.0.0</div></td></tr>
                          <tr><td class="first">logical name: </td><td class="second"><div class="id">/dev/sda</div></td></tr>
                          <tr><td class="first">version: </td><td class="second">1.27</td></tr>
                          <tr><td class="first">serial: </td><td class="second">4C530012621219123490</td></tr>
@@ -558,7 +558,7 @@
                             <tr><td class="first">description: </td><td class="second">EXT4 volume</td></tr>
                             <tr><td class="first">vendor: </td><td class="second">Linux</td></tr>
                             <tr><td class="first">physical id: </td><td class="second"><div class="id">1</div></td></tr>
-                            <tr><td class="first">bus info: </td><td class="second"><div class="id">scsi@6:0.0.0,1</div></td></tr>
+                            <tr><td class="first">bus info: </td><td class="second"><div class="id">scsi@0:0.0.0,1</div></td></tr>
                             <tr><td class="first">logical name: </td><td class="second"><div class="id">/dev/sda1</div></td></tr>
                             <tr><td class="first">logical name: </td><td class="second"><div class="id">/</div></td></tr>
                             <tr><td class="first">version: </td><td class="second">1.0</td></tr>
@@ -566,7 +566,7 @@
                             <tr><td class="first">size: </td><td class="second">6609MiB</td></tr>
                             <tr><td class="first">capacity: </td><td class="second">6609MiB</td></tr>
                             <tr><td class="first">capabilities: </td><td class="second"><dfn title="Primary partition">primary</dfn> <dfn title="Bootable partition (active)">bootable</dfn> <dfn title="">journaled</dfn> <dfn title="Extended Attributes">extended_attributes</dfn> <dfn title="4GB+ files">large_files</dfn> <dfn title="16TB+ files">huge_files</dfn> <dfn title="directories with 65000+ subdirs">dir_nlink</dfn> <dfn title="extent-based allocation">extents</dfn> <dfn title="">ext4</dfn> <dfn title="EXT2/EXT3">ext2</dfn> <dfn title="initialized volume">initialized</dfn> </td></tr>
-                            <tr><td class="first">configuration:</td><td class="second"><table summary="configuration of volume:0"><tr><td class="sub-first"> created</td><td>=</td><td>2016-12-07 12:02:51</td></tr><tr><td class="sub-first"> filesystem</td><td>=</td><td>ext4</td></tr><tr><td class="sub-first"> lastmountpoint</td><td>=</td><td>/</td></tr><tr><td class="sub-first"> modified</td><td>=</td><td>2016-12-09 09:34:30</td></tr><tr><td class="sub-first"> mount.fstype</td><td>=</td><td>ext4</td></tr><tr><td class="sub-first"> mount.options</td><td>=</td><td>rw,relatime,errors=remount-ro,data=ordered</td></tr><tr><td class="sub-first"> mounted</td><td>=</td><td>2016-12-08 09:43:52</td></tr><tr><td class="sub-first"> state</td><td>=</td><td>mounted</td></tr></table></td></tr>
+                            <tr><td class="first">configuration:</td><td class="second"><table summary="configuration of volume:0"><tr><td class="sub-first"> created</td><td>=</td><td>2016-12-07 12:02:51</td></tr><tr><td class="sub-first"> filesystem</td><td>=</td><td>ext4</td></tr><tr><td class="sub-first"> lastmountpoint</td><td>=</td><td>/</td></tr><tr><td class="sub-first"> modified</td><td>=</td><td>2016-12-09 09:45:27</td></tr><tr><td class="sub-first"> mount.fstype</td><td>=</td><td>ext4</td></tr><tr><td class="sub-first"> mount.options</td><td>=</td><td>rw,relatime,errors=remount-ro,data=ordered</td></tr><tr><td class="sub-first"> mounted</td><td>=</td><td>2016-12-09 09:34:33</td></tr><tr><td class="sub-first"> state</td><td>=</td><td>mounted</td></tr></table></td></tr>
  </tbody>                         </table></div>
                          </div>
 <div class="indented">
@@ -576,7 +576,7 @@
  <tbody>
                             <tr><td class="first">description: </td><td class="second">Extended partition</td></tr>
                             <tr><td class="first">physical id: </td><td class="second"><div class="id">2</div></td></tr>
-                            <tr><td class="first">bus info: </td><td class="second"><div class="id">scsi@6:0.0.0,2</div></td></tr>
+                            <tr><td class="first">bus info: </td><td class="second"><div class="id">scsi@0:0.0.0,2</div></td></tr>
                             <tr><td class="first">logical name: </td><td class="second"><div class="id">/dev/sda2</div></td></tr>
                             <tr><td class="first">size: </td><td class="second">1022MiB</td></tr>
                             <tr><td class="first">capacity: </td><td class="second">1022MiB</td></tr>
@@ -784,7 +784,7 @@
  <thead><tr><td class="first">id:</td><td class="second"><div class="id">scsi</div></td></tr></thead>
  <tbody>
           <tr><td class="first">physical id: </td><td class="second"><div class="id">1</div></td></tr>
-          <tr><td class="first">logical name: </td><td class="second"><div class="id">scsi1</div></td></tr>
+          <tr><td class="first">logical name: </td><td class="second"><div class="id">scsi2</div></td></tr>
           <tr><td class="first">capabilities: </td><td class="second"><dfn title="Emulated device">emulated</dfn> </td></tr>
  </tbody>       </table></div>
 <div class="indented">
@@ -796,7 +796,7 @@
              <tr><td class="first">product: </td><td class="second">DVDRAM GT30N</td></tr>
              <tr><td class="first">vendor: </td><td class="second">HL-DT-ST</td></tr>
              <tr><td class="first">physical id: </td><td class="second"><div class="id">0.0.0</div></td></tr>
-             <tr><td class="first">bus info: </td><td class="second"><div class="id">scsi@1:0.0.0</div></td></tr>
+             <tr><td class="first">bus info: </td><td class="second"><div class="id">scsi@2:0.0.0</div></td></tr>
              <tr><td class="first">logical name: </td><td class="second"><div class="id">/dev/cdrom</div></td></tr>
              <tr><td class="first">logical name: </td><td class="second"><div class="id">/dev/cdrw</div></td></tr>
              <tr><td class="first">logical name: </td><td class="second"><div class="id">/dev/dvd</div></td></tr>

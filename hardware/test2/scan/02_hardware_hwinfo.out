@@ -7,7 +7,7 @@ kernel version is 4.4
 ----- /proc/cmdline end -----
 debug = 0xff7ffff7
 probe = 0x15938fcdaa17fcf9fffe (+memory +pci +isapnp +net +floppy +misc +misc.serial +misc.par +misc.floppy +serial +cpu +bios +monitor +mouse +scsi +usb -usb.mods +modem +modem.usb +parallel +parallel.lp +parallel.zip -isa -isa.isdn +isdn +kbd +prom +sbus +int +braille +braille.alva +braille.fhp +braille.ht -ignx11 +sys -bios.vbe -isapnp.old -isapnp.new -isapnp.mod +braille.baum -manual +fb +pppoe -scan +pcmcia +fork -parallel.imm +s390 +cpuemu -sysfs -s390disks +udev +block +block.cdrom +block.part +edd +edd.mod -bios.ddc -bios.fb -bios.mode +input +block.mods +bios.vesa -cpuemu.debug -scsi.noserial +wlan -bios.crc -hal +bios.vram +bios.acpi -bios.ddc.ports=0 +modules.pata -net.eeprom +x86emu=dump -max -lxrc)
-shm: attached segment 131075 at 0x7fe9557ca000
+shm: attached segment 98307 at 0x7f2bdfeed000
 >> hal.1: read hal data
 >> floppy.1: get nvram
 ----- /proc/nvram -----
@@ -130,33 +130,33 @@ x86emu: could not init vm
 ----- /proc/ioports end -----
 ----- /proc/interrupts -----
     0:         46          0          0          0   IO-APIC   2-edge      timer
-    1:          4         73        809        193   IO-APIC   1-edge      i8042
+    1:          3        113        144        133   IO-APIC   1-edge      i8042
     8:          0          1          0          0   IO-APIC   8-edge      rtc0
-    9:        114        120        125        129   IO-APIC   9-fasteoi   acpi
-   12:        481        508        463        496   IO-APIC  12-edge      i8042
+    9:        117        117        115        115   IO-APIC   9-fasteoi   acpi
+   12:        480        478        498        504   IO-APIC  12-edge      i8042
    16:          0          0          0          0   IO-APIC  16-fasteoi   mmc0
-   17:          0          1          1          2   IO-APIC  17-fasteoi   rtl_pci
-   19:       3184       5041       7561       5867   IO-APIC  19-fasteoi   ehci_hcd:usb2, ips, firewire_ohci
-   23:         55         47         47         54   IO-APIC  23-fasteoi   ehci_hcd:usb1
-   24:         26         32        886         29   PCI-MSI 512000-edge      0000:00:1f.2
-   25:          0     153422          1          3   PCI-MSI 409600-edge      enp0s25
-   26:         19         18         13         15   PCI-MSI 32768-edge      i915
-   27:          7          6          7          5   PCI-MSI 360448-edge      mei_me
-   28:         82         86         85         86   PCI-MSI 442368-edge      snd_hda_intel
-  NMI:         14         18        109         14   Non-maskable interrupts
-  LOC:       8739       9161      25873       6620   Local timer interrupts
+   17:          0          1          1          1   IO-APIC  17-fasteoi   rtl_pci
+   19:       1998      42821      11643      10997   IO-APIC  19-fasteoi   ehci_hcd:usb2, ips, firewire_ohci
+   23:         49         47         51         48   IO-APIC  23-fasteoi   ehci_hcd:usb1
+   24:         32         34        676         26   PCI-MSI 512000-edge      0000:00:1f.2
+   25:         16         17         13         16   PCI-MSI 32768-edge      i915
+   26:          3      61890          4          3   PCI-MSI 409600-edge      enp0s25
+   27:          6          6          7          6   PCI-MSI 360448-edge      mei_me
+   28:         87         79         83         90   PCI-MSI 442368-edge      snd_hda_intel
+  NMI:         26         15         15         21   Non-maskable interrupts
+  LOC:      22750      23117      21930      18423   Local timer interrupts
   SPU:          0          0          0          0   Spurious interrupts
-  PMI:         14         18        109         14   Performance monitoring interrupts
-  IWI:          0          0          1          0   IRQ work interrupts
+  PMI:         26         15         15         21   Performance monitoring interrupts
+  IWI:          0          0          0          0   IRQ work interrupts
   RTR:          2          0          0          0   APIC ICR read retries
-  RES:       1299        811       1295        996   Rescheduling interrupts
-  CAL:        973        952       1041       1187   Function call interrupts
-  TLB:         95         77         53         42   TLB shootdowns
+  RES:       1645        683       1226        497   Rescheduling interrupts
+  CAL:       1051        971       1136       1092   Function call interrupts
+  TLB:         59         43         56         43   TLB shootdowns
   TRM:          0          0          0          0   Thermal event interrupts
   THR:          0          0          0          0   Threshold APIC interrupts
   DFR:          0          0          0          0   Deferred Error APIC interrupts
   MCE:          0          0          0          0   Machine check exceptions
-  MCP:          2          2          2          2   Machine check polls
+  MCP:          3          3          3          3   Machine check polls
   ERR:          0
   MIS:          0
   PIN:          0          0          0          0   Posted-interrupt notification event
@@ -179,7 +179,7 @@ x86emu: could not init vm
   model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
   stepping	: 2
   microcode	: 0xc
-  cpu MHz		: 1333.000
+  cpu MHz		: 1199.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -193,7 +193,7 @@ x86emu: could not init vm
   wp		: yes
   flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt aes lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm ida arat
   bugs		:
-  bogomips	: 4788.04
+  bogomips	: 4787.83
   clflush size	: 64
   cache_alignment	: 64
   address sizes	: 36 bits physical, 48 bits virtual
@@ -206,7 +206,7 @@ x86emu: could not init vm
   model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
   stepping	: 2
   microcode	: 0xc
-  cpu MHz		: 1866.000
+  cpu MHz		: 2400.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -220,7 +220,7 @@ x86emu: could not init vm
   wp		: yes
   flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt aes lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm ida arat
   bugs		:
-  bogomips	: 4788.04
+  bogomips	: 4787.83
   clflush size	: 64
   cache_alignment	: 64
   address sizes	: 36 bits physical, 48 bits virtual
@@ -233,7 +233,7 @@ x86emu: could not init vm
   model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
   stepping	: 2
   microcode	: 0xc
-  cpu MHz		: 1466.000
+  cpu MHz		: 1199.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -247,7 +247,7 @@ x86emu: could not init vm
   wp		: yes
   flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt aes lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm ida arat
   bugs		:
-  bogomips	: 4788.04
+  bogomips	: 4787.83
   clflush size	: 64
   cache_alignment	: 64
   address sizes	: 36 bits physical, 48 bits virtual
@@ -260,7 +260,7 @@ x86emu: could not init vm
   model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
   stepping	: 2
   microcode	: 0xc
-  cpu MHz		: 1599.000
+  cpu MHz		: 1199.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -274,7 +274,7 @@ x86emu: could not init vm
   wp		: yes
   flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt aes lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm ida arat
   bugs		:
-  bogomips	: 4788.04
+  bogomips	: 4787.83
   clflush size	: 64
   cache_alignment	: 64
   address sizes	: 36 bits physical, 48 bits virtual
@@ -290,7 +290,7 @@ x86emu: could not init vm
   meminfo:    0xea5b0000
   xen balloon:    0x0
 >> pci.1: sysfs drivers
------ sysfs driver list (id 0x61e9b32fe03556ee) -----
+----- sysfs driver list (id 0xe61fe062e7eef21e) -----
        processor: /devices/system/cpu/cpu0
        processor: /devices/system/cpu/cpu1
        processor: /devices/system/cpu/cpu2
@@ -370,8 +370,8 @@ x86emu: could not init vm
           button: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0E:00
           button: /devices/LNXSYSTM:00/LNXPWRBN:00
          battery: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:09/PNP0C09:00/PNP0C0A:00
-              sd: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0
-              sr: /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0
+              sd: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0
+              sr: /devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0
        serio_raw: module = serio_raw
            atkbd: /devices/platform/i8042/serio0
          psmouse: module = psmouse
@@ -415,7 +415,7 @@ vesa-framebuffer: /devices/platform/vesa-framebuffer.0
     device = 0x46
     subvendor = 0x17aa
     subdevice = 0x215a
-    irq = 26
+    irq = 25
     res[0] = 0xf2000000 0xf23fffff 0x140204
     res[2] = 0xd0000000 0xdfffffff 0x14220c
     res[4] = 0x1800 0x1807 0x40101
@@ -467,7 +467,7 @@ vesa-framebuffer: /devices/platform/vesa-framebuffer.0
     device = 0x10ea
     subvendor = 0x17aa
     subdevice = 0x2153
-    irq = 25
+    irq = 26
     res[0] = 0xf2600000 0xf261ffff 0x40200
     res[1] = 0xf2625000 0xf2625fff 0x40200
     res[2] = 0x1820 0x183f 0x40101
@@ -707,7 +707,7 @@ class 06, sub_class 00 prog_if 00, hdr 0, flags <>, irq 0
   30: 00 00 00 00 e0 00 00 00 00 00 00 00 00 00 00 00  "................"
 
 bus 00, slot 02, func 0, vend:dev:s_vend:s_dev:rev 8086:0046:17aa:215a:02
-class 03, sub_class 00 prog_if 00, hdr 0, flags <>, irq 26
+class 03, sub_class 00 prog_if 00, hdr 0, flags <>, irq 25
   addr0 f2000000, size 00400000
   addr2 d0000000, size 10000000
   addr4 00001800, size 00000008
@@ -734,7 +734,7 @@ class 07, sub_class 00 prog_if 02, hdr 0, flags <>, irq 17
   30: 00 00 00 00 c8 00 00 00 00 00 00 00 0b 02 00 00  "................"
 
 bus 00, slot 19, func 0, vend:dev:s_vend:s_dev:rev 8086:10ea:17aa:2153:06
-class 02, sub_class 00 prog_if 00, hdr 0, flags <>, irq 25
+class 02, sub_class 00 prog_if 00, hdr 0, flags <>, irq 26
   addr0 f2600000, size 00020000
   addr1 f2625000, size 00001000
   addr2 00001820, size 00000020
@@ -1093,17 +1093,17 @@ i/o:0 0x2000 - 0x20ff (0x100) "0000:03:00.0"
 i/o:0 0x2000 - 0x20ff (0x100) "rtl_pci"
 i/o:0 0x3000 - 0x3fff (0x1000) "PCI Bus 0000:05"
 irq:0  0 (       46) "2-edge      timer"
-irq:0  1 (     1079) "1-edge      i8042"
+irq:0  1 (      393) "1-edge      i8042"
 irq:0  8 (        1) "8-edge      rtc0"
-irq:0  9 (      488) "9-fasteoi   acpi"
-irq:0 12 (     1948) "12-edge      i8042"
+irq:0  9 (      464) "9-fasteoi   acpi"
+irq:0 12 (     1960) "12-edge      i8042"
 irq:0 16 (        0) "16-fasteoi   mmc0"
-irq:0 17 (        4) "17-fasteoi   rtl_pci"
-irq:0 19 (    21653) "19-fasteoi   ehci_hcd:usb2" "ips" "firewire_ohci"
-irq:0 23 (      203) "23-fasteoi   ehci_hcd:usb1"
-irq:0 24 (      973) "512000-edge      0000:00:1f.2"
-irq:0 25 (   153426) "409600-edge      enp0s25"
-irq:0 26 (       65) "32768-edge      i915"
+irq:0 17 (        3) "17-fasteoi   rtl_pci"
+irq:0 19 (    67459) "19-fasteoi   ehci_hcd:usb2" "ips" "firewire_ohci"
+irq:0 23 (      195) "23-fasteoi   ehci_hcd:usb1"
+irq:0 24 (      768) "512000-edge      0000:00:1f.2"
+irq:0 25 (       62) "32768-edge      i915"
+irq:0 26 (    61900) "409600-edge      enp0s25"
 irq:0 27 (       25) "360448-edge      mei_me"
 irq:0 28 (      339) "442368-edge      snd_hda_intel"
 dma:1 4 "cascade"
@@ -1211,8 +1211,8 @@ partitions:
   block: name = sda, path = /class/block/sda
     dev = 8:0
     range = 16
-    block device: bus = scsi, bus_id = 6:0:0:0 driver = sd
-      path = /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0
+    block device: bus = scsi, bus_id = 0:0:0:0 driver = sd
+      path = /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0
     vendor = SanDisk
     model = Cruzer Fit
     rev = 1.27
@@ -1221,8 +1221,8 @@ partitions:
   block: name = sr0, path = /class/block/sr0
     dev = 11:0
     range = 1
-    block device: bus = scsi, bus_id = 1:0:0:0 driver = sr
-      path = /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0
+    block device: bus = scsi, bus_id = 2:0:0:0 driver = sr
+      path = /devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0
     vendor = HL-DT-ST
     model = DVDRAM GT30N
     rev = LT09
@@ -1334,12 +1334,12 @@ sysfs: no such class: scsi_tape
 >> scsi.3: scsi generic
   scsi: name = sg0, path = /class/scsi_generic/sg0
     dev = 21:0
-    scsi device: bus_id = 1:0:0:0 driver = sr
-      path = /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0
+    scsi device: bus_id = 2:0:0:0 driver = sr
+      path = /devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0
   scsi: name = sg1, path = /class/scsi_generic/sg1
     dev = 21:1
-    scsi device: bus_id = 6:0:0:0 driver = sd
-      path = /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0
+    scsi device: bus_id = 0:0:0:0 driver = sd
+      path = /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0
 >> usb.1: sysfs drivers
 >> usb.2: usb
   usb dev: /devices/pci0000:00/0000:00:1a.0/usb1/1-1
@@ -1564,30 +1564,30 @@ removed: /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.1
 >> usb.3.3: input
   input: name = mice, path = /devices/virtual/input/mice
     dev = 13:63
-  input: name = event10, path = /devices/pci0000:00/0000:00:1b.0/sound/card0/input11/event10
+  input: name = event10, path = /devices/pci0000:00/0000:00:1b.0/sound/card0/input12/event10
     dev = 13:74
     input device: bus = sound, bus_id = card0 driver = (null)
       path = /devices/pci0000:00/0000:00:1b.0/sound/card0
-  input: name = event11, path = /devices/pci0000:00/0000:00:1b.0/sound/card0/input12/event11
+  input: name = event11, path = /devices/pci0000:00/0000:00:1b.0/sound/card0/input13/event11
     dev = 13:75
     input device: bus = sound, bus_id = card0 driver = (null)
       path = /devices/pci0000:00/0000:00:1b.0/sound/card0
-  input: name = event12, path = /devices/pci0000:00/0000:00:1b.0/sound/card0/input13/event12
+  input: name = event12, path = /devices/pci0000:00/0000:00:1b.0/sound/card0/input14/event12
     dev = 13:76
     input device: bus = sound, bus_id = card0 driver = (null)
       path = /devices/pci0000:00/0000:00:1b.0/sound/card0
-  input: name = event13, path = /devices/pci0000:00/0000:00:1b.0/sound/card0/input14/event13
+  input: name = event13, path = /devices/pci0000:00/0000:00:1b.0/sound/card0/input15/event13
     dev = 13:77
     input device: bus = sound, bus_id = card0 driver = (null)
       path = /devices/pci0000:00/0000:00:1b.0/sound/card0
-  input: name = event14, path = /devices/pci0000:00/0000:00:1b.0/sound/card0/input15/event14
+  input: name = event14, path = /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0/input/input16/event14
     dev = 13:78
-    input device: bus = sound, bus_id = card0 driver = (null)
-      path = /devices/pci0000:00/0000:00:1b.0/sound/card0
-  input: name = event15, path = /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0/input/input16/event15
-    dev = 13:79
     input device: bus = usb, bus_id = 1-1.6:1.0 driver = uvcvideo
       path = /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0
+  input: name = event15, path = /devices/platform/i8042/serio1/serio2/input/input7/event15
+    dev = 13:79
+    input device: bus = serio, bus_id = serio2 driver = psmouse
+      path = /devices/platform/i8042/serio1/serio2
   input: name = event0, path = /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0D:00/input/input0/event0
     dev = 13:64
     input device: bus = acpi, bus_id = PNP0C0D:00 driver = button
@@ -1612,19 +1612,19 @@ removed: /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.1
     dev = 13:69
     input device: bus = serio, bus_id = serio1 driver = psmouse
       path = /devices/platform/i8042/serio1
-  input: name = event6, path = /devices/platform/i8042/serio1/serio2/input/input7/event6
+  input: name = event6, path = /devices/platform/thinkpad_acpi/input/input8/event6
     dev = 13:70
-    input device: bus = serio, bus_id = serio2 driver = psmouse
-      path = /devices/platform/i8042/serio1/serio2
-  input: name = event7, path = /devices/platform/thinkpad_acpi/input/input8/event7
-    dev = 13:71
     input device: bus = platform, bus_id = thinkpad_acpi driver = thinkpad_acpi
       path = /devices/platform/thinkpad_acpi
-  input: name = event8, path = /devices/pci0000:00/0000:00:1b.0/sound/card0/input9/event8
+  input: name = event7, path = /devices/pci0000:00/0000:00:1b.0/sound/card0/input9/event7
+    dev = 13:71
+    input device: bus = sound, bus_id = card0 driver = (null)
+      path = /devices/pci0000:00/0000:00:1b.0/sound/card0
+  input: name = event8, path = /devices/pci0000:00/0000:00:1b.0/sound/card0/input10/event8
     dev = 13:72
     input device: bus = sound, bus_id = card0 driver = (null)
       path = /devices/pci0000:00/0000:00:1b.0/sound/card0
-  input: name = event9, path = /devices/pci0000:00/0000:00:1b.0/sound/card0/input10/event9
+  input: name = event9, path = /devices/pci0000:00/0000:00:1b.0/sound/card0/input11/event9
     dev = 13:73
     input device: bus = sound, bus_id = card0 driver = (null)
       path = /devices/pci0000:00/0000:00:1b.0/sound/card0
@@ -1676,11 +1676,11 @@ sysfs: no such class: usb
 ----- return code: ? -----
 >> edd.2: edd info
 >> modem.1: serial
-******  started child process 3685 (15s/120s)  ******
-******  stopped child process 3685 (120s)  ******
+******  started child process 10466 (15s/120s)  ******
+******  stopped child process 10466 (120s)  ******
 >> mouse.2: serial
-******  started child process 3686 (20s/20s)  ******
-******  stopped child process 3686 (20s)  ******
+******  started child process 10467 (20s/20s)  ******
+******  stopped child process 10467 (20s)  ******
 >> input.1: joydev mod
 >> input.1.1: evdev mod
 ----- exec: "/sbin/modprobe evdev " -----
@@ -1750,23 +1750,12 @@ sysfs: no such class: usb
   B: KEY=6420 30000 0 0 0 0
   B: ABS=260800011000003
   
-  I: Bus=0011 Vendor=0002 Product=000a Version=0000
-  N: Name="TPPS/2 IBM TrackPoint"
-  P: Phys=synaptics-pt/serio0/input0
-  S: Sysfs=/devices/platform/i8042/serio1/serio2/input/input7
-  U: Uniq=
-  H: Handlers=mouse1 event6 
-  B: PROP=21
-  B: EV=7
-  B: KEY=70000 0 0 0 0
-  B: REL=3
-  
   I: Bus=0019 Vendor=17aa Product=5054 Version=4101
   N: Name="ThinkPad Extra Buttons"
   P: Phys=thinkpad_acpi/input0
   S: Sysfs=/devices/platform/thinkpad_acpi/input/input8
   U: Uniq=
-  H: Handlers=rfkill kbd event7 
+  H: Handlers=rfkill kbd event6 
   B: PROP=0
   B: EV=33
   B: KEY=10040 0 18040000 0 10000000000000 0 1501b02102004 c000280041114000 10e000000000000 0
@@ -1778,7 +1767,7 @@ sysfs: no such class: usb
   P: Phys=ALSA
   S: Sysfs=/devices/pci0000:00/0000:00:1b.0/sound/card0/input9
   U: Uniq=
-  H: Handlers=event8 
+  H: Handlers=event7 
   B: PROP=0
   B: EV=21
   B: SW=10
@@ -1788,7 +1777,7 @@ sysfs: no such class: usb
   P: Phys=ALSA
   S: Sysfs=/devices/pci0000:00/0000:00:1b.0/sound/card0/input10
   U: Uniq=
-  H: Handlers=event9 
+  H: Handlers=event8 
   B: PROP=0
   B: EV=21
   B: SW=10
@@ -1798,7 +1787,7 @@ sysfs: no such class: usb
   P: Phys=ALSA
   S: Sysfs=/devices/pci0000:00/0000:00:1b.0/sound/card0/input11
   U: Uniq=
-  H: Handlers=event10 
+  H: Handlers=event9 
   B: PROP=0
   B: EV=21
   B: SW=4
@@ -1808,7 +1797,7 @@ sysfs: no such class: usb
   P: Phys=ALSA
   S: Sysfs=/devices/pci0000:00/0000:00:1b.0/sound/card0/input12
   U: Uniq=
-  H: Handlers=event11 
+  H: Handlers=event10 
   B: PROP=0
   B: EV=21
   B: SW=4
@@ -1818,7 +1807,7 @@ sysfs: no such class: usb
   P: Phys=ALSA
   S: Sysfs=/devices/pci0000:00/0000:00:1b.0/sound/card0/input13
   U: Uniq=
-  H: Handlers=event12 
+  H: Handlers=event11 
   B: PROP=0
   B: EV=21
   B: SW=140
@@ -1828,7 +1817,7 @@ sysfs: no such class: usb
   P: Phys=ALSA
   S: Sysfs=/devices/pci0000:00/0000:00:1b.0/sound/card0/input14
   U: Uniq=
-  H: Handlers=event13 
+  H: Handlers=event12 
   B: PROP=0
   B: EV=21
   B: SW=140
@@ -1838,7 +1827,7 @@ sysfs: no such class: usb
   P: Phys=ALSA
   S: Sysfs=/devices/pci0000:00/0000:00:1b.0/sound/card0/input15
   U: Uniq=
-  H: Handlers=event14 
+  H: Handlers=event13 
   B: PROP=0
   B: EV=21
   B: SW=140
@@ -1848,10 +1837,21 @@ sysfs: no such class: usb
   P: Phys=usb-0000:00:1a.0-1.6/button
   S: Sysfs=/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0/input/input16
   U: Uniq=
-  H: Handlers=kbd event15 
+  H: Handlers=kbd event14 
   B: PROP=0
   B: EV=3
   B: KEY=100000 0 0 0
+  
+  I: Bus=0011 Vendor=0002 Product=000a Version=0000
+  N: Name="TPPS/2 IBM TrackPoint"
+  P: Phys=synaptics-pt/serio0/input0
+  S: Sysfs=/devices/platform/i8042/serio1/serio2/input/input7
+  U: Uniq=
+  H: Handlers=mouse1 event15 
+  B: PROP=21
+  B: EV=7
+  B: KEY=70000 0 0 0 0
+  B: REL=3
   
 ----- /proc/bus/input/devices end -----
 bus = 25, name = Lid Switch
@@ -1900,16 +1900,8 @@ bus = 17, name = SynPS/2 Synaptics TouchPad
   mouse wheels = 0
   is_mouse = 1
   is_joystick = 0
-bus = 17, name = TPPS/2 IBM TrackPoint
-  handlers = mouse1 event6
-  key = 00000000000700000000000000000000000000000000000000000000000000000000000000000000
-  rel = 0000000000000003
-  mouse buttons = 3
-  mouse wheels = 0
-  is_mouse = 1
-  is_joystick = 0
 bus = 25, name = ThinkPad Extra Buttons
-  handlers = rfkill kbd event7
+  handlers = rfkill kbd event6
   key = 0000000000010040000000000000000000000000180400000000000000000000001000000000000000000000000000000001501b02102004c000280041114000010e0000000000000000000000000000
   mouse buttons = 0
   mouse wheels = 0
@@ -1917,60 +1909,68 @@ bus = 25, name = ThinkPad Extra Buttons
   is_joystick = 0
 unknown non-USB input device
 bus = 0, name = HDA Intel MID Mic
-  handlers = event8
+  handlers = event7
   mouse buttons = 0
   mouse wheels = 0
   is_mouse = 0
   is_joystick = 0
 unknown non-USB input device
 bus = 0, name = HDA Intel MID Dock Mic
-  handlers = event9
+  handlers = event8
   mouse buttons = 0
   mouse wheels = 0
   is_mouse = 0
   is_joystick = 0
 unknown non-USB input device
 bus = 0, name = HDA Intel MID Dock Headphone
-  handlers = event10
+  handlers = event9
   mouse buttons = 0
   mouse wheels = 0
   is_mouse = 0
   is_joystick = 0
 unknown non-USB input device
 bus = 0, name = HDA Intel MID Headphone
-  handlers = event11
+  handlers = event10
   mouse buttons = 0
   mouse wheels = 0
   is_mouse = 0
   is_joystick = 0
 unknown non-USB input device
 bus = 0, name = HDA Intel MID HDMI/DP,pcm=3
-  handlers = event12
+  handlers = event11
   mouse buttons = 0
   mouse wheels = 0
   is_mouse = 0
   is_joystick = 0
 unknown non-USB input device
 bus = 0, name = HDA Intel MID HDMI/DP,pcm=7
-  handlers = event13
+  handlers = event12
   mouse buttons = 0
   mouse wheels = 0
   is_mouse = 0
   is_joystick = 0
 unknown non-USB input device
 bus = 0, name = HDA Intel MID HDMI/DP,pcm=8
-  handlers = event14
+  handlers = event13
   mouse buttons = 0
   mouse wheels = 0
   is_mouse = 0
   is_joystick = 0
 unknown non-USB input device
 bus = 3, name = Integrated Camera
-  handlers = kbd event15
+  handlers = kbd event14
   key = 0000000000100000000000000000000000000000000000000000000000000000
   mouse buttons = 0
   mouse wheels = 0
   is_mouse = 0
+  is_joystick = 0
+bus = 17, name = TPPS/2 IBM TrackPoint
+  handlers = mouse1 event15
+  key = 00000000000700000000000000000000000000000000000000000000000000000000000000000000
+  rel = 0000000000000003
+  mouse buttons = 3
+  mouse wheels = 0
+  is_mouse = 1
   is_joystick = 0
 >> kbd.2: uml
 >> cpu.1: cpuinfo
@@ -1982,7 +1982,7 @@ bus = 3, name = Integrated Camera
   model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
   stepping	: 2
   microcode	: 0xc
-  cpu MHz		: 1733.000
+  cpu MHz		: 2133.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -1996,7 +1996,7 @@ bus = 3, name = Integrated Camera
   wp		: yes
   flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt aes lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm ida arat
   bugs		:
-  bogomips	: 4788.04
+  bogomips	: 4787.83
   clflush size	: 64
   cache_alignment	: 64
   address sizes	: 36 bits physical, 48 bits virtual
@@ -2009,7 +2009,7 @@ bus = 3, name = Integrated Camera
   model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
   stepping	: 2
   microcode	: 0xc
-  cpu MHz		: 1333.000
+  cpu MHz		: 1466.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -2023,7 +2023,7 @@ bus = 3, name = Integrated Camera
   wp		: yes
   flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt aes lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm ida arat
   bugs		:
-  bogomips	: 4788.04
+  bogomips	: 4787.83
   clflush size	: 64
   cache_alignment	: 64
   address sizes	: 36 bits physical, 48 bits virtual
@@ -2036,7 +2036,7 @@ bus = 3, name = Integrated Camera
   model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
   stepping	: 2
   microcode	: 0xc
-  cpu MHz		: 1599.000
+  cpu MHz		: 1199.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -2050,7 +2050,7 @@ bus = 3, name = Integrated Camera
   wp		: yes
   flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt aes lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm ida arat
   bugs		:
-  bogomips	: 4788.04
+  bogomips	: 4787.83
   clflush size	: 64
   cache_alignment	: 64
   address sizes	: 36 bits physical, 48 bits virtual
@@ -2063,7 +2063,7 @@ bus = 3, name = Integrated Camera
   model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
   stepping	: 2
   microcode	: 0xc
-  cpu MHz		: 1599.000
+  cpu MHz		: 1199.000
   cache size	: 3072 KB
   physical id	: 0
   siblings	: 4
@@ -2077,7 +2077,7 @@ bus = 3, name = Integrated Camera
   wp		: yes
   flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt aes lahf_lm tpr_shadow vnmi flexpriority ept vpid dtherm ida arat
   bugs		:
-  bogomips	: 4788.04
+  bogomips	: 4787.83
   clflush size	: 64
   cache_alignment	: 64
   address sizes	: 36 bits physical, 48 bits virtual
@@ -2236,7 +2236,7 @@ enp0s25: socket failed: Operation not permitted
   E: PROP=0
   E: SUBSYSTEM=input
   E: TAGS=:seat:
-  E: USEC_INITIALIZED=6190257
+  E: USEC_INITIALIZED=5900255
   
   P: /devices/LNXSYSTM:00/LNXPWRBN:00/input/input2/event2
   N: input/event2
@@ -2250,7 +2250,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=66
   E: SUBSYSTEM=input
   E: TAGS=:power-switch:
-  E: USEC_INITIALIZED=6365291
+  E: USEC_INITIALIZED=6101029
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00
@@ -2325,7 +2325,7 @@ enp0s25: socket failed: Operation not permitted
   E: PROP=0
   E: SUBSYSTEM=input
   E: TAGS=:seat:
-  E: USEC_INITIALIZED=9436028
+  E: USEC_INITIALIZED=8608473
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/LNXVIDEO:00/input/input6/event4
   N: input/event4
@@ -2339,7 +2339,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=68
   E: SUBSYSTEM=input
   E: TAGS=:power-switch:
-  E: USEC_INITIALIZED=9465122
+  E: USEC_INITIALIZED=8660882
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/PNP0C14:00
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/PNP0C14:00
@@ -2356,7 +2356,7 @@ enp0s25: socket failed: Operation not permitted
   E: ID_VENDOR_FROM_DATABASE=Lenovo Group Limited
   E: MODALIAS=acpi:LEN0015:PNP0F13:
   E: SUBSYSTEM=acpi
-  E: USEC_INITIALIZED=15815395
+  E: USEC_INITIALIZED=13693342
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:09/PNP0000:00
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:09/PNP0000:00
@@ -2442,7 +2442,7 @@ enp0s25: socket failed: Operation not permitted
   E: ID_VENDOR_FROM_DATABASE=IBM
   E: MODALIAS=acpi:IBM0068:
   E: SUBSYSTEM=acpi
-  E: USEC_INITIALIZED=15839818
+  E: USEC_INITIALIZED=13729192
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:09/PNP0C09:00/LNXPOWER:00
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:09/PNP0C09:00/LNXPOWER:00
@@ -2485,7 +2485,7 @@ enp0s25: socket failed: Operation not permitted
   E: ID_VENDOR_FROM_DATABASE=STMicroelectronics
   E: MODALIAS=acpi:SMO1200:PNP0C31:
   E: SUBSYSTEM=acpi
-  E: USEC_INITIALIZED=15817359
+  E: USEC_INITIALIZED=13683117
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:0a
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/device:0a
@@ -2703,7 +2703,7 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=input
   E: SW=1
   E: TAGS=:seat:
-  E: USEC_INITIALIZED=6192236
+  E: USEC_INITIALIZED=5939495
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0D:00/input/input0/event0
   N: input/event0
@@ -2716,7 +2716,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=64
   E: SUBSYSTEM=input
   E: TAGS=:power-switch:
-  E: USEC_INITIALIZED=6700636
+  E: USEC_INITIALIZED=6221799
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0E:00
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0E:00
@@ -2740,7 +2740,7 @@ enp0s25: socket failed: Operation not permitted
   E: PROP=0
   E: SUBSYSTEM=input
   E: TAGS=:seat:
-  E: USEC_INITIALIZED=6221793
+  E: USEC_INITIALIZED=5948913
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0E:00/input/input1/event1
   N: input/event1
@@ -2754,7 +2754,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=65
   E: SUBSYSTEM=input
   E: TAGS=:power-switch:
-  E: USEC_INITIALIZED=6881944
+  E: USEC_INITIALIZED=6223712
   
   P: /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0F:00
   E: DEVPATH=/devices/LNXSYSTM:00/LNXSYBUS:00/PNP0C0F:00
@@ -2850,7 +2850,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:00:00.0
   E: PCI_SUBSYS_ID=17AA:2193
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15703696
+  E: USEC_INITIALIZED=13598506
   
   P: /devices/pci0000:00/0000:00:02.0
   E: DEVPATH=/devices/pci0000:00/0000:00:02.0
@@ -2866,7 +2866,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:00:02.0
   E: PCI_SUBSYS_ID=17AA:215A
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15703696
+  E: USEC_INITIALIZED=13598473
   
   P: /devices/pci0000:00/0000:00:02.0/backlight/acpi_video0
   E: DEVPATH=/devices/pci0000:00/0000:00:02.0/backlight/acpi_video0
@@ -2875,7 +2875,7 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=backlight
   E: SYSTEMD_WANTS=systemd-backlight@backlight:acpi_video0.service
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15779451
+  E: USEC_INITIALIZED=13660088
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card0
   N: dri/card0
@@ -2889,8 +2889,8 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=0
   E: PRIMARY_DEVICE_FOR_DISPLAY=1
   E: SUBSYSTEM=drm
-  E: TAGS=:master-of-seat:seat:uaccess:
-  E: USEC_INITIALIZED=15780332
+  E: TAGS=:uaccess:seat:master-of-seat:
+  E: USEC_INITIALIZED=13660547
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-DP-1
   E: DEVPATH=/devices/pci0000:00/0000:00:02.0/drm/card0/card0-DP-1
@@ -2898,8 +2898,8 @@ enp0s25: socket failed: Operation not permitted
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: SUBSYSTEM=drm
-  E: TAGS=:master-of-seat:seat:
-  E: USEC_INITIALIZED=15861046
+  E: TAGS=:seat:master-of-seat:
+  E: USEC_INITIALIZED=13736216
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-DP-2
   E: DEVPATH=/devices/pci0000:00/0000:00:02.0/drm/card0/card0-DP-2
@@ -2907,8 +2907,8 @@ enp0s25: socket failed: Operation not permitted
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: SUBSYSTEM=drm
-  E: TAGS=:master-of-seat:seat:
-  E: USEC_INITIALIZED=15861472
+  E: TAGS=:seat:master-of-seat:
+  E: USEC_INITIALIZED=13737020
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-DP-3
   E: DEVPATH=/devices/pci0000:00/0000:00:02.0/drm/card0/card0-DP-3
@@ -2916,8 +2916,8 @@ enp0s25: socket failed: Operation not permitted
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: SUBSYSTEM=drm
-  E: TAGS=:master-of-seat:seat:
-  E: USEC_INITIALIZED=15862946
+  E: TAGS=:seat:master-of-seat:
+  E: USEC_INITIALIZED=13739330
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-HDMI-A-1
   E: DEVPATH=/devices/pci0000:00/0000:00:02.0/drm/card0/card0-HDMI-A-1
@@ -2925,8 +2925,8 @@ enp0s25: socket failed: Operation not permitted
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: SUBSYSTEM=drm
-  E: TAGS=:master-of-seat:seat:
-  E: USEC_INITIALIZED=15859429
+  E: TAGS=:seat:master-of-seat:
+  E: USEC_INITIALIZED=13739330
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-HDMI-A-2
   E: DEVPATH=/devices/pci0000:00/0000:00:02.0/drm/card0/card0-HDMI-A-2
@@ -2934,8 +2934,8 @@ enp0s25: socket failed: Operation not permitted
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: SUBSYSTEM=drm
-  E: TAGS=:master-of-seat:seat:
-  E: USEC_INITIALIZED=15873302
+  E: TAGS=:seat:master-of-seat:
+  E: USEC_INITIALIZED=13739711
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-HDMI-A-3
   E: DEVPATH=/devices/pci0000:00/0000:00:02.0/drm/card0/card0-HDMI-A-3
@@ -2943,8 +2943,8 @@ enp0s25: socket failed: Operation not permitted
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: SUBSYSTEM=drm
-  E: TAGS=:master-of-seat:seat:
-  E: USEC_INITIALIZED=15866778
+  E: TAGS=:seat:master-of-seat:
+  E: USEC_INITIALIZED=13739832
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-LVDS-1
   E: DEVPATH=/devices/pci0000:00/0000:00:02.0/drm/card0/card0-LVDS-1
@@ -2952,8 +2952,8 @@ enp0s25: socket failed: Operation not permitted
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: SUBSYSTEM=drm
-  E: TAGS=:master-of-seat:seat:
-  E: USEC_INITIALIZED=15870990
+  E: TAGS=:seat:master-of-seat:
+  E: USEC_INITIALIZED=13742166
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-LVDS-1/intel_backlight
   E: DEVPATH=/devices/pci0000:00/0000:00:02.0/drm/card0/card0-LVDS-1/intel_backlight
@@ -2962,7 +2962,7 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=backlight
   E: SYSTEMD_WANTS=systemd-backlight@backlight:intel_backlight.service
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15887634
+  E: USEC_INITIALIZED=13744707
   
   P: /devices/pci0000:00/0000:00:02.0/drm/card0/card0-VGA-1
   E: DEVPATH=/devices/pci0000:00/0000:00:02.0/drm/card0/card0-VGA-1
@@ -2970,8 +2970,8 @@ enp0s25: socket failed: Operation not permitted
   E: ID_PATH=pci-0000:00:02.0
   E: ID_PATH_TAG=pci-0000_00_02_0
   E: SUBSYSTEM=drm
-  E: TAGS=:master-of-seat:seat:
-  E: USEC_INITIALIZED=15873162
+  E: TAGS=:seat:master-of-seat:
+  E: USEC_INITIALIZED=13742063
   
   P: /devices/pci0000:00/0000:00:02.0/drm/controlD64
   N: dri/controlD64
@@ -2983,7 +2983,7 @@ enp0s25: socket failed: Operation not permitted
   E: MAJOR=226
   E: MINOR=64
   E: SUBSYSTEM=drm
-  E: USEC_INITIALIZED=15776663
+  E: USEC_INITIALIZED=13660666
   
   P: /devices/pci0000:00/0000:00:02.0/drm/renderD128
   N: dri/renderD128
@@ -2997,7 +2997,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=128
   E: SUBSYSTEM=drm
   E: TAGS=:seat:uaccess:
-  E: USEC_INITIALIZED=15778066
+  E: USEC_INITIALIZED=13660966
   
   P: /devices/pci0000:00/0000:00:02.0/graphics/fb0
   N: fb0
@@ -3009,8 +3009,8 @@ enp0s25: socket failed: Operation not permitted
   E: MAJOR=29
   E: MINOR=0
   E: SUBSYSTEM=graphics
-  E: TAGS=:master-of-seat:seat:
-  E: USEC_INITIALIZED=15777971
+  E: TAGS=:seat:master-of-seat:
+  E: USEC_INITIALIZED=13660679
   
   P: /devices/pci0000:00/0000:00:02.0/i2c-0
   E: DEVPATH=/devices/pci0000:00/0000:00:02.0/i2c-0
@@ -3169,7 +3169,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:00:16.0
   E: PCI_SUBSYS_ID=17AA:215F
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15738672
+  E: USEC_INITIALIZED=13628591
   
   P: /devices/pci0000:00/0000:00:16.0/mei/mei0
   N: mei0
@@ -3297,7 +3297,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:00:16.3
   E: PCI_SUBSYS_ID=17AA:2162
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15738361
+  E: USEC_INITIALIZED=13627982
   
   P: /devices/pci0000:00/0000:00:16.3/tty/ttyS4
   N: ttyS4
@@ -3315,7 +3315,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=68
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15891143
+  E: USEC_INITIALIZED=13761555
   
   P: /devices/pci0000:00/0000:00:19.0
   E: DEVPATH=/devices/pci0000:00/0000:00:19.0
@@ -3330,7 +3330,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:00:19.0
   E: PCI_SUBSYS_ID=17AA:2153
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15754420
+  E: USEC_INITIALIZED=13644914
   
   P: /devices/pci0000:00/0000:00:19.0/net/enp0s25
   E: DEVPATH=/devices/pci0000:00/0000:00:19.0/net/enp0s25
@@ -3353,7 +3353,7 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=net
   E: SYSTEMD_ALIAS=/sys/subsystem/net/devices/enp0s25
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=9408259
+  E: USEC_INITIALIZED=8820230
   
   P: /devices/pci0000:00/0000:00:1a.0
   E: DEVPATH=/devices/pci0000:00/0000:00:1a.0
@@ -3369,7 +3369,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:00:1a.0
   E: PCI_SUBSYS_ID=17AA:2163
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15738068
+  E: USEC_INITIALIZED=13628419
   
   P: /devices/pci0000:00/0000:00:1a.0/usb1
   N: bus/usb/001/001
@@ -3401,7 +3401,7 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=usb
   E: TAGS=:seat:
   E: TYPE=9/0/0
-  E: USEC_INITIALIZED=6357517
+  E: USEC_INITIALIZED=6014842
   
   P: /devices/pci0000:00/0000:00:1a.0/usb1/1-0:1.0
   E: DEVPATH=/devices/pci0000:00/0000:00:1a.0/usb1/1-0:1.0
@@ -3416,7 +3416,7 @@ enp0s25: socket failed: Operation not permitted
   E: PRODUCT=1d6b/2/404
   E: SUBSYSTEM=usb
   E: TYPE=9/0/0
-  E: USEC_INITIALIZED=15917783
+  E: USEC_INITIALIZED=13801114
   
   P: /devices/pci0000:00/0000:00:1a.0/usb1/1-1
   N: bus/usb/001/002
@@ -3447,7 +3447,7 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=usb
   E: TAGS=:seat:
   E: TYPE=9/0/1
-  E: USEC_INITIALIZED=9391539
+  E: USEC_INITIALIZED=6039211
   
   P: /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.4
   N: bus/usb/001/003
@@ -3475,7 +3475,7 @@ enp0s25: socket failed: Operation not permitted
   E: PRODUCT=a5c/217f/360
   E: SUBSYSTEM=usb
   E: TYPE=224/1/1
-  E: USEC_INITIALIZED=9395648
+  E: USEC_INITIALIZED=6053034
   
   P: /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.4/1-1.4:1.0
   E: DEVPATH=/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.4/1-1.4:1.0
@@ -3491,7 +3491,7 @@ enp0s25: socket failed: Operation not permitted
   E: PRODUCT=a5c/217f/360
   E: SUBSYSTEM=usb
   E: TYPE=224/1/1
-  E: USEC_INITIALIZED=16019442
+  E: USEC_INITIALIZED=13887282
   
   P: /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.4/1-1.4:1.0/bluetooth/hci0
   E: DEVPATH=/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.4/1-1.4:1.0/bluetooth/hci0
@@ -3500,7 +3500,7 @@ enp0s25: socket failed: Operation not permitted
   E: SYSTEMD_ALIAS=/sys/subsystem/bluetooth/devices/hci0
   E: SYSTEMD_WANTS=bluetooth.target
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=16528830
+  E: USEC_INITIALIZED=14293415
   
   P: /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.4/1-1.4:1.0/bluetooth/hci0/rfkill1
   E: DEVPATH=/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.4/1-1.4:1.0/bluetooth/hci0/rfkill1
@@ -3510,7 +3510,7 @@ enp0s25: socket failed: Operation not permitted
   E: RFKILL_STATE=1
   E: RFKILL_TYPE=bluetooth
   E: SUBSYSTEM=rfkill
-  E: USEC_INITIALIZED=16530338
+  E: USEC_INITIALIZED=14293941
   
   P: /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.4/1-1.4:1.1
   E: DEVPATH=/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.4/1-1.4:1.1
@@ -3526,7 +3526,7 @@ enp0s25: socket failed: Operation not permitted
   E: PRODUCT=a5c/217f/360
   E: SUBSYSTEM=usb
   E: TYPE=224/1/1
-  E: USEC_INITIALIZED=16020556
+  E: USEC_INITIALIZED=13887320
   
   P: /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.4/1-1.4:1.2
   E: DEVPATH=/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.4/1-1.4:1.2
@@ -3541,7 +3541,7 @@ enp0s25: socket failed: Operation not permitted
   E: PRODUCT=a5c/217f/360
   E: SUBSYSTEM=usb
   E: TYPE=224/1/1
-  E: USEC_INITIALIZED=16021138
+  E: USEC_INITIALIZED=13887326
   
   P: /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.4/1-1.4:1.3
   E: DEVPATH=/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.4/1-1.4:1.3
@@ -3556,7 +3556,7 @@ enp0s25: socket failed: Operation not permitted
   E: PRODUCT=a5c/217f/360
   E: SUBSYSTEM=usb
   E: TYPE=224/1/1
-  E: USEC_INITIALIZED=16021892
+  E: USEC_INITIALIZED=13888019
   
   P: /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6
   N: bus/usb/001/004
@@ -3583,7 +3583,7 @@ enp0s25: socket failed: Operation not permitted
   E: PRODUCT=17ef/480f/2345
   E: SUBSYSTEM=usb
   E: TYPE=239/2/1
-  E: USEC_INITIALIZED=9394185
+  E: USEC_INITIALIZED=6052471
   
   P: /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0
   E: DEVPATH=/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0
@@ -3598,7 +3598,7 @@ enp0s25: socket failed: Operation not permitted
   E: PRODUCT=17ef/480f/2345
   E: SUBSYSTEM=usb
   E: TYPE=239/2/1
-  E: USEC_INITIALIZED=16021222
+  E: USEC_INITIALIZED=13943982
   
   P: /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0/input/input16
   E: DEVPATH=/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0/input/input16
@@ -3629,15 +3629,15 @@ enp0s25: socket failed: Operation not permitted
   E: PROP=0
   E: SUBSYSTEM=input
   E: TAGS=:seat:
-  E: USEC_INITIALIZED=16511141
+  E: USEC_INITIALIZED=14409468
   
-  P: /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0/input/input16/event15
-  N: input/event15
+  P: /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0/input/input16/event14
+  N: input/event14
   S: input/by-id/usb-Chicony_Electronics_Co.__Ltd._Integrated_Camera-event-if00
   S: input/by-path/pci-0000:00:1a.0-usb-0:1.6:1.0-event
-  E: DEVLINKS=/dev/input/by-id/usb-Chicony_Electronics_Co.__Ltd._Integrated_Camera-event-if00 /dev/input/by-path/pci-0000:00:1a.0-usb-0:1.6:1.0-event
-  E: DEVNAME=/dev/input/event15
-  E: DEVPATH=/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0/input/input16/event15
+  E: DEVLINKS=/dev/input/by-path/pci-0000:00:1a.0-usb-0:1.6:1.0-event /dev/input/by-id/usb-Chicony_Electronics_Co.__Ltd._Integrated_Camera-event-if00
+  E: DEVNAME=/dev/input/event14
+  E: DEVPATH=/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0/input/input16/event14
   E: ID_BUS=usb
   E: ID_INPUT=1
   E: ID_INPUT_KEY=1
@@ -3656,9 +3656,9 @@ enp0s25: socket failed: Operation not permitted
   E: ID_VENDOR_ENC=Chicony\x20Electronics\x20Co.\x2c\x20Ltd.
   E: ID_VENDOR_ID=17ef
   E: MAJOR=13
-  E: MINOR=79
+  E: MINOR=78
   E: SUBSYSTEM=input
-  E: USEC_INITIALIZED=16561717
+  E: USEC_INITIALIZED=14441193
   
   P: /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0/media0
   N: media0
@@ -3672,7 +3672,7 @@ enp0s25: socket failed: Operation not permitted
   N: video0
   S: v4l/by-id/usb-Chicony_Electronics_Co.__Ltd._Integrated_Camera-video-index0
   S: v4l/by-path/pci-0000:00:1a.0-usb-0:1.6:1.0-video-index0
-  E: DEVLINKS=/dev/v4l/by-path/pci-0000:00:1a.0-usb-0:1.6:1.0-video-index0 /dev/v4l/by-id/usb-Chicony_Electronics_Co.__Ltd._Integrated_Camera-video-index0
+  E: DEVLINKS=/dev/v4l/by-id/usb-Chicony_Electronics_Co.__Ltd._Integrated_Camera-video-index0 /dev/v4l/by-path/pci-0000:00:1a.0-usb-0:1.6:1.0-video-index0
   E: DEVNAME=/dev/video0
   E: DEVPATH=/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0/video4linux/video0
   E: ID_BUS=usb
@@ -3698,7 +3698,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=0
   E: SUBSYSTEM=video4linux
   E: TAGS=:seat:uaccess:
-  E: USEC_INITIALIZED=16529437
+  E: USEC_INITIALIZED=14422252
   
   P: /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.1
   E: DEVPATH=/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.1
@@ -3713,7 +3713,7 @@ enp0s25: socket failed: Operation not permitted
   E: PRODUCT=17ef/480f/2345
   E: SUBSYSTEM=usb
   E: TYPE=239/2/1
-  E: USEC_INITIALIZED=16017730
+  E: USEC_INITIALIZED=13943982
   
   P: /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1:1.0
   E: DEVPATH=/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1:1.0
@@ -3728,7 +3728,7 @@ enp0s25: socket failed: Operation not permitted
   E: PRODUCT=8087/20/0
   E: SUBSYSTEM=usb
   E: TYPE=9/0/1
-  E: USEC_INITIALIZED=15929864
+  E: USEC_INITIALIZED=13807340
   
   P: /devices/pci0000:00/0000:00:1b.0
   E: DEVPATH=/devices/pci0000:00/0000:00:1b.0
@@ -3743,7 +3743,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:00:1b.0
   E: PCI_SUBSYS_ID=17AA:215E
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15736509
+  E: USEC_INITIALIZED=13628053
   
   P: /devices/pci0000:00/0000:00:1b.0/hdaudioC0D0
   E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/hdaudioC0D0
@@ -3773,8 +3773,8 @@ enp0s25: socket failed: Operation not permitted
   E: SOUND_INITIALIZED=1
   E: SUBSYSTEM=sound
   E: SYSTEMD_WANTS=sound.target
-  E: TAGS=:systemd:seat:
-  E: USEC_INITIALIZED=16512406
+  E: TAGS=:seat:systemd:
+  E: USEC_INITIALIZED=14259016
   
   P: /devices/pci0000:00/0000:00:1b.0/sound/card0/hwC0D0
   N: snd/hwC0D0
@@ -3784,7 +3784,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=8
   E: SUBSYSTEM=sound
   E: TAGS=:uaccess:
-  E: USEC_INITIALIZED=16523428
+  E: USEC_INITIALIZED=14261313
   
   P: /devices/pci0000:00/0000:00:1b.0/sound/card0/hwC0D3
   N: snd/hwC0D3
@@ -3794,7 +3794,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=9
   E: SUBSYSTEM=sound
   E: TAGS=:uaccess:
-  E: USEC_INITIALIZED=16520780
+  E: USEC_INITIALIZED=14261419
   
   P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input10
   E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input10
@@ -3811,19 +3811,19 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=input
   E: SW=10
   E: TAGS=:seat:
-  E: USEC_INITIALIZED=16519208
+  E: USEC_INITIALIZED=14262104
   
-  P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input10/event9
-  N: input/event9
-  E: DEVNAME=/dev/input/event9
-  E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input10/event9
+  P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input10/event8
+  N: input/event8
+  E: DEVNAME=/dev/input/event8
+  E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input10/event8
   E: ID_INPUT=1
   E: ID_PATH=pci-0000:00:1b.0
   E: ID_PATH_TAG=pci-0000_00_1b_0
   E: MAJOR=13
-  E: MINOR=73
+  E: MINOR=72
   E: SUBSYSTEM=input
-  E: USEC_INITIALIZED=16561701
+  E: USEC_INITIALIZED=14292526
   
   P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input11
   E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input11
@@ -3840,19 +3840,19 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=input
   E: SW=4
   E: TAGS=:seat:
-  E: USEC_INITIALIZED=16519124
+  E: USEC_INITIALIZED=14262983
   
-  P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input11/event10
-  N: input/event10
-  E: DEVNAME=/dev/input/event10
-  E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input11/event10
+  P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input11/event9
+  N: input/event9
+  E: DEVNAME=/dev/input/event9
+  E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input11/event9
   E: ID_INPUT=1
   E: ID_PATH=pci-0000:00:1b.0
   E: ID_PATH_TAG=pci-0000_00_1b_0
   E: MAJOR=13
-  E: MINOR=74
+  E: MINOR=73
   E: SUBSYSTEM=input
-  E: USEC_INITIALIZED=16565420
+  E: USEC_INITIALIZED=14288508
   
   P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input12
   E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input12
@@ -3869,19 +3869,19 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=input
   E: SW=4
   E: TAGS=:seat:
-  E: USEC_INITIALIZED=16519256
+  E: USEC_INITIALIZED=14262260
   
-  P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input12/event11
-  N: input/event11
-  E: DEVNAME=/dev/input/event11
-  E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input12/event11
+  P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input12/event10
+  N: input/event10
+  E: DEVNAME=/dev/input/event10
+  E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input12/event10
   E: ID_INPUT=1
   E: ID_PATH=pci-0000:00:1b.0
   E: ID_PATH_TAG=pci-0000_00_1b_0
   E: MAJOR=13
-  E: MINOR=75
+  E: MINOR=74
   E: SUBSYSTEM=input
-  E: USEC_INITIALIZED=16561712
+  E: USEC_INITIALIZED=14292523
   
   P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input13
   E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input13
@@ -3898,19 +3898,19 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=input
   E: SW=140
   E: TAGS=:seat:
-  E: USEC_INITIALIZED=16521910
+  E: USEC_INITIALIZED=14262983
   
-  P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input13/event12
-  N: input/event12
-  E: DEVNAME=/dev/input/event12
-  E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input13/event12
+  P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input13/event11
+  N: input/event11
+  E: DEVNAME=/dev/input/event11
+  E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input13/event11
   E: ID_INPUT=1
   E: ID_PATH=pci-0000:00:1b.0
   E: ID_PATH_TAG=pci-0000_00_1b_0
   E: MAJOR=13
-  E: MINOR=76
+  E: MINOR=75
   E: SUBSYSTEM=input
-  E: USEC_INITIALIZED=16565378
+  E: USEC_INITIALIZED=14296332
   
   P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input14
   E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input14
@@ -3927,19 +3927,19 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=input
   E: SW=140
   E: TAGS=:seat:
-  E: USEC_INITIALIZED=16522165
+  E: USEC_INITIALIZED=14264282
   
-  P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input14/event13
-  N: input/event13
-  E: DEVNAME=/dev/input/event13
-  E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input14/event13
+  P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input14/event12
+  N: input/event12
+  E: DEVNAME=/dev/input/event12
+  E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input14/event12
   E: ID_INPUT=1
   E: ID_PATH=pci-0000:00:1b.0
   E: ID_PATH_TAG=pci-0000_00_1b_0
   E: MAJOR=13
-  E: MINOR=77
+  E: MINOR=76
   E: SUBSYSTEM=input
-  E: USEC_INITIALIZED=16573504
+  E: USEC_INITIALIZED=14312371
   
   P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input15
   E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input15
@@ -3956,19 +3956,19 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=input
   E: SW=140
   E: TAGS=:seat:
-  E: USEC_INITIALIZED=16521836
+  E: USEC_INITIALIZED=14289000
   
-  P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input15/event14
-  N: input/event14
-  E: DEVNAME=/dev/input/event14
-  E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input15/event14
+  P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input15/event13
+  N: input/event13
+  E: DEVNAME=/dev/input/event13
+  E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input15/event13
   E: ID_INPUT=1
   E: ID_PATH=pci-0000:00:1b.0
   E: ID_PATH_TAG=pci-0000_00_1b_0
   E: MAJOR=13
-  E: MINOR=78
+  E: MINOR=77
   E: SUBSYSTEM=input
-  E: USEC_INITIALIZED=16549429
+  E: USEC_INITIALIZED=14329276
   
   P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input9
   E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input9
@@ -3985,19 +3985,19 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=input
   E: SW=10
   E: TAGS=:seat:
-  E: USEC_INITIALIZED=16519687
+  E: USEC_INITIALIZED=14262191
   
-  P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input9/event8
-  N: input/event8
-  E: DEVNAME=/dev/input/event8
-  E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input9/event8
+  P: /devices/pci0000:00/0000:00:1b.0/sound/card0/input9/event7
+  N: input/event7
+  E: DEVNAME=/dev/input/event7
+  E: DEVPATH=/devices/pci0000:00/0000:00:1b.0/sound/card0/input9/event7
   E: ID_INPUT=1
   E: ID_PATH=pci-0000:00:1b.0
   E: ID_PATH_TAG=pci-0000_00_1b_0
   E: MAJOR=13
-  E: MINOR=72
+  E: MINOR=71
   E: SUBSYSTEM=input
-  E: USEC_INITIALIZED=16574234
+  E: USEC_INITIALIZED=14292492
   
   P: /devices/pci0000:00/0000:00:1b.0/sound/card0/pcmC0D0c
   N: snd/pcmC0D0c
@@ -4007,7 +4007,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=4
   E: SUBSYSTEM=sound
   E: TAGS=:uaccess:
-  E: USEC_INITIALIZED=16515829
+  E: USEC_INITIALIZED=14260675
   
   P: /devices/pci0000:00/0000:00:1b.0/sound/card0/pcmC0D0p
   N: snd/pcmC0D0p
@@ -4017,7 +4017,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=3
   E: SUBSYSTEM=sound
   E: TAGS=:uaccess:
-  E: USEC_INITIALIZED=16516229
+  E: USEC_INITIALIZED=14260077
   
   P: /devices/pci0000:00/0000:00:1b.0/sound/card0/pcmC0D3p
   N: snd/pcmC0D3p
@@ -4027,7 +4027,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=5
   E: SUBSYSTEM=sound
   E: TAGS=:uaccess:
-  E: USEC_INITIALIZED=16516333
+  E: USEC_INITIALIZED=14260749
   
   P: /devices/pci0000:00/0000:00:1b.0/sound/card0/pcmC0D7p
   N: snd/pcmC0D7p
@@ -4037,7 +4037,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=6
   E: SUBSYSTEM=sound
   E: TAGS=:uaccess:
-  E: USEC_INITIALIZED=16517799
+  E: USEC_INITIALIZED=14260747
   
   P: /devices/pci0000:00/0000:00:1b.0/sound/card0/pcmC0D8p
   N: snd/pcmC0D8p
@@ -4047,7 +4047,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=7
   E: SUBSYSTEM=sound
   E: TAGS=:uaccess:
-  E: USEC_INITIALIZED=16518155
+  E: USEC_INITIALIZED=14261421
   
   P: /devices/pci0000:00/0000:00:1b.0/sound/card0/controlC0
   N: snd/controlC0
@@ -4061,7 +4061,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=2
   E: SUBSYSTEM=sound
   E: TAGS=:uaccess:
-  E: USEC_INITIALIZED=16515690
+  E: USEC_INITIALIZED=14260162
   
   P: /devices/pci0000:00/0000:00:1c.0
   E: DEVPATH=/devices/pci0000:00/0000:00:1c.0
@@ -4077,7 +4077,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:00:1c.0
   E: PCI_SUBSYS_ID=17AA:2164
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15737795
+  E: USEC_INITIALIZED=13628516
   
   P: /devices/pci0000:00/0000:00:1c.0/pci_bus/0000:02
   E: DEVPATH=/devices/pci0000:00/0000:00:1c.0/pci_bus/0000:02
@@ -4097,7 +4097,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:00:1c.1
   E: PCI_SUBSYS_ID=17AA:2164
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15735111
+  E: USEC_INITIALIZED=13628770
   
   P: /devices/pci0000:00/0000:00:1c.1/0000:03:00.0
   E: DEVPATH=/devices/pci0000:00/0000:00:1c.1/0000:03:00.0
@@ -4112,7 +4112,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:03:00.0
   E: PCI_SUBSYS_ID=10EC:E020
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15930778
+  E: USEC_INITIALIZED=13840231
   
   P: /devices/pci0000:00/0000:00:1c.1/0000:03:00.0/ieee80211/phy0
   E: DEVPATH=/devices/pci0000:00/0000:00:1c.1/0000:03:00.0/ieee80211/phy0
@@ -4126,7 +4126,7 @@ enp0s25: socket failed: Operation not permitted
   E: RFKILL_STATE=1
   E: RFKILL_TYPE=wlan
   E: SUBSYSTEM=rfkill
-  E: USEC_INITIALIZED=16574467
+  E: USEC_INITIALIZED=14573998
   
   P: /devices/pci0000:00/0000:00:1c.1/0000:03:00.0/net/wlp3s0
   E: DEVPATH=/devices/pci0000:00/0000:00:1c.1/0000:03:00.0/net/wlp3s0
@@ -4151,7 +4151,7 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=net
   E: SYSTEMD_ALIAS=/sys/subsystem/net/devices/wlp3s0 /sys/subsystem/net/devices/wlp3s0
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=16564270
+  E: USEC_INITIALIZED=14548226
   
   P: /devices/pci0000:00/0000:00:1c.1/pci_bus/0000:03
   E: DEVPATH=/devices/pci0000:00/0000:00:1c.1/pci_bus/0000:03
@@ -4171,7 +4171,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:00:1c.3
   E: PCI_SUBSYS_ID=17AA:2164
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15736672
+  E: USEC_INITIALIZED=13628776
   
   P: /devices/pci0000:00/0000:00:1c.3/pci_bus/0000:05
   E: DEVPATH=/devices/pci0000:00/0000:00:1c.3/pci_bus/0000:05
@@ -4191,7 +4191,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:00:1c.4
   E: PCI_SUBSYS_ID=17AA:2164
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15738109
+  E: USEC_INITIALIZED=13628279
   
   P: /devices/pci0000:00/0000:00:1c.4/0000:0d:00.0
   E: DEVPATH=/devices/pci0000:00/0000:00:1c.4/0000:0d:00.0
@@ -4206,7 +4206,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:0d:00.0
   E: PCI_SUBSYS_ID=0000:0000
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15920712
+  E: USEC_INITIALIZED=13827343
   
   P: /devices/pci0000:00/0000:00:1c.4/0000:0d:00.0/leds/mmc0::
   E: DEVPATH=/devices/pci0000:00/0000:00:1c.4/0000:0d:00.0/leds/mmc0::
@@ -4230,13 +4230,13 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:0d:00.3
   E: PCI_SUBSYS_ID=17AA:2136
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15922777
+  E: USEC_INITIALIZED=13827343
   
   P: /devices/pci0000:00/0000:00:1c.4/0000:0d:00.3/fw0
   N: fw0
   E: DEVNAME=/dev/fw0
   E: DEVPATH=/devices/pci0000:00/0000:00:1c.4/0000:0d:00.3/fw0
-  E: MAJOR=247
+  E: MAJOR=246
   E: MINOR=0
   E: SUBSYSTEM=firewire
   
@@ -4258,7 +4258,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:00:1d.0
   E: PCI_SUBSYS_ID=17AA:2163
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15737626
+  E: USEC_INITIALIZED=13627986
   
   P: /devices/pci0000:00/0000:00:1d.0/usb2
   N: bus/usb/002/001
@@ -4290,7 +4290,7 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=usb
   E: TAGS=:seat:
   E: TYPE=9/0/0
-  E: USEC_INITIALIZED=6281855
+  E: USEC_INITIALIZED=6034305
   
   P: /devices/pci0000:00/0000:00:1d.0/usb2/2-0:1.0
   E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-0:1.0
@@ -4305,7 +4305,7 @@ enp0s25: socket failed: Operation not permitted
   E: PRODUCT=1d6b/2/404
   E: SUBSYSTEM=usb
   E: TYPE=9/0/0
-  E: USEC_INITIALIZED=15928872
+  E: USEC_INITIALIZED=13801104
   
   P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1
   N: bus/usb/002/002
@@ -4336,7 +4336,7 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=usb
   E: TAGS=:seat:
   E: TYPE=9/0/1
-  E: USEC_INITIALIZED=6287282
+  E: USEC_INITIALIZED=6046348
   
   P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1
   N: bus/usb/002/003
@@ -4364,7 +4364,7 @@ enp0s25: socket failed: Operation not permitted
   E: PRODUCT=781/5571/127
   E: SUBSYSTEM=usb
   E: TYPE=0/0/0
-  E: USEC_INITIALIZED=6324735
+  E: USEC_INITIALIZED=6054661
   
   P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0
   E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0
@@ -4377,36 +4377,36 @@ enp0s25: socket failed: Operation not permitted
   E: PRODUCT=781/5571/127
   E: SUBSYSTEM=usb
   E: TYPE=0/0/0
-  E: USEC_INITIALIZED=16023543
+  E: USEC_INITIALIZED=13973201
   
-  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6
-  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6
+  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0
+  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0
   E: DEVTYPE=scsi_host
   E: SUBSYSTEM=scsi
   
-  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/scsi_host/host6
-  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/scsi_host/host6
+  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/scsi_host/host0
+  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/scsi_host/host0
   E: SUBSYSTEM=scsi_host
   
-  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0
-  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0
+  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0
+  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0
   E: DEVTYPE=scsi_target
   E: SUBSYSTEM=scsi
   
-  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0
-  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0
+  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0
+  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0
   E: DEVTYPE=scsi_device
   E: DRIVER=sd
   E: MODALIAS=scsi:t-0x00
   E: SUBSYSTEM=scsi
   
-  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/block/sda
+  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/block/sda
   N: sda
   S: disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0
   S: disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0
-  E: DEVLINKS=/dev/disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0 /dev/disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0
+  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0 /dev/disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0
   E: DEVNAME=/dev/sda
-  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/block/sda
+  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/block/sda
   E: DEVTYPE=disk
   E: ID_BUS=usb
   E: ID_INSTANCE=0:0
@@ -4431,16 +4431,16 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=0
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=9486270
+  E: USEC_INITIALIZED=8713382
   
-  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/block/sda/sda1
+  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/block/sda/sda1
   N: sda1
   S: disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0-part1
   S: disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0-part1
   S: disk/by-uuid/b9fc048b-f75f-462e-9b11-86669ba9f6e0
-  E: DEVLINKS=/dev/disk/by-uuid/b9fc048b-f75f-462e-9b11-86669ba9f6e0 /dev/disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0-part1 /dev/disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0-part1
+  E: DEVLINKS=/dev/disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0-part1 /dev/disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0-part1 /dev/disk/by-uuid/b9fc048b-f75f-462e-9b11-86669ba9f6e0
   E: DEVNAME=/dev/sda1
-  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/block/sda/sda1
+  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/block/sda/sda1
   E: DEVTYPE=partition
   E: ID_BUS=usb
   E: ID_FS_TYPE=ext4
@@ -4478,15 +4478,15 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=1
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=9612189
+  E: USEC_INITIALIZED=8838228
   
-  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/block/sda/sda2
+  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/block/sda/sda2
   N: sda2
   S: disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0-part2
   S: disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0-part2
   E: DEVLINKS=/dev/disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0-part2 /dev/disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0-part2
   E: DEVNAME=/dev/sda2
-  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/block/sda/sda2
+  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/block/sda/sda2
   E: DEVTYPE=partition
   E: ID_BUS=usb
   E: ID_INSTANCE=0:0
@@ -4518,16 +4518,16 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=2
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=9499204
+  E: USEC_INITIALIZED=8728267
   
-  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/block/sda/sda5
+  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/block/sda/sda5
   N: sda5
   S: disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0-part5
   S: disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0-part5
   S: disk/by-uuid/247c12ce-659e-42d9-b9f0-709428332871
-  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0-part5 /dev/disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0-part5 /dev/disk/by-uuid/247c12ce-659e-42d9-b9f0-709428332871
+  E: DEVLINKS=/dev/disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0-part5 /dev/disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0-part5 /dev/disk/by-uuid/247c12ce-659e-42d9-b9f0-709428332871
   E: DEVNAME=/dev/sda5
-  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/block/sda/sda5
+  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/block/sda/sda5
   E: DEVTYPE=partition
   E: ID_BUS=usb
   E: ID_FS_TYPE=swap
@@ -4564,28 +4564,28 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=5
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=9612737
+  E: USEC_INITIALIZED=8837565
   
-  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/bsg/6:0:0:0
-  N: bsg/6:0:0:0
-  E: DEVNAME=/dev/bsg/6:0:0:0
-  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/bsg/6:0:0:0
+  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/bsg/0:0:0:0
+  N: bsg/0:0:0:0
+  E: DEVNAME=/dev/bsg/0:0:0:0
+  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/bsg/0:0:0:0
   E: MAJOR=249
   E: MINOR=1
   E: SUBSYSTEM=bsg
   
-  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/scsi_device/6:0:0:0
-  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/scsi_device/6:0:0:0
+  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/scsi_device/0:0:0:0
+  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/scsi_device/0:0:0:0
   E: SUBSYSTEM=scsi_device
   
-  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/scsi_disk/6:0:0:0
-  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/scsi_disk/6:0:0:0
+  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/scsi_disk/0:0:0:0
+  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/scsi_disk/0:0:0:0
   E: SUBSYSTEM=scsi_disk
   
-  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/scsi_generic/sg1
+  P: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/scsi_generic/sg1
   N: sg1
   E: DEVNAME=/dev/sg1
-  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/scsi_generic/sg1
+  E: DEVPATH=/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/scsi_generic/sg1
   E: MAJOR=21
   E: MINOR=1
   E: SUBSYSTEM=scsi_generic
@@ -4603,7 +4603,7 @@ enp0s25: socket failed: Operation not permitted
   E: PRODUCT=8087/20/0
   E: SUBSYSTEM=usb
   E: TYPE=9/0/1
-  E: USEC_INITIALIZED=15941776
+  E: USEC_INITIALIZED=13818983
   
   P: /devices/pci0000:00/0000:00:1e.0
   E: DEVPATH=/devices/pci0000:00/0000:00:1e.0
@@ -4618,7 +4618,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:00:1e.0
   E: PCI_SUBSYS_ID=17AA:2165
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15757646
+  E: USEC_INITIALIZED=13647901
   
   P: /devices/pci0000:00/0000:00:1e.0/pci_bus/0000:0e
   E: DEVPATH=/devices/pci0000:00/0000:00:1e.0/pci_bus/0000:0e
@@ -4637,7 +4637,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:00:1f.0
   E: PCI_SUBSYS_ID=17AA:2166
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15735996
+  E: USEC_INITIALIZED=13628259
   
   P: /devices/pci0000:00/0000:00:1f.0/PNP0103:00
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.0/PNP0103:00
@@ -4669,7 +4669,7 @@ enp0s25: socket failed: Operation not permitted
   E: ID_VENDOR_FROM_DATABASE=IBM
   E: MODALIAS=acpi:IBM0068:
   E: SUBSYSTEM=platform
-  E: USEC_INITIALIZED=15911644
+  E: USEC_INITIALIZED=13771940
   
   P: /devices/pci0000:00/0000:00:1f.0/PNP0C09:00/PNP0C0A:00
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.0/PNP0C09:00/PNP0C0A:00
@@ -4696,19 +4696,19 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:00:1f.2
   E: PCI_SUBSYS_ID=17AA:2168
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15736714
+  E: USEC_INITIALIZED=13628261
   
   P: /devices/pci0000:00/0000:00:1f.2/ata1/ata_port/ata1
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata1/ata_port/ata1
   E: SUBSYSTEM=ata_port
   
-  P: /devices/pci0000:00/0000:00:1f.2/ata1/host0
-  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata1/host0
+  P: /devices/pci0000:00/0000:00:1f.2/ata1/host1
+  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata1/host1
   E: DEVTYPE=scsi_host
   E: SUBSYSTEM=scsi
   
-  P: /devices/pci0000:00/0000:00:1f.2/ata1/host0/scsi_host/host0
-  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata1/host0/scsi_host/host0
+  P: /devices/pci0000:00/0000:00:1f.2/ata1/host1/scsi_host/host1
+  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata1/host1/scsi_host/host1
   E: SUBSYSTEM=scsi_host
   
   P: /devices/pci0000:00/0000:00:1f.2/ata1/link1/ata_link/link1
@@ -4723,28 +4723,28 @@ enp0s25: socket failed: Operation not permitted
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/ata_port/ata2
   E: SUBSYSTEM=ata_port
   
-  P: /devices/pci0000:00/0000:00:1f.2/ata2/host1
-  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1
+  P: /devices/pci0000:00/0000:00:1f.2/ata2/host2
+  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host2
   E: DEVTYPE=scsi_host
   E: SUBSYSTEM=scsi
   
-  P: /devices/pci0000:00/0000:00:1f.2/ata2/host1/scsi_host/host1
-  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1/scsi_host/host1
+  P: /devices/pci0000:00/0000:00:1f.2/ata2/host2/scsi_host/host2
+  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host2/scsi_host/host2
   E: SUBSYSTEM=scsi_host
   
-  P: /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0
-  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0
+  P: /devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0
+  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0
   E: DEVTYPE=scsi_target
   E: SUBSYSTEM=scsi
   
-  P: /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0
-  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0
+  P: /devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0
+  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0
   E: DEVTYPE=scsi_device
   E: DRIVER=sr
   E: MODALIAS=scsi:t-0x05
   E: SUBSYSTEM=scsi
   
-  P: /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sr0
+  P: /devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0/block/sr0
   N: sr0
   L: -100
   S: cdrom
@@ -4753,9 +4753,9 @@ enp0s25: socket failed: Operation not permitted
   S: disk/by-path/pci-0000:00:1f.2-ata-2
   S: dvd
   S: dvdrw
-  E: DEVLINKS=/dev/disk/by-path/pci-0000:00:1f.2-ata-2 /dev/disk/by-id/ata-HL-DT-STDVDRAM_GT30N_M2EA5411839 /dev/cdrw /dev/dvd /dev/dvdrw /dev/cdrom
+  E: DEVLINKS=/dev/dvd /dev/cdrom /dev/disk/by-id/ata-HL-DT-STDVDRAM_GT30N_M2EA5411839 /dev/disk/by-path/pci-0000:00:1f.2-ata-2 /dev/cdrw /dev/dvdrw
   E: DEVNAME=/dev/sr0
-  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sr0
+  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0/block/sr0
   E: DEVTYPE=disk
   E: ID_ATA=1
   E: ID_ATA_SATA=1
@@ -4786,25 +4786,25 @@ enp0s25: socket failed: Operation not permitted
   E: MAJOR=11
   E: MINOR=0
   E: SUBSYSTEM=block
-  E: TAGS=:systemd:seat:uaccess:
-  E: USEC_INITIALIZED=8843729
+  E: TAGS=:uaccess:seat:systemd:
+  E: USEC_INITIALIZED=10452104
   
-  P: /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/bsg/1:0:0:0
-  N: bsg/1:0:0:0
-  E: DEVNAME=/dev/bsg/1:0:0:0
-  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/bsg/1:0:0:0
+  P: /devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0/bsg/2:0:0:0
+  N: bsg/2:0:0:0
+  E: DEVNAME=/dev/bsg/2:0:0:0
+  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0/bsg/2:0:0:0
   E: MAJOR=249
   E: MINOR=0
   E: SUBSYSTEM=bsg
   
-  P: /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/scsi_device/1:0:0:0
-  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/scsi_device/1:0:0:0
+  P: /devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0/scsi_device/2:0:0:0
+  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0/scsi_device/2:0:0:0
   E: SUBSYSTEM=scsi_device
   
-  P: /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/scsi_generic/sg0
+  P: /devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0/scsi_generic/sg0
   N: sg0
   E: DEVNAME=/dev/sg0
-  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/scsi_generic/sg0
+  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0/scsi_generic/sg0
   E: ID_FOR_SEAT=scsi_generic-pci-0000_00_1f_2-ata-2
   E: ID_PATH=pci-0000:00:1f.2-ata-2
   E: ID_PATH_TAG=pci-0000_00_1f_2-ata-2
@@ -4812,7 +4812,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=0
   E: SUBSYSTEM=scsi_generic
   E: TAGS=:seat:uaccess:
-  E: USEC_INITIALIZED=15945294
+  E: USEC_INITIALIZED=13798782
   
   P: /devices/pci0000:00/0000:00:1f.2/ata2/link2/ata_link/link2
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata2/link2/ata_link/link2
@@ -4826,13 +4826,13 @@ enp0s25: socket failed: Operation not permitted
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata3/ata_port/ata3
   E: SUBSYSTEM=ata_port
   
-  P: /devices/pci0000:00/0000:00:1f.2/ata3/host2
-  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata3/host2
+  P: /devices/pci0000:00/0000:00:1f.2/ata3/host3
+  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata3/host3
   E: DEVTYPE=scsi_host
   E: SUBSYSTEM=scsi
   
-  P: /devices/pci0000:00/0000:00:1f.2/ata3/host2/scsi_host/host2
-  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata3/host2/scsi_host/host2
+  P: /devices/pci0000:00/0000:00:1f.2/ata3/host3/scsi_host/host3
+  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata3/host3/scsi_host/host3
   E: SUBSYSTEM=scsi_host
   
   P: /devices/pci0000:00/0000:00:1f.2/ata3/link3/ata_link/link3
@@ -4847,13 +4847,13 @@ enp0s25: socket failed: Operation not permitted
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata4/ata_port/ata4
   E: SUBSYSTEM=ata_port
   
-  P: /devices/pci0000:00/0000:00:1f.2/ata4/host3
-  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata4/host3
+  P: /devices/pci0000:00/0000:00:1f.2/ata4/host4
+  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata4/host4
   E: DEVTYPE=scsi_host
   E: SUBSYSTEM=scsi
   
-  P: /devices/pci0000:00/0000:00:1f.2/ata4/host3/scsi_host/host3
-  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata4/host3/scsi_host/host3
+  P: /devices/pci0000:00/0000:00:1f.2/ata4/host4/scsi_host/host4
+  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata4/host4/scsi_host/host4
   E: SUBSYSTEM=scsi_host
   
   P: /devices/pci0000:00/0000:00:1f.2/ata4/link4/ata_link/link4
@@ -4868,13 +4868,13 @@ enp0s25: socket failed: Operation not permitted
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata5/ata_port/ata5
   E: SUBSYSTEM=ata_port
   
-  P: /devices/pci0000:00/0000:00:1f.2/ata5/host4
-  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata5/host4
+  P: /devices/pci0000:00/0000:00:1f.2/ata5/host5
+  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata5/host5
   E: DEVTYPE=scsi_host
   E: SUBSYSTEM=scsi
   
-  P: /devices/pci0000:00/0000:00:1f.2/ata5/host4/scsi_host/host4
-  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata5/host4/scsi_host/host4
+  P: /devices/pci0000:00/0000:00:1f.2/ata5/host5/scsi_host/host5
+  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata5/host5/scsi_host/host5
   E: SUBSYSTEM=scsi_host
   
   P: /devices/pci0000:00/0000:00:1f.2/ata5/link5/ata_link/link5
@@ -4889,13 +4889,13 @@ enp0s25: socket failed: Operation not permitted
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata6/ata_port/ata6
   E: SUBSYSTEM=ata_port
   
-  P: /devices/pci0000:00/0000:00:1f.2/ata6/host5
-  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata6/host5
+  P: /devices/pci0000:00/0000:00:1f.2/ata6/host6
+  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata6/host6
   E: DEVTYPE=scsi_host
   E: SUBSYSTEM=scsi
   
-  P: /devices/pci0000:00/0000:00:1f.2/ata6/host5/scsi_host/host5
-  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata6/host5/scsi_host/host5
+  P: /devices/pci0000:00/0000:00:1f.2/ata6/host6/scsi_host/host6
+  E: DEVPATH=/devices/pci0000:00/0000:00:1f.2/ata6/host6/scsi_host/host6
   E: SUBSYSTEM=scsi_host
   
   P: /devices/pci0000:00/0000:00:1f.2/ata6/link6/ata_link/link6
@@ -4918,7 +4918,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:00:1f.3
   E: PCI_SUBSYS_ID=17AA:2167
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15950963
+  E: USEC_INITIALIZED=13821748
   
   P: /devices/pci0000:00/0000:00:1f.6
   E: DEVPATH=/devices/pci0000:00/0000:00:1f.6
@@ -4933,7 +4933,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:00:1f.6
   E: PCI_SUBSYS_ID=17AA:2190
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15950446
+  E: USEC_INITIALIZED=13821837
   
   P: /devices/pci0000:00/PNP0C14:00
   E: DEVPATH=/devices/pci0000:00/PNP0C14:00
@@ -4956,7 +4956,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:ff:00.0
   E: PCI_SUBSYS_ID=17AA:2196
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15955397
+  E: USEC_INITIALIZED=13823944
   
   P: /devices/pci0000:ff/0000:ff:00.1
   E: DEVPATH=/devices/pci0000:ff/0000:ff:00.1
@@ -4970,7 +4970,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:ff:00.1
   E: PCI_SUBSYS_ID=17AA:2196
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15952239
+  E: USEC_INITIALIZED=13823944
   
   P: /devices/pci0000:ff/0000:ff:02.0
   E: DEVPATH=/devices/pci0000:ff/0000:ff:02.0
@@ -4984,7 +4984,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:ff:02.0
   E: PCI_SUBSYS_ID=17AA:2196
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15953310
+  E: USEC_INITIALIZED=13824469
   
   P: /devices/pci0000:ff/0000:ff:02.1
   E: DEVPATH=/devices/pci0000:ff/0000:ff:02.1
@@ -4998,7 +4998,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:ff:02.1
   E: PCI_SUBSYS_ID=17AA:2196
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15954434
+  E: USEC_INITIALIZED=13824347
   
   P: /devices/pci0000:ff/0000:ff:02.2
   E: DEVPATH=/devices/pci0000:ff/0000:ff:02.2
@@ -5012,7 +5012,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:ff:02.2
   E: PCI_SUBSYS_ID=17AA:2196
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15958401
+  E: USEC_INITIALIZED=13826040
   
   P: /devices/pci0000:ff/0000:ff:02.3
   E: DEVPATH=/devices/pci0000:ff/0000:ff:02.3
@@ -5026,7 +5026,7 @@ enp0s25: socket failed: Operation not permitted
   E: PCI_SLOT_NAME=0000:ff:02.3
   E: PCI_SUBSYS_ID=17AA:2196
   E: SUBSYSTEM=pci
-  E: USEC_INITIALIZED=15958003
+  E: USEC_INITIALIZED=13826136
   
   P: /devices/pci0000:ff/pci_bus/0000:ff
   E: DEVPATH=/devices/pci0000:ff/pci_bus/0000:ff
@@ -5119,7 +5119,7 @@ enp0s25: socket failed: Operation not permitted
   E: PROP=0
   E: SUBSYSTEM=input
   E: TAGS=:seat:
-  E: USEC_INITIALIZED=6418206
+  E: USEC_INITIALIZED=6144271
   
   P: /devices/platform/i8042/serio0/input/input3/event3
   N: input/event3
@@ -5136,7 +5136,7 @@ enp0s25: socket failed: Operation not permitted
   E: MAJOR=13
   E: MINOR=67
   E: SUBSYSTEM=input
-  E: USEC_INITIALIZED=8378592
+  E: USEC_INITIALIZED=6715640
   
   P: /devices/platform/i8042/serio0/input/input3/input3::capslock
   E: DEVPATH=/devices/platform/i8042/serio0/input/input3/input3::capslock
@@ -5180,7 +5180,7 @@ enp0s25: socket failed: Operation not permitted
   E: PROP=9
   E: SUBSYSTEM=input
   E: TAGS=:seat:
-  E: USEC_INITIALIZED=9731166
+  E: USEC_INITIALIZED=8902384
   
   P: /devices/platform/i8042/serio1/input/input5/event5
   N: input/event5
@@ -5203,7 +5203,7 @@ enp0s25: socket failed: Operation not permitted
   E: MAJOR=13
   E: MINOR=69
   E: SUBSYSTEM=input
-  E: USEC_INITIALIZED=9761017
+  E: USEC_INITIALIZED=8928986
   
   P: /devices/platform/i8042/serio1/input/input5/mouse0
   N: input/mouse0
@@ -5220,7 +5220,7 @@ enp0s25: socket failed: Operation not permitted
   E: MAJOR=13
   E: MINOR=32
   E: SUBSYSTEM=input
-  E: USEC_INITIALIZED=9732373
+  E: USEC_INITIALIZED=8903749
   
   P: /devices/platform/i8042/serio1/serio2
   E: DEVPATH=/devices/platform/i8042/serio1/serio2
@@ -5251,14 +5251,14 @@ enp0s25: socket failed: Operation not permitted
   E: REL=3
   E: SUBSYSTEM=input
   E: TAGS=:seat:
-  E: USEC_INITIALIZED=16469266
+  E: USEC_INITIALIZED=15076643
   
-  P: /devices/platform/i8042/serio1/serio2/input/input7/event6
-  N: input/event6
+  P: /devices/platform/i8042/serio1/serio2/input/input7/event15
+  N: input/event15
   S: input/by-path/platform-i8042-serio-2-event-mouse
   E: DEVLINKS=/dev/input/by-path/platform-i8042-serio-2-event-mouse
-  E: DEVNAME=/dev/input/event6
-  E: DEVPATH=/devices/platform/i8042/serio1/serio2/input/input7/event6
+  E: DEVNAME=/dev/input/event15
+  E: DEVPATH=/devices/platform/i8042/serio1/serio2/input/input7/event15
   E: ID_INPUT=1
   E: ID_INPUT_MOUSE=1
   E: ID_INPUT_POINTINGSTICK=1
@@ -5266,9 +5266,9 @@ enp0s25: socket failed: Operation not permitted
   E: ID_PATH_TAG=platform-i8042-serio-2
   E: ID_SERIAL=noserial
   E: MAJOR=13
-  E: MINOR=70
+  E: MINOR=79
   E: SUBSYSTEM=input
-  E: USEC_INITIALIZED=16526380
+  E: USEC_INITIALIZED=15112579
   
   P: /devices/platform/i8042/serio1/serio2/input/input7/mouse1
   N: input/mouse1
@@ -5285,7 +5285,7 @@ enp0s25: socket failed: Operation not permitted
   E: MAJOR=13
   E: MINOR=33
   E: SUBSYSTEM=input
-  E: USEC_INITIALIZED=16475546
+  E: USEC_INITIALIZED=15078255
   
   P: /devices/platform/microcode
   E: DEVPATH=/devices/platform/microcode
@@ -5326,7 +5326,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=64
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15970930
+  E: USEC_INITIALIZED=13832879
   
   P: /devices/platform/serial8250/tty/ttyS1
   N: ttyS1
@@ -5336,7 +5336,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=65
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15970324
+  E: USEC_INITIALIZED=13832918
   
   P: /devices/platform/serial8250/tty/ttyS10
   N: ttyS10
@@ -5346,7 +5346,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=74
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15968949
+  E: USEC_INITIALIZED=13833855
   
   P: /devices/platform/serial8250/tty/ttyS11
   N: ttyS11
@@ -5356,7 +5356,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=75
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15966164
+  E: USEC_INITIALIZED=13834393
   
   P: /devices/platform/serial8250/tty/ttyS12
   N: ttyS12
@@ -5366,7 +5366,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=76
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15968799
+  E: USEC_INITIALIZED=13834502
   
   P: /devices/platform/serial8250/tty/ttyS13
   N: ttyS13
@@ -5376,7 +5376,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=77
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15969442
+  E: USEC_INITIALIZED=13834785
   
   P: /devices/platform/serial8250/tty/ttyS14
   N: ttyS14
@@ -5386,7 +5386,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=78
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15985198
+  E: USEC_INITIALIZED=13836125
   
   P: /devices/platform/serial8250/tty/ttyS15
   N: ttyS15
@@ -5396,7 +5396,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=79
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15973457
+  E: USEC_INITIALIZED=13836071
   
   P: /devices/platform/serial8250/tty/ttyS16
   N: ttyS16
@@ -5406,7 +5406,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=80
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15976901
+  E: USEC_INITIALIZED=13836029
   
   P: /devices/platform/serial8250/tty/ttyS17
   N: ttyS17
@@ -5416,7 +5416,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=81
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15972906
+  E: USEC_INITIALIZED=13837614
   
   P: /devices/platform/serial8250/tty/ttyS18
   N: ttyS18
@@ -5426,7 +5426,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=82
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15973176
+  E: USEC_INITIALIZED=13837626
   
   P: /devices/platform/serial8250/tty/ttyS19
   N: ttyS19
@@ -5436,7 +5436,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=83
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15975491
+  E: USEC_INITIALIZED=13837699
   
   P: /devices/platform/serial8250/tty/ttyS2
   N: ttyS2
@@ -5446,7 +5446,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=66
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15976709
+  E: USEC_INITIALIZED=13839088
   
   P: /devices/platform/serial8250/tty/ttyS20
   N: ttyS20
@@ -5456,7 +5456,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=84
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15979859
+  E: USEC_INITIALIZED=13839116
   
   P: /devices/platform/serial8250/tty/ttyS21
   N: ttyS21
@@ -5466,7 +5466,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=85
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15976157
+  E: USEC_INITIALIZED=13839088
   
   P: /devices/platform/serial8250/tty/ttyS22
   N: ttyS22
@@ -5476,7 +5476,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=86
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15975495
+  E: USEC_INITIALIZED=13840622
   
   P: /devices/platform/serial8250/tty/ttyS23
   N: ttyS23
@@ -5486,7 +5486,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=87
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15977290
+  E: USEC_INITIALIZED=13840632
   
   P: /devices/platform/serial8250/tty/ttyS24
   N: ttyS24
@@ -5496,7 +5496,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=88
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15980544
+  E: USEC_INITIALIZED=13840664
   
   P: /devices/platform/serial8250/tty/ttyS25
   N: ttyS25
@@ -5506,7 +5506,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=89
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15981329
+  E: USEC_INITIALIZED=13842055
   
   P: /devices/platform/serial8250/tty/ttyS26
   N: ttyS26
@@ -5516,7 +5516,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=90
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15982244
+  E: USEC_INITIALIZED=13842078
   
   P: /devices/platform/serial8250/tty/ttyS27
   N: ttyS27
@@ -5526,7 +5526,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=91
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15981236
+  E: USEC_INITIALIZED=13842055
   
   P: /devices/platform/serial8250/tty/ttyS28
   N: ttyS28
@@ -5536,7 +5536,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=92
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15984455
+  E: USEC_INITIALIZED=13843473
   
   P: /devices/platform/serial8250/tty/ttyS29
   N: ttyS29
@@ -5546,7 +5546,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=93
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15984740
+  E: USEC_INITIALIZED=13843504
   
   P: /devices/platform/serial8250/tty/ttyS3
   N: ttyS3
@@ -5556,7 +5556,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=67
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15989471
+  E: USEC_INITIALIZED=13843488
   
   P: /devices/platform/serial8250/tty/ttyS30
   N: ttyS30
@@ -5566,7 +5566,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=94
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15987574
+  E: USEC_INITIALIZED=13844975
   
   P: /devices/platform/serial8250/tty/ttyS31
   N: ttyS31
@@ -5576,7 +5576,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=95
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15989974
+  E: USEC_INITIALIZED=13845058
   
   P: /devices/platform/serial8250/tty/ttyS5
   N: ttyS5
@@ -5586,7 +5586,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=69
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15986595
+  E: USEC_INITIALIZED=13845058
   
   P: /devices/platform/serial8250/tty/ttyS6
   N: ttyS6
@@ -5596,7 +5596,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=70
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15987152
+  E: USEC_INITIALIZED=13846794
   
   P: /devices/platform/serial8250/tty/ttyS7
   N: ttyS7
@@ -5606,7 +5606,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=71
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15991964
+  E: USEC_INITIALIZED=13846788
   
   P: /devices/platform/serial8250/tty/ttyS8
   N: ttyS8
@@ -5616,7 +5616,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=72
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15992610
+  E: USEC_INITIALIZED=13852239
   
   P: /devices/platform/serial8250/tty/ttyS9
   N: ttyS9
@@ -5626,7 +5626,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=73
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=15992477
+  E: USEC_INITIALIZED=13848165
   
   P: /devices/platform/thinkpad_acpi
   E: DEVPATH=/devices/platform/thinkpad_acpi
@@ -5652,14 +5652,14 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=input
   E: SW=8
   E: TAGS=:seat:
-  E: USEC_INITIALIZED=16490437
+  E: USEC_INITIALIZED=14258009
   
-  P: /devices/platform/thinkpad_acpi/input/input8/event7
-  N: input/event7
+  P: /devices/platform/thinkpad_acpi/input/input8/event6
+  N: input/event6
   S: input/by-path/platform-thinkpad_acpi-event
   E: DEVLINKS=/dev/input/by-path/platform-thinkpad_acpi-event
-  E: DEVNAME=/dev/input/event7
-  E: DEVPATH=/devices/platform/thinkpad_acpi/input/input8/event7
+  E: DEVNAME=/dev/input/event6
+  E: DEVPATH=/devices/platform/thinkpad_acpi/input/input8/event6
   E: ID_INPUT=1
   E: ID_INPUT_KEY=1
   E: ID_PATH=platform-thinkpad_acpi
@@ -5682,10 +5682,10 @@ enp0s25: socket failed: Operation not permitted
   E: KEYBOARD_KEY_17=prog1
   E: KEYBOARD_KEY_1a=f20
   E: MAJOR=13
-  E: MINOR=71
+  E: MINOR=70
   E: SUBSYSTEM=input
   E: TAGS=:power-switch:
-  E: USEC_INITIALIZED=16549463
+  E: USEC_INITIALIZED=14288533
   
   P: /devices/platform/thinkpad_acpi/leds/tpacpi::power
   E: DEVPATH=/devices/platform/thinkpad_acpi/leds/tpacpi::power
@@ -5711,7 +5711,7 @@ enp0s25: socket failed: Operation not permitted
   E: RFKILL_STATE=1
   E: RFKILL_TYPE=bluetooth
   E: SUBSYSTEM=rfkill
-  E: USEC_INITIALIZED=16482815
+  E: USEC_INITIALIZED=14256870
   
   P: /devices/platform/thinkpad_hwmon
   E: DEVPATH=/devices/platform/thinkpad_hwmon
@@ -5754,7 +5754,7 @@ enp0s25: socket failed: Operation not permitted
   E: MAJOR=251
   E: MINOR=0
   E: SUBSYSTEM=rtc
-  E: USEC_INITIALIZED=6464522
+  E: USEC_INITIALIZED=6248679
   
   P: /devices/pnp0/00:03
   E: DEVPATH=/devices/pnp0/00:03
@@ -6101,7 +6101,7 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=block
   E: SYSTEMD_READY=0
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=6805371
+  E: USEC_INITIALIZED=6418525
   
   P: /devices/virtual/block/loop1
   N: loop1
@@ -6113,7 +6113,7 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=block
   E: SYSTEMD_READY=0
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=6884364
+  E: USEC_INITIALIZED=6418676
   
   P: /devices/virtual/block/loop2
   N: loop2
@@ -6125,7 +6125,7 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=block
   E: SYSTEMD_READY=0
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=7795474
+  E: USEC_INITIALIZED=6419226
   
   P: /devices/virtual/block/loop3
   N: loop3
@@ -6137,7 +6137,7 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=block
   E: SYSTEMD_READY=0
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8074824
+  E: USEC_INITIALIZED=6716553
   
   P: /devices/virtual/block/loop4
   N: loop4
@@ -6149,7 +6149,7 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=block
   E: SYSTEMD_READY=0
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8303785
+  E: USEC_INITIALIZED=6718867
   
   P: /devices/virtual/block/loop5
   N: loop5
@@ -6161,7 +6161,7 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=block
   E: SYSTEMD_READY=0
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8304572
+  E: USEC_INITIALIZED=6794092
   
   P: /devices/virtual/block/loop6
   N: loop6
@@ -6173,7 +6173,7 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=block
   E: SYSTEMD_READY=0
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8378970
+  E: USEC_INITIALIZED=6771475
   
   P: /devices/virtual/block/loop7
   N: loop7
@@ -6185,7 +6185,7 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=block
   E: SYSTEMD_READY=0
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8378414
+  E: USEC_INITIALIZED=6834205
   
   P: /devices/virtual/block/ram0
   N: ram0
@@ -6196,7 +6196,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=0
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8382227
+  E: USEC_INITIALIZED=6835256
   
   P: /devices/virtual/block/ram1
   N: ram1
@@ -6207,7 +6207,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=1
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8385370
+  E: USEC_INITIALIZED=6834040
   
   P: /devices/virtual/block/ram10
   N: ram10
@@ -6218,7 +6218,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=10
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8388535
+  E: USEC_INITIALIZED=6841878
   
   P: /devices/virtual/block/ram11
   N: ram11
@@ -6229,7 +6229,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=11
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8391917
+  E: USEC_INITIALIZED=6840255
   
   P: /devices/virtual/block/ram12
   N: ram12
@@ -6240,7 +6240,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=12
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8395290
+  E: USEC_INITIALIZED=6849956
   
   P: /devices/virtual/block/ram13
   N: ram13
@@ -6251,7 +6251,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=13
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8398641
+  E: USEC_INITIALIZED=6851572
   
   P: /devices/virtual/block/ram14
   N: ram14
@@ -6262,7 +6262,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=14
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8401824
+  E: USEC_INITIALIZED=6859735
   
   P: /devices/virtual/block/ram15
   N: ram15
@@ -6273,7 +6273,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=15
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8404957
+  E: USEC_INITIALIZED=6861357
   
   P: /devices/virtual/block/ram2
   N: ram2
@@ -6284,7 +6284,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=2
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8408110
+  E: USEC_INITIALIZED=6869393
   
   P: /devices/virtual/block/ram3
   N: ram3
@@ -6295,7 +6295,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=3
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8411187
+  E: USEC_INITIALIZED=6870961
   
   P: /devices/virtual/block/ram4
   N: ram4
@@ -6306,7 +6306,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=4
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8414254
+  E: USEC_INITIALIZED=6879470
   
   P: /devices/virtual/block/ram5
   N: ram5
@@ -6317,7 +6317,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=5
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8417622
+  E: USEC_INITIALIZED=6881419
   
   P: /devices/virtual/block/ram6
   N: ram6
@@ -6328,7 +6328,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=6
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8421054
+  E: USEC_INITIALIZED=6889163
   
   P: /devices/virtual/block/ram7
   N: ram7
@@ -6339,7 +6339,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=7
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8424449
+  E: USEC_INITIALIZED=6891140
   
   P: /devices/virtual/block/ram8
   N: ram8
@@ -6350,7 +6350,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=8
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8427564
+  E: USEC_INITIALIZED=6899030
   
   P: /devices/virtual/block/ram9
   N: ram9
@@ -6361,7 +6361,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=9
   E: SUBSYSTEM=block
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=8430631
+  E: USEC_INITIALIZED=6900584
   
   P: /devices/virtual/dmi/id
   E: DEVPATH=/devices/virtual/dmi/id
@@ -6615,7 +6615,7 @@ enp0s25: socket failed: Operation not permitted
   E: SUBSYSTEM=misc
   E: SYSTEMD_WANTS=systemd-rfkill.socket
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=16280998
+  E: USEC_INITIALIZED=14176888
   
   P: /devices/virtual/misc/snapshot
   N: snapshot
@@ -6655,7 +6655,7 @@ enp0s25: socket failed: Operation not permitted
   E: IFINDEX=1
   E: INTERFACE=lo
   E: SUBSYSTEM=net
-  E: USEC_INITIALIZED=8462536
+  E: USEC_INITIALIZED=6937885
   
   P: /devices/virtual/ppp/ppp
   N: ppp
@@ -6673,7 +6673,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=33
   E: SUBSYSTEM=sound
   E: TAGS=:uaccess:
-  E: USEC_INITIALIZED=16479338
+  E: USEC_INITIALIZED=14253139
   
   P: /devices/virtual/thermal/cooling_device0
   E: DEVPATH=/devices/virtual/thermal/cooling_device0
@@ -7249,7 +7249,7 @@ enp0s25: socket failed: Operation not permitted
   E: MINOR=3
   E: SUBSYSTEM=tty
   E: TAGS=:systemd:
-  E: USEC_INITIALIZED=16417145
+  E: USEC_INITIALIZED=14235316
   
   P: /devices/virtual/vc/vcs
   N: vcs
@@ -7738,8 +7738,8 @@ enp0s25: socket failed: Operation not permitted
   name: /dev/bus/usb/001/004
 /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0
 /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0/input/input16
-/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0/input/input16/event15
-  name: /dev/input/event15
+/devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0/input/input16/event14
+  name: /dev/input/event14
   links: /dev/input/by-id/usb-Chicony_Electronics_Co.__Ltd._Integrated_Camera-event-if00, /dev/input/by-path/pci-0000:00:1a.0-usb-0:1.6:1.0-event
 /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0/media0
   name: /dev/media0
@@ -7757,26 +7757,26 @@ enp0s25: socket failed: Operation not permitted
 /devices/pci0000:00/0000:00:1b.0/sound/card0/hwC0D3
   name: /dev/snd/hwC0D3
 /devices/pci0000:00/0000:00:1b.0/sound/card0/input10
-/devices/pci0000:00/0000:00:1b.0/sound/card0/input10/event9
-  name: /dev/input/event9
-/devices/pci0000:00/0000:00:1b.0/sound/card0/input11
-/devices/pci0000:00/0000:00:1b.0/sound/card0/input11/event10
-  name: /dev/input/event10
-/devices/pci0000:00/0000:00:1b.0/sound/card0/input12
-/devices/pci0000:00/0000:00:1b.0/sound/card0/input12/event11
-  name: /dev/input/event11
-/devices/pci0000:00/0000:00:1b.0/sound/card0/input13
-/devices/pci0000:00/0000:00:1b.0/sound/card0/input13/event12
-  name: /dev/input/event12
-/devices/pci0000:00/0000:00:1b.0/sound/card0/input14
-/devices/pci0000:00/0000:00:1b.0/sound/card0/input14/event13
-  name: /dev/input/event13
-/devices/pci0000:00/0000:00:1b.0/sound/card0/input15
-/devices/pci0000:00/0000:00:1b.0/sound/card0/input15/event14
-  name: /dev/input/event14
-/devices/pci0000:00/0000:00:1b.0/sound/card0/input9
-/devices/pci0000:00/0000:00:1b.0/sound/card0/input9/event8
+/devices/pci0000:00/0000:00:1b.0/sound/card0/input10/event8
   name: /dev/input/event8
+/devices/pci0000:00/0000:00:1b.0/sound/card0/input11
+/devices/pci0000:00/0000:00:1b.0/sound/card0/input11/event9
+  name: /dev/input/event9
+/devices/pci0000:00/0000:00:1b.0/sound/card0/input12
+/devices/pci0000:00/0000:00:1b.0/sound/card0/input12/event10
+  name: /dev/input/event10
+/devices/pci0000:00/0000:00:1b.0/sound/card0/input13
+/devices/pci0000:00/0000:00:1b.0/sound/card0/input13/event11
+  name: /dev/input/event11
+/devices/pci0000:00/0000:00:1b.0/sound/card0/input14
+/devices/pci0000:00/0000:00:1b.0/sound/card0/input14/event12
+  name: /dev/input/event12
+/devices/pci0000:00/0000:00:1b.0/sound/card0/input15
+/devices/pci0000:00/0000:00:1b.0/sound/card0/input15/event13
+  name: /dev/input/event13
+/devices/pci0000:00/0000:00:1b.0/sound/card0/input9
+/devices/pci0000:00/0000:00:1b.0/sound/card0/input9/event7
+  name: /dev/input/event7
 /devices/pci0000:00/0000:00:1b.0/sound/card0/pcmC0D0c
   name: /dev/snd/pcmC0D0c
 /devices/pci0000:00/0000:00:1b.0/sound/card0/pcmC0D0p
@@ -7817,27 +7817,27 @@ enp0s25: socket failed: Operation not permitted
 /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1
   name: /dev/bus/usb/002/003
 /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0
-/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6
-/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/scsi_host/host6
-/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0
-/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0
-/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/block/sda
+/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0
+/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/scsi_host/host0
+/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0
+/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0
+/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/block/sda
   name: /dev/sda
   links: /dev/disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0, /dev/disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0
-/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/block/sda/sda1
+/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/block/sda/sda1
   name: /dev/sda1
   links: /dev/disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0-part1, /dev/disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0-part1, /dev/disk/by-uuid/b9fc048b-f75f-462e-9b11-86669ba9f6e0
-/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/block/sda/sda2
+/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/block/sda/sda2
   name: /dev/sda2
   links: /dev/disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0-part2, /dev/disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0-part2
-/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/block/sda/sda5
+/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/block/sda/sda5
   name: /dev/sda5
   links: /dev/disk/by-id/usb-SanDisk_Cruzer_Fit_4C530012621219123490-0:0-part5, /dev/disk/by-path/pci-0000:00:1d.0-usb-0:1.1:1.0-scsi-0:0:0:0-part5, /dev/disk/by-uuid/247c12ce-659e-42d9-b9f0-709428332871
-/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/bsg/6:0:0:0
-  name: /dev/bsg/6:0:0:0
-/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/scsi_device/6:0:0:0
-/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/scsi_disk/6:0:0:0
-/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0/scsi_generic/sg1
+/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/bsg/0:0:0:0
+  name: /dev/bsg/0:0:0:0
+/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/scsi_device/0:0:0:0
+/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/scsi_disk/0:0:0:0
+/devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0/scsi_generic/sg1
   name: /dev/sg1
 /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1:1.0
 /devices/pci0000:00/0000:00:1e.0
@@ -7853,43 +7853,43 @@ enp0s25: socket failed: Operation not permitted
 /devices/pci0000:00/0000:00:1f.0/iTCO_wdt.0.auto
 /devices/pci0000:00/0000:00:1f.2
 /devices/pci0000:00/0000:00:1f.2/ata1/ata_port/ata1
-/devices/pci0000:00/0000:00:1f.2/ata1/host0
-/devices/pci0000:00/0000:00:1f.2/ata1/host0/scsi_host/host0
+/devices/pci0000:00/0000:00:1f.2/ata1/host1
+/devices/pci0000:00/0000:00:1f.2/ata1/host1/scsi_host/host1
 /devices/pci0000:00/0000:00:1f.2/ata1/link1/ata_link/link1
 /devices/pci0000:00/0000:00:1f.2/ata1/link1/dev1.0/ata_device/dev1.0
 /devices/pci0000:00/0000:00:1f.2/ata2/ata_port/ata2
-/devices/pci0000:00/0000:00:1f.2/ata2/host1
-/devices/pci0000:00/0000:00:1f.2/ata2/host1/scsi_host/host1
-/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0
-/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0
-/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/block/sr0
+/devices/pci0000:00/0000:00:1f.2/ata2/host2
+/devices/pci0000:00/0000:00:1f.2/ata2/host2/scsi_host/host2
+/devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0
+/devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0
+/devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0/block/sr0
   name: /dev/sr0
   links: /dev/cdrom, /dev/cdrw, /dev/disk/by-id/ata-HL-DT-STDVDRAM_GT30N_M2EA5411839, /dev/disk/by-path/pci-0000:00:1f.2-ata-2, /dev/dvd, /dev/dvdrw
-/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/bsg/1:0:0:0
-  name: /dev/bsg/1:0:0:0
-/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/scsi_device/1:0:0:0
-/devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0/scsi_generic/sg0
+/devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0/bsg/2:0:0:0
+  name: /dev/bsg/2:0:0:0
+/devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0/scsi_device/2:0:0:0
+/devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0/scsi_generic/sg0
   name: /dev/sg0
 /devices/pci0000:00/0000:00:1f.2/ata2/link2/ata_link/link2
 /devices/pci0000:00/0000:00:1f.2/ata2/link2/dev2.0/ata_device/dev2.0
 /devices/pci0000:00/0000:00:1f.2/ata3/ata_port/ata3
-/devices/pci0000:00/0000:00:1f.2/ata3/host2
-/devices/pci0000:00/0000:00:1f.2/ata3/host2/scsi_host/host2
+/devices/pci0000:00/0000:00:1f.2/ata3/host3
+/devices/pci0000:00/0000:00:1f.2/ata3/host3/scsi_host/host3
 /devices/pci0000:00/0000:00:1f.2/ata3/link3/ata_link/link3
 /devices/pci0000:00/0000:00:1f.2/ata3/link3/dev3.0/ata_device/dev3.0
 /devices/pci0000:00/0000:00:1f.2/ata4/ata_port/ata4
-/devices/pci0000:00/0000:00:1f.2/ata4/host3
-/devices/pci0000:00/0000:00:1f.2/ata4/host3/scsi_host/host3
+/devices/pci0000:00/0000:00:1f.2/ata4/host4
+/devices/pci0000:00/0000:00:1f.2/ata4/host4/scsi_host/host4
 /devices/pci0000:00/0000:00:1f.2/ata4/link4/ata_link/link4
 /devices/pci0000:00/0000:00:1f.2/ata4/link4/dev4.0/ata_device/dev4.0
 /devices/pci0000:00/0000:00:1f.2/ata5/ata_port/ata5
-/devices/pci0000:00/0000:00:1f.2/ata5/host4
-/devices/pci0000:00/0000:00:1f.2/ata5/host4/scsi_host/host4
+/devices/pci0000:00/0000:00:1f.2/ata5/host5
+/devices/pci0000:00/0000:00:1f.2/ata5/host5/scsi_host/host5
 /devices/pci0000:00/0000:00:1f.2/ata5/link5/ata_link/link5
 /devices/pci0000:00/0000:00:1f.2/ata5/link5/dev5.0/ata_device/dev5.0
 /devices/pci0000:00/0000:00:1f.2/ata6/ata_port/ata6
-/devices/pci0000:00/0000:00:1f.2/ata6/host5
-/devices/pci0000:00/0000:00:1f.2/ata6/host5/scsi_host/host5
+/devices/pci0000:00/0000:00:1f.2/ata6/host6
+/devices/pci0000:00/0000:00:1f.2/ata6/host6/scsi_host/host6
 /devices/pci0000:00/0000:00:1f.2/ata6/link6/ata_link/link6
 /devices/pci0000:00/0000:00:1f.2/ata6/link6/dev6.0/ata_device/dev6.0
 /devices/pci0000:00/0000:00:1f.3
@@ -7932,8 +7932,8 @@ enp0s25: socket failed: Operation not permitted
   links: /dev/input/by-path/platform-i8042-serio-1-mouse
 /devices/platform/i8042/serio1/serio2
 /devices/platform/i8042/serio1/serio2/input/input7
-/devices/platform/i8042/serio1/serio2/input/input7/event6
-  name: /dev/input/event6
+/devices/platform/i8042/serio1/serio2/input/input7/event15
+  name: /dev/input/event15
   links: /dev/input/by-path/platform-i8042-serio-2-event-mouse
 /devices/platform/i8042/serio1/serio2/input/input7/mouse1
   name: /dev/input/mouse1
@@ -8008,8 +8008,8 @@ enp0s25: socket failed: Operation not permitted
   name: /dev/ttyS9
 /devices/platform/thinkpad_acpi
 /devices/platform/thinkpad_acpi/input/input8
-/devices/platform/thinkpad_acpi/input/input8/event7
-  name: /dev/input/event7
+/devices/platform/thinkpad_acpi/input/input8/event6
+  name: /dev/input/event6
   links: /dev/input/by-path/platform-thinkpad_acpi-event
 /devices/platform/thinkpad_acpi/leds/tpacpi::power
 /devices/platform/thinkpad_acpi/leds/tpacpi::standby
@@ -8579,138 +8579,139 @@ enp0s25: socket failed: Operation not permitted
   prop read: ZsBS.GQNx7L4uPNA (failed)
   old prop read: ZsBS.GQNx7L4uPNA (failed)
 ----- kernel log -----
-  <6>[   15.960150] ACPI: If an ACPI driver is available for this device, you should use it instead of the native driver
-  <4>[   15.960152] ACPI Warning: SystemIO range 0x0000000000001180-0x00000000000011AF conflicts with OpRegion 0x0000000000001180-0x00000000000011FF (\_SB_.PCI0.LPC_.LPIO) (20150930/utaddress-254)
-  <6>[   15.960156] ACPI: If an ACPI driver is available for this device, you should use it instead of the native driver
-  <4>[   15.960158] lpc_ich: Resource conflict(s) found affecting gpio_ich
-  <6>[   16.006187] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
-  <6>[   16.029887] input: TPPS/2 IBM TrackPoint as /devices/platform/i8042/serio1/serio2/input/input7
-  <6>[   16.050198] Non-volatile memory driver v1.3
-  <6>[   16.075197] thinkpad_acpi: ThinkPad ACPI Extras v0.25
-  <6>[   16.075201] thinkpad_acpi: http://ibm-acpi.sf.net/
-  <6>[   16.075203] thinkpad_acpi: ThinkPad BIOS 6MET81WW (1.41 ), EC 6MHT43WW-1.18
-  <6>[   16.075204] thinkpad_acpi: Lenovo ThinkPad T510, model 4384WSE
-  <6>[   16.075595] thinkpad_acpi: detected a 16-level brightness capable ThinkPad
-  <6>[   16.075736] thinkpad_acpi: radio switch found; radios are enabled
-  <6>[   16.075750] thinkpad_acpi: This ThinkPad has standard ACPI backlight brightness control, supported by the ACPI video driver
-  <5>[   16.075751] thinkpad_acpi: Disabling thinkpad-acpi brightness events by default...
-  <6>[   16.079609] thinkpad_acpi: rfkill switch tpacpi_bluetooth_sw: radio is unblocked
-  <6>[   16.082052] thinkpad_acpi: Standard ACPI backlight interface available, not loading native one
-  <6>[   16.096090] input: ThinkPad Extra Buttons as /devices/platform/thinkpad_acpi/input/input8
-  <6>[   16.239840] media: Linux media interface: v0.10
-  <6>[   16.287348] snd_hda_codec_conexant hdaudioC0D0: CX20585: BIOS auto-probing.
-  <6>[   16.287809] snd_hda_codec_conexant hdaudioC0D0: autoconfig for CX20585: line_outs=1 (0x1f/0x0/0x0/0x0/0x0) type:speaker
-  <6>[   16.287812] snd_hda_codec_conexant hdaudioC0D0:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)
-  <6>[   16.287814] snd_hda_codec_conexant hdaudioC0D0:    hp_outs=2 (0x1c/0x19/0x0/0x0/0x0)
-  <6>[   16.287815] snd_hda_codec_conexant hdaudioC0D0:    mono: mono_out=0x0
-  <6>[   16.287817] snd_hda_codec_conexant hdaudioC0D0:    inputs:
-  <6>[   16.287819] snd_hda_codec_conexant hdaudioC0D0:      Internal Mic=0x23
-  <6>[   16.287821] snd_hda_codec_conexant hdaudioC0D0:      Mic=0x1b
-  <6>[   16.287822] snd_hda_codec_conexant hdaudioC0D0:      Dock Mic=0x1a
-  <6>[   16.289124] snd_hda_codec_conexant hdaudioC0D0: Enable sync_write for stable communication
-  <6>[   16.325311] input: HDA Intel MID Mic as /devices/pci0000:00/0000:00:1b.0/sound/card0/input9
-  <6>[   16.325407] input: HDA Intel MID Dock Mic as /devices/pci0000:00/0000:00:1b.0/sound/card0/input10
-  <6>[   16.325496] input: HDA Intel MID Dock Headphone as /devices/pci0000:00/0000:00:1b.0/sound/card0/input11
-  <6>[   16.325583] input: HDA Intel MID Headphone as /devices/pci0000:00/0000:00:1b.0/sound/card0/input12
-  <6>[   16.325670] input: HDA Intel MID HDMI/DP,pcm=3 as /devices/pci0000:00/0000:00:1b.0/sound/card0/input13
-  <6>[   16.325755] input: HDA Intel MID HDMI/DP,pcm=7 as /devices/pci0000:00/0000:00:1b.0/sound/card0/input14
-  <6>[   16.325842] input: HDA Intel MID HDMI/DP,pcm=8 as /devices/pci0000:00/0000:00:1b.0/sound/card0/input15
-  <6>[   16.328884] Linux video capture interface: v2.00
-  <6>[   16.476924] Bluetooth: Core ver 2.21
-  <6>[   16.476941] NET: Registered protocol family 31
-  <6>[   16.476942] Bluetooth: HCI device and connection manager initialized
-  <6>[   16.476946] Bluetooth: HCI socket layer initialized
-  <6>[   16.476948] Bluetooth: L2CAP socket layer initialized
-  <6>[   16.476953] Bluetooth: SCO socket layer initialized
-  <4>[   16.550046] kvm: disabled by bios
-  <6>[   16.556893] uvcvideo: Found UVC 1.00 device Integrated Camera (17ef:480f)
-  <6>[   16.558798] input: Integrated Camera as /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0/input/input16
-  <6>[   16.559871] usbcore: registered new interface driver uvcvideo
-  <6>[   16.559875] USB Video Class driver (1.1.1)
-  <6>[   16.614143] usbcore: registered new interface driver btusb
-  <6>[   16.635284] rtl8192se: FW Power Save off (module option)
-  <6>[   16.635532] rtl8192se: Driver for Realtek RTL8192SE/RTL8191SE
-  <6>[   16.635532] Loading firmware rtlwifi/rtl8192sefw.bin
-  <7>[   16.649398] ieee80211 phy0: Selected rate control algorithm 'rtl_rc'
-  <6>[   16.667856] ppdev: user-space parallel port driver
-  <5>[   16.709779] audit: type=1400 audit(1481272475.019:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/ubuntu-core-launcher" pid=2332 comm="apparmor_parser"
-  <6>[   16.730061] rtl8192se 0000:03:00.0 wlp3s0: renamed from wlan0
-  <5>[   16.736132] audit: type=1400 audit(1481272475.047:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/lxc-start" pid=2331 comm="apparmor_parser"
-  <5>[   17.220509] audit: type=1400 audit(1481272475.531:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/lxd/lxd-bridge-proxy" pid=2566 comm="apparmor_parser"
-  <5>[   17.221475] audit: type=1400 audit(1481272475.531:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/sbin/dhclient" pid=2330 comm="apparmor_parser"
-  <5>[   17.221483] audit: type=1400 audit(1481272475.531:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=2330 comm="apparmor_parser"
-  <5>[   17.221489] audit: type=1400 audit(1481272475.531:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-helper" pid=2330 comm="apparmor_parser"
-  <5>[   17.221495] audit: type=1400 audit(1481272475.531:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=2330 comm="apparmor_parser"
-  <5>[   17.255696] audit: type=1400 audit(1481272475.567:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/tcpdump" pid=2572 comm="apparmor_parser"
-  <5>[   17.268784] audit: type=1400 audit(1481272475.579:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lxc-container-default" pid=2329 comm="apparmor_parser"
-  <5>[   17.268792] audit: type=1400 audit(1481272475.579:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lxc-container-default-cgns" pid=2329 comm="apparmor_parser"
-  <6>[   17.503477] Adding 1046524k swap on /dev/sda5.  Priority:-1 extents:1 across:1046524k FS
-  <6>[   17.554377] cfg80211: World regulatory domain updated:
-  <6>[   17.554381] cfg80211:  DFS Master region: unset
-  <6>[   17.554382] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
-  <6>[   17.554384] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
-  <6>[   17.554386] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
-  <6>[   17.554387] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
-  <6>[   17.554389] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (N/A)
-  <6>[   17.554391] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (0 s)
-  <6>[   17.554392] cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm), (0 s)
-  <6>[   17.554393] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
-  <6>[   17.554395] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm), (N/A)
-  <4>[   17.794741] cgroup: new mount options do not match the existing superblock, will be ignored
-  <6>[   43.950803] IPv6: ADDRCONF(NETDEV_UP): wlp3s0: link is not ready
-  <6>[   44.170540] IPv6: ADDRCONF(NETDEV_UP): enp0s25: link is not ready
-  <6>[   74.968416] e1000e: enp0s25 NIC Link is Up 100 Mbps Full Duplex, Flow Control: Rx
-  <6>[   74.968423] e1000e 0000:00:19.0 enp0s25: 10/100 speed: disabling TSO
-  <6>[   74.968475] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s25: link becomes ready
-  <4>[   85.461773] perf interrupt took too long (2510 > 2500), lowering kernel.perf_event_max_sample_rate to 50000
+  <6>[   13.912625] ACPI: If an ACPI driver is available for this device, you should use it instead of the native driver
+  <4>[   13.912627] ACPI Warning: SystemIO range 0x0000000000001180-0x00000000000011AF conflicts with OpRegion 0x0000000000001180-0x00000000000011FF (\_SB_.PCI0.LPC_.LPIO) (20150930/utaddress-254)
+  <6>[   13.912631] ACPI: If an ACPI driver is available for this device, you should use it instead of the native driver
+  <4>[   13.912632] lpc_ich: Resource conflict(s) found affecting gpio_ich
+  <6>[   13.970891] shpchp: Standard Hot Plug PCI Controller Driver version: 0.4
+  <6>[   14.069355] Non-volatile memory driver v1.3
+  <6>[   14.211209] thinkpad_acpi: ThinkPad ACPI Extras v0.25
+  <6>[   14.211214] thinkpad_acpi: http://ibm-acpi.sf.net/
+  <6>[   14.211216] thinkpad_acpi: ThinkPad BIOS 6MET81WW (1.41 ), EC 6MHT43WW-1.18
+  <6>[   14.211217] thinkpad_acpi: Lenovo ThinkPad T510, model 4384WSE
+  <6>[   14.213249] thinkpad_acpi: detected a 16-level brightness capable ThinkPad
+  <6>[   14.213420] thinkpad_acpi: radio switch found; radios are enabled
+  <6>[   14.213440] thinkpad_acpi: This ThinkPad has standard ACPI backlight brightness control, supported by the ACPI video driver
+  <5>[   14.213442] thinkpad_acpi: Disabling thinkpad-acpi brightness events by default...
+  <6>[   14.215761] thinkpad_acpi: rfkill switch tpacpi_bluetooth_sw: radio is unblocked
+  <6>[   14.217330] snd_hda_codec_conexant hdaudioC0D0: CX20585: BIOS auto-probing.
+  <6>[   14.217809] snd_hda_codec_conexant hdaudioC0D0: autoconfig for CX20585: line_outs=1 (0x1f/0x0/0x0/0x0/0x0) type:speaker
+  <6>[   14.217812] snd_hda_codec_conexant hdaudioC0D0:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)
+  <6>[   14.217814] snd_hda_codec_conexant hdaudioC0D0:    hp_outs=2 (0x1c/0x19/0x0/0x0/0x0)
+  <6>[   14.217815] snd_hda_codec_conexant hdaudioC0D0:    mono: mono_out=0x0
+  <6>[   14.217816] snd_hda_codec_conexant hdaudioC0D0:    inputs:
+  <6>[   14.217819] snd_hda_codec_conexant hdaudioC0D0:      Internal Mic=0x23
+  <6>[   14.217820] snd_hda_codec_conexant hdaudioC0D0:      Mic=0x1b
+  <6>[   14.217822] snd_hda_codec_conexant hdaudioC0D0:      Dock Mic=0x1a
+  <6>[   14.219146] snd_hda_codec_conexant hdaudioC0D0: Enable sync_write for stable communication
+  <6>[   14.222601] thinkpad_acpi: Standard ACPI backlight interface available, not loading native one
+  <6>[   14.224629] input: ThinkPad Extra Buttons as /devices/platform/thinkpad_acpi/input/input8
+  <6>[   14.284358] media: Linux media interface: v0.10
+  <6>[   14.314536] Bluetooth: Core ver 2.21
+  <6>[   14.314556] NET: Registered protocol family 31
+  <6>[   14.314558] Bluetooth: HCI device and connection manager initialized
+  <6>[   14.314562] Bluetooth: HCI socket layer initialized
+  <6>[   14.314565] Bluetooth: L2CAP socket layer initialized
+  <6>[   14.314571] Bluetooth: SCO socket layer initialized
+  <6>[   14.320313] input: HDA Intel MID Mic as /devices/pci0000:00/0000:00:1b.0/sound/card0/input9
+  <6>[   14.320416] input: HDA Intel MID Dock Mic as /devices/pci0000:00/0000:00:1b.0/sound/card0/input10
+  <6>[   14.320502] input: HDA Intel MID Dock Headphone as /devices/pci0000:00/0000:00:1b.0/sound/card0/input11
+  <6>[   14.320588] input: HDA Intel MID Headphone as /devices/pci0000:00/0000:00:1b.0/sound/card0/input12
+  <6>[   14.320674] input: HDA Intel MID HDMI/DP,pcm=3 as /devices/pci0000:00/0000:00:1b.0/sound/card0/input13
+  <6>[   14.320764] input: HDA Intel MID HDMI/DP,pcm=7 as /devices/pci0000:00/0000:00:1b.0/sound/card0/input14
+  <6>[   14.320864] input: HDA Intel MID HDMI/DP,pcm=8 as /devices/pci0000:00/0000:00:1b.0/sound/card0/input15
+  <6>[   14.355683] Linux video capture interface: v2.00
+  <6>[   14.398626] usbcore: registered new interface driver btusb
+  <6>[   14.489274] ppdev: user-space parallel port driver
+  <4>[   14.557676] kvm: disabled by bios
+  <6>[   14.585369] uvcvideo: Found UVC 1.00 device Integrated Camera (17ef:480f)
+  <4>[   14.585939] kvm: disabled by bios
+  <6>[   14.587083] input: Integrated Camera as /devices/pci0000:00/0000:00:1a.0/usb1/1-1/1-1.6/1-1.6:1.0/input/input16
+  <6>[   14.587188] usbcore: registered new interface driver uvcvideo
+  <6>[   14.587190] USB Video Class driver (1.1.1)
+  <6>[   14.662336] rtl8192se: FW Power Save off (module option)
+  <6>[   14.662406] rtl8192se: Driver for Realtek RTL8192SE/RTL8191SE
+  <6>[   14.662406] Loading firmware rtlwifi/rtl8192sefw.bin
+  <7>[   14.684481] ieee80211 phy0: Selected rate control algorithm 'rtl_rc'
+  <6>[   14.712508] rtl8192se 0000:03:00.0 wlp3s0: renamed from wlan0
+  <6>[   14.925174] Adding 1046524k swap on /dev/sda5.  Priority:-1 extents:1 across:1046524k FS
+  <6>[   14.939204] cfg80211: World regulatory domain updated:
+  <6>[   14.939207] cfg80211:  DFS Master region: unset
+  <6>[   14.939208] cfg80211:   (start_freq - end_freq @ bandwidth), (max_antenna_gain, max_eirp), (dfs_cac_time)
+  <6>[   14.939210] cfg80211:   (2402000 KHz - 2472000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+  <6>[   14.939212] cfg80211:   (2457000 KHz - 2482000 KHz @ 40000 KHz), (N/A, 2000 mBm), (N/A)
+  <6>[   14.939213] cfg80211:   (2474000 KHz - 2494000 KHz @ 20000 KHz), (N/A, 2000 mBm), (N/A)
+  <6>[   14.939215] cfg80211:   (5170000 KHz - 5250000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (N/A)
+  <6>[   14.939217] cfg80211:   (5250000 KHz - 5330000 KHz @ 80000 KHz, 160000 KHz AUTO), (N/A, 2000 mBm), (0 s)
+  <6>[   14.939218] cfg80211:   (5490000 KHz - 5730000 KHz @ 160000 KHz), (N/A, 2000 mBm), (0 s)
+  <6>[   14.939219] cfg80211:   (5735000 KHz - 5835000 KHz @ 80000 KHz), (N/A, 2000 mBm), (N/A)
+  <6>[   14.939221] cfg80211:   (57240000 KHz - 63720000 KHz @ 2160000 KHz), (N/A, 0 mBm), (N/A)
+  <5>[   14.953361] audit: type=1400 audit(1481273131.230:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/ubuntu-core-launcher" pid=1527 comm="apparmor_parser"
+  <5>[   14.955263] audit: type=1400 audit(1481273131.234:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/lxc-start" pid=1526 comm="apparmor_parser"
+  <6>[   14.959941] psmouse serio2: trackpoint: IBM TrackPoint firmware: 0x0e, buttons: 3/3
+  <5>[   14.973577] audit: type=1400 audit(1481273131.250:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lxc-container-default" pid=1524 comm="apparmor_parser"
+  <5>[   14.973584] audit: type=1400 audit(1481273131.250:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lxc-container-default-cgns" pid=1524 comm="apparmor_parser"
+  <5>[   14.973589] audit: type=1400 audit(1481273131.250:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lxc-container-default-with-mounting" pid=1524 comm="apparmor_parser"
+  <5>[   14.973593] audit: type=1400 audit(1481273131.250:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lxc-container-default-with-nesting" pid=1524 comm="apparmor_parser"
+  <5>[   14.977931] audit: type=1400 audit(1481273131.254:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/lxd/lxd-bridge-proxy" pid=1529 comm="apparmor_parser"
+  <5>[   14.989787] audit: type=1400 audit(1481273131.266:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/sbin/tcpdump" pid=1531 comm="apparmor_parser"
+  <5>[   14.996493] audit: type=1400 audit(1481273131.274:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/sbin/dhclient" pid=1525 comm="apparmor_parser"
+  <5>[   14.996499] audit: type=1400 audit(1481273131.274:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=1525 comm="apparmor_parser"
+  <6>[   15.253948] input: TPPS/2 IBM TrackPoint as /devices/platform/i8042/serio1/serio2/input/input7
+  <4>[   15.567637] cgroup: new mount options do not match the existing superblock, will be ignored
+  <6>[  203.046747] IPv6: ADDRCONF(NETDEV_UP): wlp3s0: link is not ready
+  <6>[  203.266702] IPv6: ADDRCONF(NETDEV_UP): enp0s25: link is not ready
+  <6>[  204.761037] e1000e: enp0s25 NIC Link is Up 100 Mbps Full Duplex, Flow Control: Rx
+  <6>[  204.761046] e1000e 0000:00:19.0 enp0s25: 10/100 speed: disabling TSO
+  <6>[  204.761097] IPv6: ADDRCONF(NETDEV_CHANGE): enp0s25: link becomes ready
 ----- kernel log end -----
 ----- /proc/modules -----
-  ppdev 20480 0 - Live 0x0000000000000000
   arc4 16384 2 - Live 0x0000000000000000
   rtl8192se 65536 0 - Live 0x0000000000000000
-  btusb 45056 0 - Live 0x0000000000000000
-  rtl_pci 28672 1 rtl8192se, Live 0x0000000000000000
   intel_powerclamp 16384 0 - Live 0x0000000000000000
-  btrtl 16384 1 btusb, Live 0x0000000000000000
+  rtl_pci 28672 1 rtl8192se, Live 0x0000000000000000
   coretemp 16384 0 - Live 0x0000000000000000
-  rtlwifi 77824 2 rtl8192se,rtl_pci, Live 0x0000000000000000
   uvcvideo 90112 0 - Live 0x0000000000000000
+  rtlwifi 77824 2 rtl8192se,rtl_pci, Live 0x0000000000000000
   mac80211 737280 3 rtl8192se,rtl_pci,rtlwifi, Live 0x0000000000000000
-  btbcm 16384 1 btusb, Live 0x0000000000000000
   videobuf2_vmalloc 16384 1 uvcvideo, Live 0x0000000000000000
-  btintel 16384 1 btusb, Live 0x0000000000000000
   kvm 536576 0 - Live 0x0000000000000000
-  bluetooth 520192 5 btusb,btrtl,btbcm,btintel, Live 0x0000000000000000
   videobuf2_memops 16384 1 videobuf2_vmalloc, Live 0x0000000000000000
+  ppdev 20480 0 - Live 0x0000000000000000
   videobuf2_v4l2 28672 1 uvcvideo, Live 0x0000000000000000
   videobuf2_core 36864 2 uvcvideo,videobuf2_v4l2, Live 0x0000000000000000
+  btusb 45056 0 - Live 0x0000000000000000
   v4l2_common 16384 1 videobuf2_v4l2, Live 0x0000000000000000
-  videodev 176128 4 uvcvideo,videobuf2_v4l2,videobuf2_core,v4l2_common, Live 0x0000000000000000
-  snd_hda_codec_hdmi 53248 1 - Live 0x0000000000000000
   cfg80211 565248 2 rtlwifi,mac80211, Live 0x0000000000000000
-  snd_hda_codec_conexant 24576 1 - Live 0x0000000000000000
+  btrtl 16384 1 btusb, Live 0x0000000000000000
   irqbypass 16384 1 kvm, Live 0x0000000000000000
-  snd_hda_codec_generic 77824 1 snd_hda_codec_conexant, Live 0x0000000000000000
-  input_leds 16384 0 - Live 0x0000000000000000
+  videodev 176128 4 uvcvideo,videobuf2_v4l2,videobuf2_core,v4l2_common, Live 0x0000000000000000
+  btbcm 16384 1 btusb, Live 0x0000000000000000
+  btintel 16384 1 btusb, Live 0x0000000000000000
+  snd_hda_codec_hdmi 53248 1 - Live 0x0000000000000000
+  bluetooth 520192 5 btusb,btrtl,btbcm,btintel, Live 0x0000000000000000
   media 24576 2 uvcvideo,videodev, Live 0x0000000000000000
   joydev 20480 0 - Live 0x0000000000000000
+  snd_hda_codec_conexant 24576 1 - Live 0x0000000000000000
+  thinkpad_acpi 90112 1 - Live 0x0000000000000000
+  input_leds 16384 0 - Live 0x0000000000000000
+  snd_hda_codec_generic 77824 1 snd_hda_codec_conexant, Live 0x0000000000000000
   snd_hda_intel 36864 0 - Live 0x0000000000000000
-  serio_raw 16384 0 - Live 0x0000000000000000
   snd_hda_codec 135168 4 snd_hda_codec_hdmi,snd_hda_codec_conexant,snd_hda_codec_generic,snd_hda_intel, Live 0x0000000000000000
+  serio_raw 16384 0 - Live 0x0000000000000000
   snd_hda_core 73728 5 snd_hda_codec_hdmi,snd_hda_codec_conexant,snd_hda_codec_generic,snd_hda_intel,snd_hda_codec, Live 0x0000000000000000
   snd_hwdep 16384 1 snd_hda_codec, Live 0x0000000000000000
-  thinkpad_acpi 90112 1 - Live 0x0000000000000000
   snd_pcm 106496 4 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_core, Live 0x0000000000000000
   nvram 16384 1 thinkpad_acpi, Live 0x0000000000000000
   snd_timer 32768 1 snd_pcm, Live 0x0000000000000000
-  parport_pc 32768 0 - Live 0x0000000000000000
-  snd 81920 9 snd_hda_codec_hdmi,snd_hda_codec_conexant,snd_hda_codec_generic,snd_hda_intel,snd_hda_codec,snd_hwdep,thinkpad_acpi,snd_pcm,snd_timer, Live 0x0000000000000000
-  parport 49152 2 ppdev,parport_pc, Live 0x0000000000000000
-  shpchp 36864 0 - Live 0x0000000000000000
-  8250_fintek 16384 0 - Live 0x0000000000000000
+  snd 81920 9 snd_hda_codec_hdmi,snd_hda_codec_conexant,thinkpad_acpi,snd_hda_codec_generic,snd_hda_intel,snd_hda_codec,snd_hwdep,snd_pcm,snd_timer, Live 0x0000000000000000
   soundcore 16384 1 snd, Live 0x0000000000000000
+  8250_fintek 16384 0 - Live 0x0000000000000000
+  shpchp 36864 0 - Live 0x0000000000000000
   mei_me 36864 0 - Live 0x0000000000000000
+  parport_pc 32768 0 - Live 0x0000000000000000
   mei 98304 1 mei_me, Live 0x0000000000000000
+  parport 49152 2 ppdev,parport_pc, Live 0x0000000000000000
   lpc_ich 24576 0 - Live 0x0000000000000000
   mac_hid 16384 0 - Live 0x0000000000000000
   ib_iser 49152 0 - Live 0x0000000000000000
@@ -8741,41 +8742,41 @@ enp0s25: socket failed: Operation not permitted
   raid0 20480 0 - Live 0x0000000000000000
   multipath 16384 0 - Live 0x0000000000000000
   linear 16384 0 - Live 0x0000000000000000
-  i915 1208320 6 - Live 0x0000000000000000
   crct10dif_pclmul 16384 0 - Live 0x0000000000000000
   crc32_pclmul 16384 0 - Live 0x0000000000000000
-  i2c_algo_bit 16384 1 i915, Live 0x0000000000000000
-  e1000e 237568 0 - Live 0x0000000000000000
-  mxm_wmi 16384 0 - Live 0x0000000000000000
-  uas 24576 0 - Live 0x0000000000000000
   aesni_intel 167936 0 - Live 0x0000000000000000
-  drm_kms_helper 147456 1 i915, Live 0x0000000000000000
-  ptp 20480 1 e1000e, Live 0x0000000000000000
+  i915 1208320 6 - Live 0x0000000000000000
+  uas 24576 0 - Live 0x0000000000000000
   aes_x86_64 20480 1 aesni_intel, Live 0x0000000000000000
   lrw 16384 1 aesni_intel, Live 0x0000000000000000
   gf128mul 16384 1 lrw, Live 0x0000000000000000
+  i2c_algo_bit 16384 1 i915, Live 0x0000000000000000
   glue_helper 16384 1 aesni_intel, Live 0x0000000000000000
-  firewire_ohci 40960 0 - Live 0x0000000000000000
-  syscopyarea 16384 1 drm_kms_helper, Live 0x0000000000000000
-  sysfillrect 16384 1 drm_kms_helper, Live 0x0000000000000000
+  drm_kms_helper 147456 1 i915, Live 0x0000000000000000
+  e1000e 237568 0 - Live 0x0000000000000000
+  mxm_wmi 16384 0 - Live 0x0000000000000000
   ablk_helper 16384 1 aesni_intel, Live 0x0000000000000000
-  sysimgblt 16384 1 drm_kms_helper, Live 0x0000000000000000
-  fb_sys_fops 16384 1 drm_kms_helper, Live 0x0000000000000000
-  firewire_core 65536 1 firewire_ohci, Live 0x0000000000000000
-  sdhci_pci 28672 0 - Live 0x0000000000000000
-  psmouse 126976 0 - Live 0x0000000000000000
-  intel_ips 20480 0 - Live 0x0000000000000000
-  usb_storage 69632 3 uas, Live 0x0000000000000000
+  syscopyarea 16384 1 drm_kms_helper, Live 0x0000000000000000
+  firewire_ohci 40960 0 - Live 0x0000000000000000
+  sysfillrect 16384 1 drm_kms_helper, Live 0x0000000000000000
+  cryptd 20480 2 aesni_intel,ablk_helper, Live 0x0000000000000000
   ahci 36864 0 - Live 0x0000000000000000
+  sdhci_pci 28672 0 - Live 0x0000000000000000
+  ptp 20480 1 e1000e, Live 0x0000000000000000
+  firewire_core 65536 1 firewire_ohci, Live 0x0000000000000000
+  psmouse 126976 0 - Live 0x0000000000000000
+  sysimgblt 16384 1 drm_kms_helper, Live 0x0000000000000000
+  usb_storage 69632 3 uas, Live 0x0000000000000000
+  fb_sys_fops 16384 1 drm_kms_helper, Live 0x0000000000000000
+  libahci 32768 1 ahci, Live 0x0000000000000000
+  intel_ips 20480 0 - Live 0x0000000000000000
   crc_itu_t 16384 1 firewire_core, Live 0x0000000000000000
   sdhci 45056 1 sdhci_pci, Live 0x0000000000000000
-  cryptd 20480 2 aesni_intel,ablk_helper, Live 0x0000000000000000
-  libahci 32768 1 ahci, Live 0x0000000000000000
   pps_core 20480 1 ptp, Live 0x0000000000000000
   drm 360448 3 i915,drm_kms_helper, Live 0x0000000000000000
   fjes 28672 0 - Live 0x0000000000000000
-  wmi 20480 1 mxm_wmi, Live 0x0000000000000000
   video 40960 2 thinkpad_acpi,i915, Live 0x0000000000000000
+  wmi 20480 1 mxm_wmi, Live 0x0000000000000000
 ----- /proc/modules end -----
   used irqs: 0,1,8,9,11,12,16,17,19,20,21,23,24,25,26,27,28
 =========== end debug info ============
@@ -8879,7 +8880,7 @@ enp0s25: socket failed: Operation not permitted
   Memory Range: 0xf2000000-0xf23fffff (rw,non-prefetchable)
   Memory Range: 0xd0000000-0xdfffffff (ro,non-prefetchable)
   I/O Ports: 0x1800-0x1807 (rw)
-  IRQ: 26 (65 events)
+  IRQ: 25 (62 events)
   I/O Ports: 0x3c0-0x3df (rw)
   Module Alias: "pci:v00008086d00000046sv000017AAsd0000215Abc03sc00i00"
   Driver Info #0:
@@ -8924,7 +8925,7 @@ enp0s25: socket failed: Operation not permitted
   Driver: "serial"
   I/O Ports: 0x1808-0x180f (rw)
   Memory Range: 0xf2624000-0xf2624fff (rw,non-prefetchable)
-  IRQ: 17 (4 events)
+  IRQ: 17 (3 events)
   Module Alias: "pci:v00008086d00003B67sv000017AAsd00002162bc07sc00i02"
   Config Status: cfg=new, avail=yes, need=no, active=unknown
 
@@ -8946,7 +8947,7 @@ enp0s25: socket failed: Operation not permitted
   Memory Range: 0xf2600000-0xf261ffff (rw,non-prefetchable)
   Memory Range: 0xf2625000-0xf2625fff (rw,non-prefetchable)
   I/O Ports: 0x1820-0x183f (rw)
-  IRQ: 25 (153426 events)
+  IRQ: 26 (61900 events)
   HW Address: 5c:ff:35:04:97:d0
   Link detected: yes
   Module Alias: "pci:v00008086d000010EAsv000017AAsd00002153bc02sc00i00"
@@ -8969,7 +8970,7 @@ enp0s25: socket failed: Operation not permitted
   Revision: 0x06
   Driver: "ehci-pci"
   Memory Range: 0xf2828000-0xf28283ff (rw,non-prefetchable)
-  IRQ: 23 (203 events)
+  IRQ: 23 (195 events)
   Module Alias: "pci:v00008086d00003B3Csv000017AAsd00002163bc0Csc03i20"
   Driver Info #0:
     Driver Status: ehci-hcd is not active
@@ -9051,7 +9052,7 @@ enp0s25: socket failed: Operation not permitted
   SubDevice: pci 0x2164 
   Revision: 0x06
   Driver: "pcieport"
-  IRQ: 23 (203 events)
+  IRQ: 23 (195 events)
   Module Alias: "pci:v00008086d00003B48sv000017AAsd00002164bc06sc04i00"
   Driver Info #0:
     Driver Status: shpchp is active
@@ -9092,7 +9093,7 @@ enp0s25: socket failed: Operation not permitted
   Revision: 0x06
   Driver: "ehci-pci"
   Memory Range: 0xf2828400-0xf28287ff (rw,non-prefetchable)
-  IRQ: 19 (21653 events)
+  IRQ: 19 (67459 events)
   Module Alias: "pci:v00008086d00003B34sv000017AAsd00002163bc0Csc03i20"
   Driver Info #0:
     Driver Status: ehci-hcd is not active
@@ -9154,7 +9155,7 @@ enp0s25: socket failed: Operation not permitted
   I/O Ports: 0x1810-0x1813 (rw)
   I/O Ports: 0x1840-0x185f (rw)
   Memory Range: 0xf2827000-0xf28277ff (rw,non-prefetchable)
-  IRQ: 24 (973 events)
+  IRQ: 24 (768 events)
   Module Alias: "pci:v00008086d00003B2Fsv000017AAsd00002168bc01sc06i01"
   Driver Info #0:
     Driver Status: ahci is active
@@ -9197,7 +9198,7 @@ enp0s25: socket failed: Operation not permitted
   Driver: "intel ips"
   Driver Modules: "intel_ips"
   Memory Range: 0xf2626000-0xf2626fff (rw,non-prefetchable)
-  IRQ: 19 (21653 events)
+  IRQ: 19 (67459 events)
   Module Alias: "pci:v00008086d00003B32sv000017AAsd00002190bc11sc80i00"
   Driver Info #0:
     Driver Status: intel_ips is active
@@ -9223,7 +9224,7 @@ enp0s25: socket failed: Operation not permitted
   Features: WLAN
   I/O Ports: 0x2000-0x2fff (rw)
   Memory Range: 0xf2400000-0xf2403fff (rw,non-prefetchable)
-  IRQ: 17 (4 events)
+  IRQ: 17 (3 events)
   HW Address: 70:f1:a1:b6:61:d4
   Link detected: no
   WLAN channels: 1 2 3 4 5 6 7 8 9 10 11 12 13
@@ -9365,7 +9366,7 @@ enp0s25: socket failed: Operation not permitted
   Driver: "firewire_ohci"
   Driver Modules: "firewire_ohci"
   Memory Range: 0xf2500800-0xf2500fff (rw,non-prefetchable)
-  IRQ: 19 (21653 events)
+  IRQ: 19 (67459 events)
   Module Alias: "pci:v00001180d0000E832sv000017AAsd00002136bc0Csc00i10"
   Driver Info #0:
     Driver Status: ohci1394 is not active
@@ -9403,13 +9404,13 @@ enp0s25: socket failed: Operation not permitted
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #13 (VGA compatible controller)
 
-39: SCSI 600.0: 10600 Disk
+39: SCSI 00.0: 10600 Disk
   [Created at block.245]
   Unique ID: R8DB.zwCdd5wePI6
   Parent ID: 1GTX.Bb6wwkwH5k6
   SysFS ID: /class/block/sda
-  SysFS BusID: 6:0:0:0
-  SysFS Device Link: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host6/target6:0:0/6:0:0:0
+  SysFS BusID: 0:0:0:0
+  SysFS Device Link: /devices/pci0000:00/0000:00:1d.0/usb2/2-1/2-1.1/2-1.1:1.0/host0/target0:0:0/0:0:0:0
   Hardware Class: disk
   Model: "SanDisk Cruzer Fit"
   Vendor: usb 0x0781 "SanDisk"
@@ -9469,13 +9470,13 @@ enp0s25: socket failed: Operation not permitted
   Config Status: cfg=new, avail=yes, need=no, active=unknown
   Attached to: #39 (Disk)
 
-43: SCSI 100.0: 10602 CD-ROM (DVD)
+43: SCSI 200.0: 10602 CD-ROM (DVD)
   [Created at block.249]
   Unique ID: KD9E.5YR8pyiB2B8
   Parent ID: w7Y8.45KndGrzJ95
   SysFS ID: /class/block/sr0
-  SysFS BusID: 1:0:0:0
-  SysFS Device Link: /devices/pci0000:00/0000:00:1f.2/ata2/host1/target1:0:0/1:0:0:0
+  SysFS BusID: 2:0:0:0
+  SysFS Device Link: /devices/pci0000:00/0000:00:1f.2/ata2/host2/target2:0:0/2:0:0:0
   Hardware Class: cdrom
   Model: "HL-DT-ST DVDRAM GT30N"
   Vendor: "HL-DT-ST"
@@ -9705,9 +9706,9 @@ enp0s25: socket failed: Operation not permitted
   Revision: "23.45"
   Driver: "uvcvideo"
   Driver Modules: "uvcvideo"
-  Device File: /dev/input/event15
-  Device Files: /dev/input/event15, /dev/input/by-id/usb-Chicony_Electronics_Co.__Ltd._Integrated_Camera-event-if00, /dev/input/by-path/pci-0000:00:1a.0-usb-0:1.6:1.0-event
-  Device Number: char 13:79
+  Device File: /dev/input/event14
+  Device Files: /dev/input/event14, /dev/input/by-id/usb-Chicony_Electronics_Co.__Ltd._Integrated_Camera-event-if00, /dev/input/by-path/pci-0000:00:1a.0-usb-0:1.6:1.0-event
+  Device Number: char 13:78
   Speed: 480 Mbps
   Module Alias: "usb:v17EFp480Fd2345dcEFdsc02dp01ic0Eisc01ip00in00"
   Driver Info #0:
@@ -9835,7 +9836,7 @@ enp0s25: socket failed: Operation not permitted
   Device: 0x000a "TPPS/2 IBM TrackPoint"
   Compatible to: int 0x0210 0x0003
   Device File: /dev/input/mice (/dev/input/mouse1)
-  Device Files: /dev/input/mice, /dev/input/mouse1, /dev/input/event6, /dev/input/by-path/platform-i8042-serio-2-event-mouse, /dev/input/by-path/platform-i8042-serio-2-mouse
+  Device Files: /dev/input/mice, /dev/input/mouse1, /dev/input/event15, /dev/input/by-path/platform-i8042-serio-2-event-mouse, /dev/input/by-path/platform-i8042-serio-2-mouse
   Device Number: char 13:63 (char 13:33)
   Driver Info #0:
     Buttons: 3
@@ -9852,8 +9853,8 @@ enp0s25: socket failed: Operation not permitted
   Vendor: "GenuineIntel"
   Model: 6.37.2 "Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz"
   Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,rdtscp,lm,constant_tsc,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,smx,est,tm2,ssse3,cx16,xtpr,pdcm,sse4_1,sse4_2,popcnt,aes,lahf_lm,tpr_shadow,vnmi,flexpriority,ept,vpid,dtherm,ida,arat
-  Clock: 1733 MHz
-  BogoMips: 4788.04
+  Clock: 2133 MHz
+  BogoMips: 4787.83
   Cache: 3072 kb
   Units/Processor: 16
   Config Status: cfg=new, avail=yes, need=no, active=unknown
@@ -9866,8 +9867,8 @@ enp0s25: socket failed: Operation not permitted
   Vendor: "GenuineIntel"
   Model: 6.37.2 "Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz"
   Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,rdtscp,lm,constant_tsc,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,smx,est,tm2,ssse3,cx16,xtpr,pdcm,sse4_1,sse4_2,popcnt,aes,lahf_lm,tpr_shadow,vnmi,flexpriority,ept,vpid,dtherm,ida,arat
-  Clock: 1333 MHz
-  BogoMips: 4788.04
+  Clock: 1466 MHz
+  BogoMips: 4787.83
   Cache: 3072 kb
   Units/Processor: 16
   Config Status: cfg=new, avail=yes, need=no, active=unknown
@@ -9880,8 +9881,8 @@ enp0s25: socket failed: Operation not permitted
   Vendor: "GenuineIntel"
   Model: 6.37.2 "Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz"
   Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,rdtscp,lm,constant_tsc,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,smx,est,tm2,ssse3,cx16,xtpr,pdcm,sse4_1,sse4_2,popcnt,aes,lahf_lm,tpr_shadow,vnmi,flexpriority,ept,vpid,dtherm,ida,arat
-  Clock: 1600 MHz
-  BogoMips: 4788.04
+  Clock: 1200 MHz
+  BogoMips: 4787.83
   Cache: 3072 kb
   Units/Processor: 16
   Config Status: cfg=new, avail=yes, need=no, active=unknown
@@ -9894,8 +9895,8 @@ enp0s25: socket failed: Operation not permitted
   Vendor: "GenuineIntel"
   Model: 6.37.2 "Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz"
   Features: fpu,vme,de,pse,tsc,msr,pae,mce,cx8,apic,sep,mtrr,pge,mca,cmov,pat,pse36,clflush,dts,acpi,mmx,fxsr,sse,sse2,ss,ht,tm,pbe,syscall,nx,rdtscp,lm,constant_tsc,arch_perfmon,pebs,bts,rep_good,nopl,xtopology,nonstop_tsc,aperfmperf,pni,pclmulqdq,dtes64,monitor,ds_cpl,vmx,smx,est,tm2,ssse3,cx16,xtpr,pdcm,sse4_1,sse4_2,popcnt,aes,lahf_lm,tpr_shadow,vnmi,flexpriority,ept,vpid,dtherm,ida,arat
-  Clock: 1600 MHz
-  BogoMips: 4788.04
+  Clock: 1200 MHz
+  BogoMips: 4787.83
   Cache: 3072 kb
   Units/Processor: 16
   Config Status: cfg=new, avail=yes, need=no, active=unknown
