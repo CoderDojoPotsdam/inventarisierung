@@ -1,0 +1,3 @@
+00:02.0 VGA compatible controller [0300]: Intel Corporation Mobile 4 Series Chipset Integrated Graphics Controller [8086:2a42] (rev 07)
+	Subsystem: Lenovo Mobile 4 Series Chipset Integrated Graphics Controller [17aa:20e4]
+	Kernel driver in use: i915
