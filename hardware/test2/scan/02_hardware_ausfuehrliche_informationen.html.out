@@ -68,7 +68,7 @@
           <tr><td class="first">bus info: </td><td class="second"><div class="id">cpu@0</div></td></tr>
           <tr><td class="first">version: </td><td class="second">Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz</td></tr>
           <tr><td class="first">slot: </td><td class="second">None</td></tr>
-          <tr><td class="first">size: </td><td class="second">1199MHz</td></tr>
+          <tr><td class="first">size: </td><td class="second">1999MHz</td></tr>
           <tr><td class="first">capacity: </td><td class="second">2400MHz</td></tr>
           <tr><td class="first">width: </td><td class="second">64 bits</td></tr>
           <tr><td class="first">clock: </td><td class="second">133MHz</td></tr>

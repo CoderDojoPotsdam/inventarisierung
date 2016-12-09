@@ -5,7 +5,7 @@ model		: 37
 model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
 stepping	: 2
 microcode	: 0xc
-cpu MHz		: 1199.000
+cpu MHz		: 1333.000
 cache size	: 3072 KB
 physical id	: 0
 siblings	: 4
@@ -32,7 +32,7 @@ model		: 37
 model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
 stepping	: 2
 microcode	: 0xc
-cpu MHz		: 2400.000
+cpu MHz		: 1199.000
 cache size	: 3072 KB
 physical id	: 0
 siblings	: 4
@@ -59,7 +59,7 @@ model		: 37
 model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
 stepping	: 2
 microcode	: 0xc
-cpu MHz		: 1199.000
+cpu MHz		: 1999.000
 cache size	: 3072 KB
 physical id	: 0
 siblings	: 4
@@ -86,7 +86,7 @@ model		: 37
 model name	: Intel(R) Core(TM) i5 CPU       M 520  @ 2.40GHz
 stepping	: 2
 microcode	: 0xc
-cpu MHz		: 1199.000
+cpu MHz		: 1466.000
 cache size	: 3072 KB
 physical id	: 0
 siblings	: 4

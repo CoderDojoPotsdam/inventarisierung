@@ -2,10 +2,10 @@ enp0s25   Link encap:Ethernet  HWaddr 5c:ff:35:04:97:d0
           inet addr:10.22.73.145  Bcast:10.22.73.159  Mask:255.255.255.224
           inet6 addr: fe80::5eff:35ff:fe04:97d0/64 Scope:Link
           UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-          RX packets:46945 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:23460 errors:0 dropped:0 overruns:0 carrier:0
+          RX packets:47477 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:23940 errors:0 dropped:0 overruns:0 carrier:0
           collisions:0 txqueuelen:1000 
-          RX bytes:27829090 (27.8 MB)  TX bytes:1693341 (1.6 MB)
+          RX bytes:28444176 (28.4 MB)  TX bytes:1741429 (1.7 MB)
           Interrupt:20 Memory:f2600000-f2620000 
 
 lo        Link encap:Local Loopback  
