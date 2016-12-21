@@ -1,0 +1,50 @@
+H/W path                     Device     Class          Description
+==================================================================
+                                        system         Latitude D430
+/0                                      bus            0D704C
+/0/0                                    memory         64KiB BIOS
+/0/400                                  processor      Intel(R) Core(TM)2 Duo CPU     U7700  @ 1.33GHz
+/0/400/700                              memory         32KiB L1 cache
+/0/400/701                              memory         2MiB L2 cache
+/0/1000                                 memory         2GiB System Memory
+/0/1000/0                               memory         1GiB Chip DDR Synchronous 533 MHz (1.9 ns)
+/0/1000/1                               memory         1GiB DIMM DDR Synchronous 667 MHz (1.5 ns)
+/0/100                                  bridge         Mobile 945GM/PM/GMS, 943/940GML and 945GT Express Memory Controller Hub
+/0/100/2                                display        Mobile 945GM/GMS, 943/940GML Express Integrated Graphics Controller
+/0/100/2.1                              display        Mobile 945GM/GMS/GME, 943/940GML Express Integrated Graphics Controller
+/0/100/1b                               multimedia     NM10/ICH7 Family High Definition Audio Controller
+/0/100/1c                               bridge         NM10/ICH7 Family PCI Express Port 1
+/0/100/1c.1                             bridge         NM10/ICH7 Family PCI Express Port 2
+/0/100/1c.1/0                wlp12s0    network        PRO/Wireless 3945ABG [Golan] Network Connection
+/0/100/1c.2                             bridge         NM10/ICH7 Family PCI Express Port 3
+/0/100/1c.2/0                enp9s0     network        NetXtreme BCM5752 Gigabit Ethernet PCI Express
+/0/100/1d                               bus            NM10/ICH7 Family USB UHCI Controller #1
+/0/100/1d/1                  usb2       bus            UHCI Host Controller
+/0/100/1d/1/2                           bus            Internal 2.0 Hub
+/0/100/1d/1/2/2                         generic        Novatel Wireless HSDPA Modem
+/0/100/1d/1/2/3                         bus            Oz776 1.1 Hub
+/0/100/1d/1/2/3/1                       generic        Biometric Coprocessor
+/0/100/1d/1/2/3/2                       generic        O2Micro CCID SC Reader
+/0/100/1d/1/2/4                         communication  Wireless 360 Bluetooth
+/0/100/1d.1                             bus            NM10/ICH7 Family USB UHCI Controller #2
+/0/100/1d.1/1                usb3       bus            UHCI Host Controller
+/0/100/1d.2                             bus            NM10/ICH7 Family USB UHCI Controller #3
+/0/100/1d.2/1                usb4       bus            UHCI Host Controller
+/0/100/1d.3                             bus            NM10/ICH7 Family USB UHCI Controller #4
+/0/100/1d.3/1                usb5       bus            UHCI Host Controller
+/0/100/1d.7                             bus            NM10/ICH7 Family USB2 EHCI Controller
+/0/100/1d.7/1                usb1       bus            EHCI Host Controller
+/0/100/1d.7/1/8                         bus            Port Replicator
+/0/100/1d.7/1/8/2            scsi2      storage        STORE N GO
+/0/100/1d.7/1/8/2/0.0.0      /dev/sda   disk           7746MB SCSI Disk
+/0/100/1d.7/1/8/2/0.0.0/1    /dev/sda1  volume         6363MiB EXT4 volume
+/0/100/1d.7/1/8/2/0.0.0/2    /dev/sda2  volume         1022MiB Extended partition
+/0/100/1d.7/1/8/2/0.0.0/2/5  /dev/sda5  volume         1022MiB W95 FAT32 partition
+/0/100/1e                               bridge         82801 Mobile PCI Bridge
+/0/100/1e/1                             bridge         RL5c476 II
+/0/100/1e/1.1                           bus            R5C552 IEEE 1394 Controller
+/0/100/1e/1.2                           generic        R5C822 SD/SDIO/MMC/MS/MSPro Host Adapter
+/0/100/1f                               bridge         82801GBM (ICH7-M) LPC Interface Bridge
+/0/100/1f.1                             storage        82801G (ICH7 Family) IDE Controller
+/0/100/1f.3                             bus            NM10/ICH7 Family SMBus Controller
+/1                                      power          DELL JG16886

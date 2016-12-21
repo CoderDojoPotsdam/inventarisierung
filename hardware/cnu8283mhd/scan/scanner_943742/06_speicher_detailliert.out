@@ -1,0 +1,50 @@
+  *-firmware
+       description: BIOS
+       vendor: Hewlett-Packard
+       physical id: 0
+       version: 68MVD Ver. F.0F
+       date: 02/05/2008
+       size: 128KiB
+       capacity: 960KiB
+       capabilities: pci pcmcia pnp upgrade shadowing cdboot bootselect edd int13floppy720 int5printscreen int9keyboard int14serial int17printer acpi usb ls120boot smartbattery biosbootspecification netboot
+  *-cache:0
+       description: L1 cache
+       physical id: 5
+       slot: Internal L1 Cache
+       size: 64KiB
+       capacity: 64KiB
+       capabilities: burst internal write-back unified
+       configuration: level=1
+  *-cache:1
+       description: L2 cache
+       physical id: 6
+       slot: Internal L2 Cache
+       size: 4MiB
+       capacity: 4MiB
+       capabilities: burst external write-back unified
+       configuration: level=2
+  *-memory
+       description: System Memory
+       physical id: a
+       slot: System board or motherboard
+       size: 2GiB
+     *-bank:0
+          description: SODIMM DDR2 Synchronous 667 MHz (1.5 ns)
+          product: M4 70T2953EZ3-CE6
+          vendor: Samsung
+          physical id: 0
+          serial: 774CECB6
+          slot: DIMM #1
+          size: 1GiB
+          width: 64 bits
+          clock: 667MHz (1.5ns)
+     *-bank:1
+          description: SODIMM DDR2 Synchronous 667 MHz (1.5 ns)
+          product: M4 70T2953EZ3-CE6
+          vendor: Samsung
+          physical id: 1
+          serial: 774CECB2
+          slot: DIMM #2
+          size: 1GiB
+          width: 64 bits
+          clock: 667MHz (1.5ns)

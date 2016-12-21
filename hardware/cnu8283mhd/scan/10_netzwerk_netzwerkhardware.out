@@ -1,0 +1,9 @@
+00:19.0 Ethernet controller [0200]: Intel Corporation 82566MM Gigabit Network Connection [8086:1049] (rev 03)
+	Subsystem: Hewlett-Packard Company 82566MM Gigabit Network Connection [103c:30c5]
+	Kernel driver in use: e1000e
+	Kernel modules: e1000e
+--
+10:00.0 Network controller [0280]: Intel Corporation PRO/Wireless 4965 AG or AGN [Kedron] Network Connection [8086:4229] (rev 61)
+	Subsystem: Intel Corporation PRO/Wireless 4965 AG or AGN [Kedron] Network Connection [8086:1001]
+	Kernel driver in use: iwl4965
+	Kernel modules: iwl4965

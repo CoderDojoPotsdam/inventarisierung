@@ -1,0 +1,7 @@
+       description: Motherboard
+       product: 30C3
+       vendor: Hewlett-Packard
+       physical id: 0
+       version: KBC Version 73.31
+     *-firmware
+          description: BIOS

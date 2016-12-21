@@ -1,0 +1,3 @@
+00:1b.0 Audio device [0403]: Intel Corporation NM10/ICH7 Family High Definition Audio Controller [8086:27d8] (rev 01)
+	Subsystem: Hewlett-Packard Company Compaq nw8440 [103c:30a3]
+	Kernel driver in use: snd_hda_intel

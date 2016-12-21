@@ -1,0 +1,262 @@
+00:00.0 Host bridge: Intel Corporation Mobile 945GM/PM/GMS, 943/940GML and 945GT Express Memory Controller Hub (rev 03)
+	Subsystem: Hewlett-Packard Company Compaq nw8440
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B+ ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort+ >SERR- <PERR- INTx-
+	Latency: 0
+	Capabilities: <access denied>
+
+00:01.0 PCI bridge: Intel Corporation Mobile 945GM/PM/GMS, 943/940GML and 945GT Express PCI Express Root Port (rev 03) (prog-if 00 [Normal decode])
+	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin A routed to IRQ 24
+	Bus: primary=00, secondary=01, subordinate=01, sec-latency=0
+	I/O behind bridge: 00004000-00004fff
+	Memory behind bridge: f4600000-f46fffff
+	Prefetchable memory behind bridge: 00000000e0000000-00000000efffffff
+	Secondary status: 66MHz- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort+ <SERR- <PERR-
+	BridgeCtl: Parity- SERR- NoISA+ VGA+ MAbort- >Reset- FastB2B-
+		PriDiscTmr- SecDiscTmr- DiscTmrStat- DiscTmrSERREn-
+	Capabilities: <access denied>
+	Kernel driver in use: pcieport
+	Kernel modules: shpchp
+
+00:1b.0 Audio device: Intel Corporation NM10/ICH7 Family High Definition Audio Controller (rev 01)
+	Subsystem: Hewlett-Packard Company Compaq nw8440
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin A routed to IRQ 29
+	Region 0: Memory at f4700000 (64-bit, non-prefetchable) [size=16K]
+	Capabilities: <access denied>
+	Kernel driver in use: snd_hda_intel
+	Kernel modules: snd_hda_intel
+
+00:1c.0 PCI bridge: Intel Corporation NM10/ICH7 Family PCI Express Port 1 (rev 01) (prog-if 00 [Normal decode])
+	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin A routed to IRQ 25
+	Bus: primary=00, secondary=08, subordinate=08, sec-latency=0
+	I/O behind bridge: 00006000-00006fff
+	Memory behind bridge: f4100000-f41fffff
+	Prefetchable memory behind bridge: 0000000080000000-00000000801fffff
+	Secondary status: 66MHz- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- <SERR- <PERR-
+	BridgeCtl: Parity- SERR- NoISA+ VGA- MAbort- >Reset- FastB2B-
+		PriDiscTmr- SecDiscTmr- DiscTmrStat- DiscTmrSERREn-
+	Capabilities: <access denied>
+	Kernel driver in use: pcieport
+	Kernel modules: shpchp
+
+00:1c.1 PCI bridge: Intel Corporation NM10/ICH7 Family PCI Express Port 2 (rev 01) (prog-if 00 [Normal decode])
+	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin B routed to IRQ 26
+	Bus: primary=00, secondary=10, subordinate=10, sec-latency=0
+	I/O behind bridge: 00007000-00007fff
+	Memory behind bridge: f4000000-f40fffff
+	Prefetchable memory behind bridge: 0000000080200000-00000000803fffff
+	Secondary status: 66MHz- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- <SERR- <PERR-
+	BridgeCtl: Parity- SERR- NoISA+ VGA- MAbort- >Reset- FastB2B-
+		PriDiscTmr- SecDiscTmr- DiscTmrStat- DiscTmrSERREn-
+	Capabilities: <access denied>
+	Kernel driver in use: pcieport
+	Kernel modules: shpchp
+
+00:1c.3 PCI bridge: Intel Corporation NM10/ICH7 Family PCI Express Port 4 (rev 01) (prog-if 00 [Normal decode])
+	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin D routed to IRQ 27
+	Bus: primary=00, secondary=20, subordinate=20, sec-latency=0
+	I/O behind bridge: 00002000-00003fff
+	Memory behind bridge: f0000000-f3ffffff
+	Prefetchable memory behind bridge: 0000000080400000-00000000805fffff
+	Secondary status: 66MHz- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort+ <SERR- <PERR-
+	BridgeCtl: Parity- SERR- NoISA+ VGA- MAbort- >Reset- FastB2B-
+		PriDiscTmr- SecDiscTmr- DiscTmrStat- DiscTmrSERREn-
+	Capabilities: <access denied>
+	Kernel driver in use: pcieport
+	Kernel modules: shpchp
+
+00:1d.0 USB controller: Intel Corporation NM10/ICH7 Family USB UHCI Controller #1 (rev 01) (prog-if 00 [UHCI])
+	Subsystem: Hewlett-Packard Company Compaq nw8440
+	Control: I/O+ Mem- BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap- 66MHz- UDF- FastB2B+ ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin A routed to IRQ 20
+	Region 4: I/O ports at 5000 [size=32]
+	Kernel driver in use: uhci_hcd
+
+00:1d.1 USB controller: Intel Corporation NM10/ICH7 Family USB UHCI Controller #2 (rev 01) (prog-if 00 [UHCI])
+	Subsystem: Hewlett-Packard Company Compaq nw8440
+	Control: I/O+ Mem- BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap- 66MHz- UDF- FastB2B+ ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin B routed to IRQ 21
+	Region 4: I/O ports at 5020 [size=32]
+	Kernel driver in use: uhci_hcd
+
+00:1d.2 USB controller: Intel Corporation NM10/ICH7 Family USB UHCI Controller #3 (rev 01) (prog-if 00 [UHCI])
+	Subsystem: Hewlett-Packard Company Compaq nw8440
+	Control: I/O+ Mem- BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap- 66MHz- UDF- FastB2B+ ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin C routed to IRQ 18
+	Region 4: I/O ports at 5040 [size=32]
+	Kernel driver in use: uhci_hcd
+
+00:1d.3 USB controller: Intel Corporation NM10/ICH7 Family USB UHCI Controller #4 (rev 01) (prog-if 00 [UHCI])
+	Subsystem: Hewlett-Packard Company Compaq nw8440
+	Control: I/O+ Mem- BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap- 66MHz- UDF- FastB2B+ ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin D routed to IRQ 19
+	Region 4: I/O ports at 5060 [size=32]
+	Kernel driver in use: uhci_hcd
+
+00:1d.7 USB controller: Intel Corporation NM10/ICH7 Family USB2 EHCI Controller (rev 01) (prog-if 20 [EHCI])
+	Subsystem: Hewlett-Packard Company Compaq nw8440
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B+ ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin A routed to IRQ 20
+	Region 0: Memory at f4704000 (32-bit, non-prefetchable) [size=1K]
+	Capabilities: <access denied>
+	Kernel driver in use: ehci-pci
+
+00:1e.0 PCI bridge: Intel Corporation 82801 Mobile PCI Bridge (rev e1) (prog-if 01 [Subtractive decode])
+	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR+ FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Bus: primary=00, secondary=02, subordinate=06, sec-latency=64
+	I/O behind bridge: 00008000-00008fff
+	Memory behind bridge: f4200000-f45fffff
+	Prefetchable memory behind bridge: 00000000fff00000-00000000000fffff
+	Secondary status: 66MHz- FastB2B+ ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort+ <SERR- <PERR-
+	BridgeCtl: Parity- SERR+ NoISA+ VGA- MAbort- >Reset- FastB2B-
+		PriDiscTmr- SecDiscTmr- DiscTmrStat- DiscTmrSERREn-
+	Capabilities: <access denied>
+
+00:1f.0 ISA bridge: Intel Corporation 82801GBM (ICH7-M) LPC Interface Bridge (rev 01)
+	Subsystem: Hewlett-Packard Company Compaq nw8440
+	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Capabilities: <access denied>
+	Kernel driver in use: lpc_ich
+	Kernel modules: intel_rng, lpc_ich, leds_ss4200
+
+00:1f.2 IDE interface: Intel Corporation 82801GBM/GHM (ICH7-M Family) SATA Controller [IDE mode] (rev 01) (prog-if 80 [Master])
+	Subsystem: Hewlett-Packard Company 82801GBM/GHM (ICH7-M Family) SATA Controller [IDE mode]
+	Control: I/O+ Mem- BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz+ UDF- FastB2B+ ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0
+	Interrupt: pin B routed to IRQ 17
+	Region 0: I/O ports at 01f0 [size=8]
+	Region 1: I/O ports at 03f4
+	Region 2: I/O ports at 0170 [size=8]
+	Region 3: I/O ports at 0374
+	Region 4: I/O ports at 5080 [size=16]
+	Capabilities: <access denied>
+	Kernel driver in use: ata_piix
+	Kernel modules: pata_acpi
+
+01:00.0 VGA compatible controller: Advanced Micro Devices, Inc. [AMD/ATI] RV530/M56-P [Mobility Radeon X1600] (prog-if 00 [VGA controller])
+	Subsystem: Hewlett-Packard Company RV530/M56-P [Mobility Radeon X1600]
+	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin A routed to IRQ 28
+	Region 0: Memory at e0000000 (32-bit, prefetchable) [size=256M]
+	Region 1: I/O ports at 4000 [size=256]
+	Region 2: Memory at f4600000 (32-bit, non-prefetchable) [size=64K]
+	[virtual] Expansion ROM at f4620000 [disabled] [size=128K]
+	Capabilities: <access denied>
+	Kernel driver in use: radeon
+	Kernel modules: radeon
+
+02:06.0 CardBus bridge: Texas Instruments PCIxx12 Cardbus Controller
+	Subsystem: Hewlett-Packard Company Compaq nw8440
+	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 168, Cache Line Size: 64 bytes
+	Interrupt: pin A routed to IRQ 18
+	Region 0: Memory at f4200000 (32-bit, non-prefetchable) [size=4K]
+	Bus: primary=02, secondary=03, subordinate=06, sec-latency=176
+	Memory window 0: 84000000-87ffffff (prefetchable)
+	Memory window 1: 88000000-8bffffff
+	I/O window 0: 00008000-000080ff
+	I/O window 1: 00008400-000084ff
+	BridgeCtl: Parity- SERR- ISA- VGA- MAbort- >Reset+ 16bInt+ PostWrite+
+	16-bit legacy interface ports at 0001
+	Capabilities: <access denied>
+	Kernel driver in use: yenta_cardbus
+	Kernel modules: yenta_socket
+
+02:06.1 FireWire (IEEE 1394): Texas Instruments PCIxx12 OHCI Compliant IEEE 1394 Host Controller (prog-if 10 [OHCI])
+	Subsystem: Hewlett-Packard Company Compaq nw8440
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 64 (500ns min, 1000ns max), Cache Line Size: 64 bytes
+	Interrupt: pin B routed to IRQ 19
+	Region 0: Memory at f4201000 (32-bit, non-prefetchable) [size=2K]
+	Region 1: Memory at f4204000 (32-bit, non-prefetchable) [size=16K]
+	Capabilities: <access denied>
+	Kernel driver in use: firewire_ohci
+	Kernel modules: firewire_ohci
+
+02:06.2 Mass storage controller: Texas Instruments 5-in-1 Multimedia Card Reader (SD/MMC/MS/MS PRO/xD)
+	Subsystem: Hewlett-Packard Company Compaq nw8440
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 64 (1750ns min, 1000ns max), Cache Line Size: 64 bytes
+	Interrupt: pin B routed to IRQ 19
+	Region 0: Memory at f4208000 (32-bit, non-prefetchable) [size=4K]
+	Capabilities: <access denied>
+	Kernel driver in use: tifm_7xx1
+	Kernel modules: tifm_7xx1
+
+02:06.3 SD Host controller: Texas Instruments PCIxx12 SDA Standard Compliant SD Host Controller
+	Subsystem: Hewlett-Packard Company Compaq nw8440
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 64 (1750ns min, 1000ns max), Cache Line Size: 64 bytes
+	Interrupt: pin C routed to IRQ 22
+	Region 0: Memory at f4209000 (32-bit, non-prefetchable) [size=256]
+	Capabilities: <access denied>
+	Kernel driver in use: sdhci-pci
+	Kernel modules: sdhci_pci
+
+02:06.4 Communication controller: Texas Instruments PCIxx12 GemCore based SmartCard controller
+	Subsystem: Hewlett-Packard Company nc8430
+	Control: I/O- Mem+ BusMaster- SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=medium >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Interrupt: pin A routed to IRQ 11
+	Region 0: Memory at f420a000 (32-bit, non-prefetchable) [size=4K]
+	Region 1: Memory at f420b000 (32-bit, non-prefetchable) [size=4K]
+	Capabilities: <access denied>
+
+08:00.0 Ethernet controller: Broadcom Corporation NetXtreme BCM5753M Gigabit Ethernet PCI Express (rev 21)
+	Subsystem: Hewlett-Packard Company Compaq nw8440
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin A routed to IRQ 16
+	Region 0: Memory at f4100000 (64-bit, non-prefetchable) [size=64K]
+	Capabilities: <access denied>
+	Kernel driver in use: tg3
+	Kernel modules: tg3
+
+10:00.0 Network controller: Intel Corporation PRO/Wireless 3945ABG [Golan] Network Connection (rev 02)
+	Subsystem: Hewlett-Packard Company PRO/Wireless 3945ABG [Golan] Network Connection
+	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Latency: 0, Cache Line Size: 64 bytes
+	Interrupt: pin A routed to IRQ 30
+	Region 0: Memory at f4000000 (32-bit, non-prefetchable) [size=4K]
+	Capabilities: <access denied>
+	Kernel driver in use: iwl3945
+	Kernel modules: iwl3945
+
