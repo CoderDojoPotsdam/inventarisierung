@@ -1,0 +1,3 @@
+00:02.0 VGA compatible controller [0300]: Intel Corporation 2nd Generation Core Processor Family Integrated Graphics Controller [8086:0126] (rev 09)
+	Subsystem: Lenovo 2nd Generation Core Processor Family Integrated Graphics Controller [17aa:21cf]
+	Kernel driver in use: i915

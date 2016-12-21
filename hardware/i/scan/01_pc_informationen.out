@@ -5,8 +5,8 @@ SMBIOS 2.4 present.
 Handle 0x0000, DMI type 0, 24 bytes
 BIOS Information
 	Vendor: LENOVO
-	Version: 6FET82WW (3.12 )
-	Release Date: 11/26/2009
+	Version: 6FET79WW (3.09 )
+	Release Date: 10/02/2009
 	Address: 0xE0000
 	Runtime Size: 128 kB
 	ROM Size: 8192 kB
@@ -25,16 +25,16 @@ BIOS Information
 		USB legacy is supported
 		BIOS boot specification is supported
 		Targeted content distribution is supported
-	BIOS Revision: 3.18
-	Firmware Revision: 1.6
+	BIOS Revision: 3.9
+	Firmware Revision: 1.1
 
 Handle 0x0001, DMI type 1, 27 bytes
 System Information
 	Manufacturer: LENOVO
 	Product Name: 2241WU7
 	Version: ThinkPad T500
-	Serial Number: R83548A
-	UUID: 5D632281-5043-11CB-A443-F26A49E4CEAC
+	Serial Number: R8NPPWM
+	UUID: B520ED01-4A89-11CB-9CC4-8A47477F9E09
 	Wake-up Type: Power Switch
 	SKU Number: Not Specified
 	Family: ThinkPad T500
