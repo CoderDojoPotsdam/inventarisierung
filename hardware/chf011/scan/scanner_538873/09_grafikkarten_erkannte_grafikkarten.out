@@ -1,0 +1,3 @@
+01:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] RV635/M86 [Mobility Radeon HD 3650] [1002:9591]
+	Subsystem: Lenovo RV635/M86 [Mobility Radeon HD 3650] [17aa:2117]
+	Kernel driver in use: radeon
