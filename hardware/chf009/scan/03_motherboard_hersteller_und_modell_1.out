@@ -1,7 +1,14 @@
        description: Motherboard
+<<<<<<< HEAD
        product: 0XW631
        vendor: Dell Inc.
        physical id: 0
        serial: .JG8G13J.CN129617792020.
+=======
+       product: 0HP728
+       vendor: Dell Inc.
+       physical id: 0
+       serial: .6F37P3J.CN4864383E1659.
+>>>>>>> 744a6bdc87eb17efbf071e4a9355748385ada99c
      *-firmware
           description: BIOS

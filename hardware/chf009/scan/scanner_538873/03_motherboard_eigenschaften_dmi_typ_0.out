@@ -5,11 +5,19 @@ SMBIOS 2.4 present.
 Handle 0x0000, DMI type 0, 24 bytes
 BIOS Information
 	Vendor: Dell Inc.
+<<<<<<< HEAD
 	Version: A00
 	Release Date: 05/21/2007
 	Address: 0xF0000
 	Runtime Size: 64 kB
 	ROM Size: 576 kB
+=======
+	Version: A04
+	Release Date: 03/04/2008
+	Address: 0xF0000
+	Runtime Size: 64 kB
+	ROM Size: 2048 kB
+>>>>>>> 744a6bdc87eb17efbf071e4a9355748385ada99c
 	Characteristics:
 		ISA is supported
 		PCI is supported
@@ -32,6 +40,11 @@ BIOS Information
 		BIOS boot specification is supported
 		Function key-initiated network boot is supported
 		Targeted content distribution is supported
+<<<<<<< HEAD
 	BIOS Revision: 0.0
 	Firmware Revision: 0.0
+=======
+	BIOS Revision: 0.4
+	Firmware Revision: 0.4
+>>>>>>> 744a6bdc87eb17efbf071e4a9355748385ada99c
 

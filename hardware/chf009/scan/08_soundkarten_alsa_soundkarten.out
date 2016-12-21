@@ -1,2 +1,6 @@
  0 [Intel          ]: HDA-Intel - HDA Intel
+<<<<<<< HEAD
                       HDA Intel at 0xefebc000 irq 27
+=======
+                      HDA Intel at 0xfe9fc000 irq 28
+>>>>>>> 744a6bdc87eb17efbf071e4a9355748385ada99c

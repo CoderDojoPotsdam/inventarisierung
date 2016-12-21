@@ -17,6 +17,7 @@ Memory Device
 	Error Information Handle: Not Provided
 	Total Width: 64 bits
 	Data Width: 64 bits
+<<<<<<< HEAD
 	Size: 1024 MB
 	Form Factor: Chip
 	Set: None
@@ -29,6 +30,20 @@ Memory Device
 	Serial Number: Not Specified
 	Asset Tag: Not Specified
 	Part Number: Not Specified
+=======
+	Size: 2048 MB
+	Form Factor: DIMM
+	Set: None
+	Locator: DIMM_A
+	Bank Locator: Not Specified
+	Type: DDR
+	Type Detail: Synchronous
+	Speed: 667 MHz
+	Manufacturer: CE00000000000000
+	Serial Number: 7831D18D
+	Asset Tag: 510816
+	Part Number: M4 70T5663QZ3-CE6 
+>>>>>>> 744a6bdc87eb17efbf071e4a9355748385ada99c
 
 Handle 0x1101, DMI type 17, 27 bytes
 Memory Device
@@ -36,7 +51,11 @@ Memory Device
 	Error Information Handle: Not Provided
 	Total Width: 64 bits
 	Data Width: 64 bits
+<<<<<<< HEAD
 	Size: 1024 MB
+=======
+	Size: 2048 MB
+>>>>>>> 744a6bdc87eb17efbf071e4a9355748385ada99c
 	Form Factor: DIMM
 	Set: None
 	Locator: DIMM_B
@@ -44,8 +63,15 @@ Memory Device
 	Type: DDR
 	Type Detail: Synchronous
 	Speed: 667 MHz
+<<<<<<< HEAD
 	Manufacturer: AD00000000000000
 	Serial Number: 04008208
 	Asset Tag: 420723
 	Part Number: HYMP512S64CP8-Y5  
+=======
+	Manufacturer: CE00000000000000
+	Serial Number: 7831CCD5
+	Asset Tag: 510816
+	Part Number: M4 70T5663QZ3-CE6 
+>>>>>>> 744a6bdc87eb17efbf071e4a9355748385ada99c
 

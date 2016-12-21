@@ -19,7 +19,7 @@
 00:1d.7 USB controller: Intel Corporation 82801I (ICH9 Family) USB2 EHCI Controller #1 (rev 03)
 00:1e.0 PCI bridge: Intel Corporation 82801 Mobile PCI Bridge (rev 93)
 00:1f.0 ISA bridge: Intel Corporation ICH9M-E LPC Interface Controller (rev 03)
-00:1f.2 SATA controller: Intel Corporation 82801IBM/IEM (ICH9M/ICH9M-E) 4 port SATA Controller [AHCI mode] (rev 03)
+00:1f.2 IDE interface: Intel Corporation 82801IBM/IEM (ICH9M/ICH9M-E) 2 port SATA Controller [IDE mode] (rev 03)
 00:1f.3 SMBus: Intel Corporation 82801I (ICH9 Family) SMBus Controller (rev 03)
 03:00.0 Network controller: Intel Corporation Ultimate N WiFi Link 5300
 15:00.0 CardBus bridge: Ricoh Co Ltd RL5c476 II (rev ba)

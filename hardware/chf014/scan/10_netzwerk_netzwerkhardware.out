@@ -1,0 +1,4 @@
+00:19.0 Ethernet controller [0200]: Intel Corporation 82566MM Gigabit Network Connection [8086:1049] (rev 03)
+	Subsystem: Hewlett-Packard Company 82566MM Gigabit Network Connection [103c:30c3]
+	Kernel driver in use: e1000e
+	Kernel modules: e1000e

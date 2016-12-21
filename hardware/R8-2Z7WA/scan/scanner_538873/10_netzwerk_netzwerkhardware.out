@@ -1,0 +1,8 @@
+00:19.0 Ethernet controller [0200]: Intel Corporation 82577LM Gigabit Network Connection [8086:10ea] (rev 06)
+	Subsystem: Lenovo 82577LM Gigabit Network Connection [17aa:2153]
+	Kernel driver in use: e1000e
+	Kernel modules: e1000e
+--
+03:00.0 Network controller [0280]: Realtek Semiconductor Co., Ltd. RTL8191SEvB Wireless LAN Controller [10ec:8172] (rev 10)
+	Subsystem: Realtek Semiconductor Co., Ltd. RTL8191SEvB Wireless LAN Controller [10ec:e020]
+	Kernel driver in use: rtl8192se

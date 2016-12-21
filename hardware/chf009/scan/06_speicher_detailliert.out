@@ -2,10 +2,17 @@
        description: BIOS
        vendor: Dell Inc.
        physical id: 0
+<<<<<<< HEAD
        version: A00
        date: 05/21/2007
        size: 64KiB
        capacity: 512KiB
+=======
+       version: A04
+       date: 03/04/2008
+       size: 64KiB
+       capacity: 1984KiB
+>>>>>>> 744a6bdc87eb17efbf071e4a9355748385ada99c
        capabilities: isa pci pcmcia pnp upgrade shadowing cdboot bootselect int13floppy720 int5printscreen int9keyboard int14serial int17printer int10video acpi usb agp smartbattery biosbootspecification netboot
   *-cache:0
        description: L1 cache
@@ -17,8 +24,13 @@
   *-cache:1
        description: L2 cache
        physical id: 701
+<<<<<<< HEAD
        size: 2MiB
        capacity: 2MiB
+=======
+       size: 4MiB
+       capacity: 4MiB
+>>>>>>> 744a6bdc87eb17efbf071e4a9355748385ada99c
        clock: 66MHz (15.0ns)
        capabilities: pipeline-burst internal varies unified
        configuration: level=2
@@ -26,6 +38,7 @@
        description: System Memory
        physical id: 1000
        slot: System board or motherboard
+<<<<<<< HEAD
        size: 2GiB
      *-bank:0
           description: Chip DDR Synchronous 533 MHz (1.9 ns)
@@ -42,5 +55,26 @@
           serial: 04008208
           slot: DIMM_B
           size: 1GiB
+=======
+       size: 4GiB
+     *-bank:0
+          description: DIMM DDR Synchronous 667 MHz (1.5 ns)
+          product: M4 70T5663QZ3-CE6
+          vendor: Samsung
+          physical id: 0
+          serial: 7831D18D
+          slot: DIMM_A
+          size: 2GiB
+          width: 64 bits
+          clock: 667MHz (1.5ns)
+     *-bank:1
+          description: DIMM DDR Synchronous 667 MHz (1.5 ns)
+          product: M4 70T5663QZ3-CE6
+          vendor: Samsung
+          physical id: 1
+          serial: 7831CCD5
+          slot: DIMM_B
+          size: 2GiB
+>>>>>>> 744a6bdc87eb17efbf071e4a9355748385ada99c
           width: 64 bits
           clock: 667MHz (1.5ns)

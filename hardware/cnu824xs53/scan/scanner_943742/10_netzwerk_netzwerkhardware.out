@@ -1,0 +1,8 @@
+08:00.0 Ethernet controller [0200]: Broadcom Corporation NetXtreme BCM5753M Gigabit Ethernet PCI Express [14e4:16fd] (rev 21)
+	Subsystem: Hewlett-Packard Company Compaq nw8440 [103c:30a3]
+	Kernel driver in use: tg3
+--
+10:00.0 Network controller [0280]: Intel Corporation PRO/Wireless 3945ABG [Golan] Network Connection [8086:4222] (rev 02)
+	Subsystem: Hewlett-Packard Company PRO/Wireless 3945ABG [Golan] Network Connection [103c:135c]
+	Kernel driver in use: iwl3945
+	Kernel modules: iwl3945
