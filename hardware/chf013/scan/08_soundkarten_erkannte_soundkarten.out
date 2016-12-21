@@ -1,0 +1,4 @@
+00:1b.0 Audio device [0403]: Intel Corporation 82801I (ICH9 Family) HD Audio Controller [8086:293e] (rev 03)
+	Subsystem: Lenovo 82801I (ICH9 Family) HD Audio Controller [17aa:20f2]
+	Kernel driver in use: snd_hda_intel
+	Kernel modules: snd_hda_intel
