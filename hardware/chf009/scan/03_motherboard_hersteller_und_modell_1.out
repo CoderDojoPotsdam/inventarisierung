@@ -1,0 +1,7 @@
+       description: Motherboard
+       product: 0HP728
+       vendor: Dell Inc.
+       physical id: 0
+       serial: .6F37P3J.CN4864383E1659.
+     *-firmware
+          description: BIOS
