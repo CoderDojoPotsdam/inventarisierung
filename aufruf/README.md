@@ -1,7 +1,7 @@
 Liebe Leute,
 
 wir haben Laptops gespendet bekommen. Diese wollen wir nicht alle verwenden.  
-Wenn ihr Laptops für einen gemeinnützigen Zweck (Workshops wie CoderDojos, Schülerworkshops, Jugendklubs) braucht,  
+Wenn ihr Laptops für einen gemeinnützigen Zweck (z.B. Workshops wie CoderDojos, Schülerworkshops oder Jugendklubs, ...) braucht,  
 dann schreibt uns bitte eine E-Mail:  
 ```
 Martin Koll <martin.koll[ät]wissenschaftsladen.de>
