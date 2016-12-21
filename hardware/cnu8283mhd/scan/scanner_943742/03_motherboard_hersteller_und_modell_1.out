@@ -1,0 +1,7 @@
+       description: Motherboard
+       product: 30C5
+       vendor: Hewlett-Packard
+       physical id: 0
+       version: KBC Version 71.36
+     *-firmware
+          description: BIOS
