@@ -1,0 +1,7 @@
+       description: Motherboard
+       product: 30A3
+       vendor: Hewlett-Packard
+       physical id: 0
+       version: KBC Version 40.16
+     *-firmware
+          description: BIOS

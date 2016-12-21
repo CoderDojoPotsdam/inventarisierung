@@ -1,0 +1,51 @@
+# dmidecode 3.0
+Getting SMBIOS data from sysfs.
+SMBIOS 2.4 present.
+
+Handle 0x1000, DMI type 16, 15 bytes
+Physical Memory Array
+	Location: System Board Or Motherboard
+	Use: System Memory
+	Error Correction Type: None
+	Maximum Capacity: 4 GB
+	Error Information Handle: Not Provided
+	Number Of Devices: 2
+
+Handle 0x1100, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x1000
+	Error Information Handle: Not Provided
+	Total Width: 64 bits
+	Data Width: 64 bits
+	Size: 2048 MB
+	Form Factor: DIMM
+	Set: None
+	Locator: DIMM_A
+	Bank Locator: Not Specified
+	Type: DDR
+	Type Detail: Synchronous
+	Speed: 667 MHz
+	Manufacturer: AD00000000000000
+	Serial Number: 00002052
+	Asset Tag: 410821
+	Part Number: HYMP125S64CP8-Y5  
+
+Handle 0x1101, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x1000
+	Error Information Handle: Not Provided
+	Total Width: 64 bits
+	Data Width: 64 bits
+	Size: 2048 MB
+	Form Factor: DIMM
+	Set: None
+	Locator: DIMM_B
+	Bank Locator: Not Specified
+	Type: DDR
+	Type Detail: Synchronous
+	Speed: 667 MHz
+	Manufacturer: AD00000000000000
+	Serial Number: 04008052
+	Asset Tag: 410821
+	Part Number: HYMP125S64CP8-Y5  
+

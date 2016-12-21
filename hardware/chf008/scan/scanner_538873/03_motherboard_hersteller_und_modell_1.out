@@ -1,0 +1,7 @@
+       description: Motherboard
+       product: 0NF743
+       vendor: Dell Inc.
+       physical id: 0
+       serial: .FGN483J.CN486437A55895.
+     *-firmware
+          description: BIOS
