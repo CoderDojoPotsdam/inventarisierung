@@ -1,0 +1,3 @@
+00:02.0 VGA compatible controller [0300]: Intel Corporation Mobile GM965/GL960 Integrated Graphics Controller (primary) [8086:2a02] (rev 0c)
+	Subsystem: Dell Mobile GM965/GL960 Integrated Graphics Controller (primary) [1028:0200]
+	Kernel driver in use: i915

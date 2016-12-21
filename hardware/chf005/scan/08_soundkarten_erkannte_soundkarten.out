@@ -1,0 +1,4 @@
+00:1b.0 Audio device [0403]: Intel Corporation 82801H (ICH8 Family) HD Audio Controller [8086:284b] (rev 02)
+	Subsystem: Dell 82801H (ICH8 Family) HD Audio Controller [1028:0200]
+	Kernel driver in use: snd_hda_intel
+	Kernel modules: snd_hda_intel

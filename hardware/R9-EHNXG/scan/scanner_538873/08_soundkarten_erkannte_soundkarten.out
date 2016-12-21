@@ -1,0 +1,4 @@
+00:1b.0 Audio device [0403]: Intel Corporation 6 Series/C200 Series Chipset Family High Definition Audio Controller [8086:1c20] (rev 04)
+	Subsystem: Lenovo 6 Series/C200 Series Chipset Family High Definition Audio Controller [17aa:21cf]
+	Kernel driver in use: snd_hda_intel
+	Kernel modules: snd_hda_intel
