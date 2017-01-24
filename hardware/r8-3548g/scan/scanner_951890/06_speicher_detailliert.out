@@ -1,0 +1,58 @@
+  *-firmware
+       description: BIOS
+       vendor: LENOVO
+       physical id: 0
+       version: 6FET82WW (3.12 )
+       date: 11/26/2009
+       size: 128KiB
+       capacity: 8128KiB
+       capabilities: pci pcmcia pnp upgrade shadowing escd cdboot bootselect socketedrom edd acpi usb biosbootspecification
+  *-cache:0
+       description: L1 cache
+       physical id: a
+       slot: Internal L1 Cache
+       size: 64KiB
+       capacity: 64KiB
+       capabilities: synchronous internal write-back instruction
+       configuration: level=1
+  *-cache:1
+       description: L2 cache
+       physical id: c
+       slot: Internal L2 Cache
+       size: 3MiB
+       capacity: 3MiB
+       capabilities: burst internal write-back unified
+       configuration: level=2
+  *-cache
+       description: L1 cache
+       physical id: b
+       slot: Internal L1 Cache
+       size: 64KiB
+       capacity: 64KiB
+       capabilities: synchronous internal write-back data
+       configuration: level=1
+  *-memory
+       description: System Memory
+       physical id: 2b
+       slot: System board or motherboard
+       size: 4GiB
+     *-bank:0
+          description: SODIMM DDR3 Synchronous 1066 MHz (0.9 ns)
+          product: M471B5673FH0-CF8
+          vendor: Samsung
+          physical id: 0
+          serial: 84010528
+          slot: DIMM 1
+          size: 2GiB
+          width: 64 bits
+          clock: 1066MHz (0.9ns)
+     *-bank:1
+          description: SODIMM DDR3 Synchronous 1066 MHz (0.9 ns)
+          product: 16JSF25664HZ-1G1F1
+          vendor: Micron Technology
+          physical id: 1
+          serial: 300BE134
+          slot: DIMM 2
+          size: 2GiB
+          width: 64 bits
+          clock: 1066MHz (0.9ns)
