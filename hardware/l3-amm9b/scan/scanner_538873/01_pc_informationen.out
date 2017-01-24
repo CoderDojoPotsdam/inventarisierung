@@ -1,0 +1,41 @@
+# dmidecode 3.0
+Getting SMBIOS data from sysfs.
+SMBIOS 2.4 present.
+
+Handle 0x0000, DMI type 0, 24 bytes
+BIOS Information
+	Vendor: LENOVO
+	Version: 6FET87WW (3.17 )
+	Release Date: 12/03/2010
+	Address: 0xE0000
+	Runtime Size: 128 kB
+	ROM Size: 8192 kB
+	Characteristics:
+		PCI is supported
+		PC Card (PCMCIA) is supported
+		PNP is supported
+		BIOS is upgradeable
+		BIOS shadowing is allowed
+		ESCD support is available
+		Boot from CD is supported
+		Selectable boot is supported
+		BIOS ROM is socketed
+		EDD is supported
+		ACPI is supported
+		USB legacy is supported
+		BIOS boot specification is supported
+		Targeted content distribution is supported
+	BIOS Revision: 3.23
+	Firmware Revision: 1.6
+
+Handle 0x0001, DMI type 1, 27 bytes
+System Information
+	Manufacturer: LENOVO
+	Product Name: 205545G
+	Version: ThinkPad T500
+	Serial Number: L3AMM9B
+	UUID: 42EEED81-4B07-11CB-9761-C3D5955016FD
+	Wake-up Type: Power Switch
+	SKU Number: Not Specified
+	Family: ThinkPad T500
+
