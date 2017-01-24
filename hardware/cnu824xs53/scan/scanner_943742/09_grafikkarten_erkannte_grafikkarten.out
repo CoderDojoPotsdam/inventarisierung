@@ -1,0 +1,3 @@
+01:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] RV530/M56-P [Mobility Radeon X1600] [1002:71c5]
+	Subsystem: Hewlett-Packard Company RV530/M56-P [Mobility Radeon X1600] [103c:30b4]
+	Kernel driver in use: radeon

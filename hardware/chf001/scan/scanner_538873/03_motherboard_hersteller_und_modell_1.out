@@ -1,0 +1,7 @@
+       description: Motherboard
+       product: 0D704C
+       vendor: Dell Inc.
+       physical id: 0
+       serial: .2WXJS3J.CN129618642372.
+     *-firmware
+          description: BIOS

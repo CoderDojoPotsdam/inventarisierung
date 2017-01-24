@@ -1,0 +1,47 @@
+H/W path                     Device      Class          Description
+===================================================================
+                                         system         HP Compaq nw8440 (RZ800EP#ABD) (RZ800EP#ABD)
+/0                                       bus            30A3
+/0/0                                     memory         128KiB BIOS
+/0/4                                     processor      Intel(R) Core(TM)2 CPU         T7200  @ 2.00GHz
+/0/4/5                                   memory         64KiB L1 cache
+/0/4/6                                   memory         4MiB L2 cache
+/0/a                                     memory         2GiB System Memory
+/0/a/0                                   memory         1GiB SODIMM DDR2 Synchronous 667 MHz (1.5 ns)
+/0/a/1                                   memory         1GiB SODIMM DDR2 Synchronous 667 MHz (1.5 ns)
+/0/100                                   bridge         Mobile 945GM/PM/GMS, 943/940GML and 945GT Express Memory Controller Hub
+/0/100/1                                 bridge         Mobile 945GM/PM/GMS, 943/940GML and 945GT Express PCI Express Root Port
+/0/100/1/0                               display        RV530/M56-P [Mobility Radeon X1600]
+/0/100/1b                                multimedia     NM10/ICH7 Family High Definition Audio Controller
+/0/100/1c                                bridge         NM10/ICH7 Family PCI Express Port 1
+/0/100/1c/0                  enp8s0      network        NetXtreme BCM5753M Gigabit Ethernet PCI Express
+/0/100/1c.1                              bridge         NM10/ICH7 Family PCI Express Port 2
+/0/100/1c.1/0                wlp16s0     network        PRO/Wireless 3945ABG [Golan] Network Connection
+/0/100/1c.3                              bridge         NM10/ICH7 Family PCI Express Port 4
+/0/100/1d                                bus            NM10/ICH7 Family USB UHCI Controller #1
+/0/100/1d/1                  usb2        bus            UHCI Host Controller
+/0/100/1d.1                              bus            NM10/ICH7 Family USB UHCI Controller #2
+/0/100/1d.1/1                usb3        bus            UHCI Host Controller
+/0/100/1d.1/1/1                          generic        Fingerprint Sensor
+/0/100/1d.2                              bus            NM10/ICH7 Family USB UHCI Controller #3
+/0/100/1d.2/1                usb4        bus            UHCI Host Controller
+/0/100/1d.3                              bus            NM10/ICH7 Family USB UHCI Controller #4
+/0/100/1d.3/1                usb5        bus            UHCI Host Controller
+/0/100/1d.7                              bus            NM10/ICH7 Family USB2 EHCI Controller
+/0/100/1d.7/1                usb1        bus            EHCI Host Controller
+/0/100/1d.7/1/8                          bus            CY7C65640 USB-2.0 "TetraHub"
+/0/100/1d.7/1/8/1            scsi2       storage        STORE N GO
+/0/100/1d.7/1/8/1/0.0.0      /dev/sda    disk           7746MB SCSI Disk
+/0/100/1d.7/1/8/1/0.0.0/1    /dev/sda1   volume         6363MiB EXT4 volume
+/0/100/1d.7/1/8/1/0.0.0/2    /dev/sda2   volume         1022MiB Extended partition
+/0/100/1d.7/1/8/1/0.0.0/2/5  /dev/sda5   volume         1022MiB W95 FAT32 partition
+/0/100/1e                                bridge         82801 Mobile PCI Bridge
+/0/100/1e/6                              bridge         PCIxx12 Cardbus Controller
+/0/100/1e/6.1                            bus            PCIxx12 OHCI Compliant IEEE 1394 Host Controller
+/0/100/1e/6.2                            storage        5-in-1 Multimedia Card Reader (SD/MMC/MS/MS PRO/xD)
+/0/100/1e/6.3                            generic        PCIxx12 SDA Standard Compliant SD Host Controller
+/0/100/1e/6.4                            communication  PCIxx12 GemCore based SmartCard controller
+/0/100/1f                                bridge         82801GBM (ICH7-M) LPC Interface Bridge
+/0/100/1f.2                              storage        82801GBM/GHM (ICH7-M Family) SATA Controller [IDE mode]
+/0/1                         scsi1       storage        
+/0/1/0.0.0                   /dev/cdrom  disk           DVD-ROM GDR-D10N

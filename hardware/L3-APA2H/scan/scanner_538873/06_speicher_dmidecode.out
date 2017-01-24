@@ -1,0 +1,92 @@
+# dmidecode 3.0
+Getting SMBIOS data from sysfs.
+SMBIOS 2.4 present.
+
+Handle 0x0007, DMI type 5, 20 bytes
+Memory Controller Information
+	Error Detecting Method: None
+	Error Correcting Capabilities:
+		None
+	Supported Interleave: One-way Interleave
+	Current Interleave: One-way Interleave
+	Maximum Memory Module Size: 4096 MB
+	Maximum Total Memory Size: 8192 MB
+	Supported Speeds:
+		Other
+	Supported Memory Types:
+		DIMM
+		SDRAM
+	Memory Module Voltage: 2.9 V
+	Associated Memory Slots: 2
+		0x0008
+		0x0009
+	Enabled Error Correcting Capabilities:
+		Unknown
+
+Handle 0x0008, DMI type 6, 12 bytes
+Memory Module Information
+	Socket Designation: DIMM Slot 1
+	Bank Connections: 0 1
+	Current Speed: 42 ns
+	Type: DIMM SDRAM
+	Installed Size: 2048 MB (Double-bank Connection)
+	Enabled Size: 2048 MB (Double-bank Connection)
+	Error Status: OK
+
+Handle 0x0009, DMI type 6, 12 bytes
+Memory Module Information
+	Socket Designation: DIMM Slot 2
+	Bank Connections: 2 3
+	Current Speed: 42 ns
+	Type: DIMM SDRAM
+	Installed Size: 2048 MB (Double-bank Connection)
+	Enabled Size: 2048 MB (Double-bank Connection)
+	Error Status: OK
+
+Handle 0x002B, DMI type 16, 15 bytes
+Physical Memory Array
+	Location: System Board Or Motherboard
+	Use: System Memory
+	Error Correction Type: None
+	Maximum Capacity: 4 GB
+	Error Information Handle: Not Provided
+	Number Of Devices: 2
+
+Handle 0x002C, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x002B
+	Error Information Handle: No Error
+	Total Width: 64 bits
+	Data Width: 64 bits
+	Size: 2048 MB
+	Form Factor: SODIMM
+	Set: None
+	Locator: DIMM 1
+	Bank Locator: Bank 0/1
+	Type: Reserved
+	Type Detail: Synchronous
+	Speed: 1066 MHz
+	Manufacturer: 80CE            
+	Serial Number: 48075C18        
+	Asset Tag: 0844
+	Part Number: M471B5673DZ1-CF8  
+
+Handle 0x002D, DMI type 17, 27 bytes
+Memory Device
+	Array Handle: 0x002B
+	Error Information Handle: No Error
+	Total Width: 64 bits
+	Data Width: 64 bits
+	Size: 2048 MB
+	Form Factor: SODIMM
+	Set: None
+	Locator: DIMM 2
+	Bank Locator: Bank 2/3
+	Type: Reserved
+	Type Detail: Synchronous
+	Speed: 1066 MHz
+	Manufacturer: 80CE            
+	Serial Number: 876F58BC        
+	Asset Tag: 0912
+	Part Number: M471B5673EH1-CF8  
+

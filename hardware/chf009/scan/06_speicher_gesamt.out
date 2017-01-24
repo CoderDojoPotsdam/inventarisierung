@@ -1,0 +1,7 @@
+              total        used        free      shared  buff/cache   available
+<<<<<<< HEAD
+Mem:           1990          42        1801           9         147        1787
+=======
+Mem:           3942          45        3747          11         149        3691
+>>>>>>> 744a6bdc87eb17efbf071e4a9355748385ada99c
+Swap:             0           0           0
