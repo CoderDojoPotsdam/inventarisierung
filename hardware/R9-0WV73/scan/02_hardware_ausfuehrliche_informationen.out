@@ -1,0 +1,50 @@
+H/W path                   Device     Class          Description
+================================================================
+                                      system         7470WPZ
+/0                                    bus            7470WPZ
+/0/0                                  memory         128KiB BIOS
+/0/6                                  processor      Intel(R) Core(TM)2 Duo CPU     L9300  @ 1.60GHz
+/0/6/a                                memory         64KiB L1 cache
+/0/6/c                                memory         6MiB L2 cache
+/0/b                                  memory         64KiB L1 cache
+/0/20                                 memory         4GiB System Memory
+/0/20/0                               memory         2GiB SODIMM DDR3 Synchronous 1066 MHz (0.9 ns)
+/0/20/1                               memory         2GiB SODIMM DDR3 Synchronous 1066 MHz (0.9 ns)
+/0/100                                bridge         Mobile 4 Series Chipset Memory Controller Hub
+/0/100/2                              display        Mobile 4 Series Chipset Integrated Graphics Controller
+/0/100/2.1                            display        Mobile 4 Series Chipset Integrated Graphics Controller
+/0/100/3                              communication  Mobile 4 Series Chipset MEI Controller
+/0/100/3.3                            communication  Mobile 4 Series Chipset AMT SOL Redirection
+/0/100/19                  enp0s25    network        82567LM Gigabit Network Connection
+/0/100/1a                             bus            82801I (ICH9 Family) USB UHCI Controller #4
+/0/100/1a/1                usb3       bus            UHCI Host Controller
+/0/100/1a.1                           bus            82801I (ICH9 Family) USB UHCI Controller #5
+/0/100/1a.1/1              usb4       bus            UHCI Host Controller
+/0/100/1a.1/1/1                       generic        Fingerprint Sensor
+/0/100/1a.2                           bus            82801I (ICH9 Family) USB UHCI Controller #6
+/0/100/1a.2/1              usb5       bus            UHCI Host Controller
+/0/100/1a.7                           bus            82801I (ICH9 Family) USB2 EHCI Controller #2
+/0/100/1a.7/1              usb1       bus            EHCI Host Controller
+/0/100/1b                             multimedia     82801I (ICH9 Family) HD Audio Controller
+/0/100/1c                             bridge         82801I (ICH9 Family) PCI Express Port 1
+/0/100/1c.1                           bridge         82801I (ICH9 Family) PCI Express Port 2
+/0/100/1c.1/0              wls1       network        Ultimate N WiFi Link 5300
+/0/100/1c.3                           bridge         82801I (ICH9 Family) PCI Express Port 4
+/0/100/1d                             bus            82801I (ICH9 Family) USB UHCI Controller #1
+/0/100/1d/1                usb6       bus            UHCI Host Controller
+/0/100/1d.1                           bus            82801I (ICH9 Family) USB UHCI Controller #2
+/0/100/1d.1/1              usb7       bus            UHCI Host Controller
+/0/100/1d.2                           bus            82801I (ICH9 Family) USB UHCI Controller #3
+/0/100/1d.2/1              usb8       bus            UHCI Host Controller
+/0/100/1d.7                           bus            82801I (ICH9 Family) USB2 EHCI Controller #1
+/0/100/1d.7/1              usb2       bus            EHCI Host Controller
+/0/100/1d.7/1/1            scsi0      storage        STORE N GO
+/0/100/1d.7/1/1/0.0.0      /dev/sda   disk           7746MB SCSI Disk
+/0/100/1d.7/1/1/0.0.0/1    /dev/sda1  volume         6363MiB EXT4 volume
+/0/100/1d.7/1/1/0.0.0/2    /dev/sda2  volume         1022MiB Extended partition
+/0/100/1d.7/1/1/0.0.0/2/5  /dev/sda5  volume         1022MiB W95 FAT32 partition
+/0/100/1e                             bridge         82801 Mobile PCI Bridge
+/0/100/1f                             bridge         ICH9M-E LPC Interface Controller
+/0/100/1f.2                           storage        82801IBM/IEM (ICH9M/ICH9M-E) 4 port SATA Controller [AHCI mode]
+/0/100/1f.3                           bus            82801I (ICH9 Family) SMBus Controller
+/1                                    power          42T4650

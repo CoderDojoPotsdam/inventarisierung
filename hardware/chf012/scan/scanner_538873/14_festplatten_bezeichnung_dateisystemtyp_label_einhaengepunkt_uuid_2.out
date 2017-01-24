@@ -1,0 +1,6 @@
+NAME   UUID                                 FSTYPE  SIZE LABEL MOUNTPOINT
+sda                                                 7.2G       
+├─sda1 c7aa6a46-9ecc-4aeb-9c6e-1554c62d8666 ext4    6.2G       /
+├─sda2                                                1K       
+└─sda5 FCF1-9BF9                            vfat   1022M       /windows
+sr0                                                1024M       

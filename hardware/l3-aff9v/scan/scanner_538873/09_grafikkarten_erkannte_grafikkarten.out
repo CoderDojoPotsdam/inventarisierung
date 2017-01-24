@@ -1,0 +1,7 @@
+00:02.0 VGA compatible controller [0300]: Intel Corporation Mobile 4 Series Chipset Integrated Graphics Controller [8086:2a42] (rev 07)
+	Subsystem: Lenovo Mobile 4 Series Chipset Integrated Graphics Controller [17aa:2115]
+	Kernel driver in use: i915
+--
+01:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] RV635/M86 [Mobility Radeon HD 3650] [1002:9591]
+	Subsystem: Lenovo RV635/M86 [Mobility Radeon HD 3650] [17aa:2116]
+	Kernel driver in use: radeon

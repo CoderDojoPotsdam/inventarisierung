@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+00:1b.0 Audio device [0403]: Intel Corporation NM10/ICH7 Family High Definition Audio Controller [8086:27d8] (rev 01)
+	Subsystem: Dell NM10/ICH7 Family High Definition Audio Controller [1028:0201]
+=======
+00:1b.0 Audio device [0403]: Intel Corporation 82801H (ICH8 Family) HD Audio Controller [8086:284b] (rev 02)
+	Subsystem: Dell 82801H (ICH8 Family) HD Audio Controller [1028:0200]
+>>>>>>> 744a6bdc87eb17efbf071e4a9355748385ada99c
+	Kernel driver in use: snd_hda_intel
+	Kernel modules: snd_hda_intel

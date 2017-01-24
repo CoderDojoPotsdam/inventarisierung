@@ -1,0 +1,16 @@
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+<<<<<<< HEAD
+          RX packets:800 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:800 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1 
+          RX bytes:59200 (59.2 KB)  TX bytes:59200 (59.2 KB)
+=======
+          RX packets:320 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:320 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1 
+          RX bytes:23680 (23.6 KB)  TX bytes:23680 (23.6 KB)
+>>>>>>> 744a6bdc87eb17efbf071e4a9355748385ada99c
+
