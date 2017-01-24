@@ -1,0 +1,77 @@
+smartctl 6.5 2016-01-24 r4214 [x86_64-linux-4.4.0-31-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+/dev/sda: Unknown USB bridge [0x0781:0x5572 (0x127)]
+Please specify device type with the -d option.
+
+Use smartctl -h to get a usage summary
+
+smartctl 6.5 2016-01-24 r4214 [x86_64-linux-4.4.0-31-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Vendor:               SanDisk
+Product:              Cruzer Switch
+Revision:             1.27
+Compliance:           SPC-4
+User Capacity:        15,744,892,928 bytes [15.7 GB]
+Logical block size:   512 bytes
+Serial number:        20044317331DC9E05F25
+Device type:          disk
+Local Time is:        Tue Jan 24 14:52:50 2017 CET
+SMART support is:     Available - device has SMART capability.
+SMART support is:     Enabled
+Temperature Warning:  Disabled or Not Supported
+
+=== START OF READ SMART DATA SECTION ===
+SMART Health Status: OK
+
+Error Counter logging not supported
+
+Device does not support Self Test logging
+smartctl 6.5 2016-01-24 r4214 [x86_64-linux-4.4.0-31-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Vendor:               SanDisk
+Product:              Cruzer Switch
+Revision:             1.27
+Compliance:           SPC-4
+User Capacity:        15,744,892,928 bytes [15.7 GB]
+Logical block size:   512 bytes
+Serial number:        20044317331DC9E05F25
+Device type:          disk
+Local Time is:        Tue Jan 24 14:52:50 2017 CET
+SMART support is:     Available - device has SMART capability.
+SMART support is:     Enabled
+Temperature Warning:  Disabled or Not Supported
+
+=== START OF READ SMART DATA SECTION ===
+SMART Health Status: OK
+
+Error Counter logging not supported
+
+Device does not support Self Test logging
+smartctl 6.5 2016-01-24 r4214 [x86_64-linux-4.4.0-31-generic] (local build)
+Copyright (C) 2002-16, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Vendor:               SanDisk
+Product:              Cruzer Switch
+Revision:             1.27
+Compliance:           SPC-4
+User Capacity:        15,744,892,928 bytes [15.7 GB]
+Logical block size:   512 bytes
+Serial number:        20044317331DC9E05F25
+Device type:          disk
+Local Time is:        Tue Jan 24 14:52:50 2017 CET
+SMART support is:     Available - device has SMART capability.
+SMART support is:     Enabled
+Temperature Warning:  Disabled or Not Supported
+
+=== START OF READ SMART DATA SECTION ===
+SMART Health Status: OK
+
+Error Counter logging not supported
+
+Device does not support Self Test logging
